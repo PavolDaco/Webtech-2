@@ -9,6 +9,7 @@
  
 	<link rel="stylesheet" href="aktuality/style.css">  
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
     <script type="text/javascript" src="aktuality/script_aktuality.js"></script> 
 
 <div class="container">

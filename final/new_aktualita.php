@@ -8,28 +8,31 @@
  
     <link rel="stylesheet" href="aktuality/style.css"> 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
     <script type="text/javascript" src="aktuality/script_aktuality.js"></script>   
 
 <div class="container">
 <div>
     <form id='form' action='aktuality/insert_aktualita.php' method='POST'>
-    <input type="checkbox" name="lang1" value="sk" id='sk'/> SVK
- 	  <input type="checkbox" name="lang2" value="en" id='en'/> ENG	
+     <div class="options">
+      <input type="checkbox" name="lang1" value="sk" id='sk' required /> SVK
+ 	    <input type="checkbox" name="lang2" value="en" id='en' required/> ENG	
+     </div>
 
  	 <div class="svk">
 	     Titulok(SK): <br>
-	     <input type="text" name="titulokSK"><br>
+	     <input type="text" name="titulokSK" id="titulokSK"><br>
 
 	     Text(SK): <br>
-	     <textarea rows="4" cols="50" name="textSK" ></textarea><br>
+	     <textarea rows="4" cols="50" name="textSK" id="textSK"></textarea><br>
      </div>
 
      <div class="eng">
 	     Title(EN): <br>
-	     <input type="text" name="titulokEN"><br>
+	     <input type="text" name="titulokEN" id="titulokEN"><br>
 
 	     Text(EN): <br>
-	     <textarea rows="4" cols="50" name="textEN" ></textarea><br>
+	     <textarea rows="4" cols="50" name="textEN" id="textEN"></textarea><br>
      </div>
 
      <br><br>
