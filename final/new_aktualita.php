@@ -15,8 +15,8 @@
 <div>
     <form id='form' action='aktuality/insert_aktualita.php' method='POST'>
      <div class="options">
-      <input type="checkbox" name="lang1" value="sk" id='sk' /> SVK
- 	    <input type="checkbox" name="lang2" value="en" id='en'/> ENG	
+      <input type="checkbox" name="lang1" value="sk" id='sk' required/> SVK
+ 	    <input type="checkbox" name="lang2" value="en" id='en'required /> ENG	
      </div>
 
  	 <div class="svk">
