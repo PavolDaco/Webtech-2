@@ -324,7 +324,7 @@ INSERT INTO `zamestnanci` (`id`, `name`, `surname`, `title1`, `title2`, `ldapLog
 (39, 'Erich', 'Stark', 'Ing.', '', '', 'stark.jpg', 'C 014', '', 'OIKR', 'doktorand', ''),
 (40, 'Peter', 'Ťapák', 'Ing.', ' PhD.', '', '', 'D 121', '569', 'OEAP', 'teacher', ''),
 (41, 'Katarína', 'Žáková', 'doc. Ing.', ' PhD.', 'zakova', 'zakova.jpg', 'D 119', '742', 'OIKR', 'teacher', 'zástupca riaditeľa ústavu pre pedagogickú činnosť; zástupca vedúceho oddelenia'),
-(56, 'Pavol', 'Dašto', 'mozno Bc', '', 'xdaco', '', '', '', '', '', ''),
+(56, 'Pavol', 'Dačo', '', '', 'xdaco', '', '', '', '', '', ''),
 (57, 'Michal', 'Koplinger', '', '', 'xkoplingerm', '', '', NULL, '', '', ''),
 (58, 'Tomáš', 'Džadoň', '', '', 'xdzadont', '', '', NULL, '', '', '');
 
