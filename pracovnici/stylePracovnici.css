@@ -1,0 +1,25 @@
+#myTable tr > *:nth-child(1) {
+    display: none;
+}
+
+.okno{
+
+  z-index: 1;
+  position: absolute; 
+  width:40%; 
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 30px;
+  color: white;   
+  border: 3px solid blue;   
+  min-width: 325px; 
+
+}
+
+#tabPublikacie{
+	color: white;
+}
+
+
+.closebtn {
+  cursor:pointer;
+}

@@ -1,0 +1,40 @@
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    height: 50px;
+ }
+  
+ th, table > tbody > tr > td:first-child {
+      font-weight: bold;
+      font-size: 16px;
+      width: 15%;
+      background-color: #DEB887;
+ }
+
+ th {
+      background-color: #00FFFF;
+      text-align: right;
+ }
+
+ td {
+ 	width: 12%;
+  background-color: #b3b3b3;
+ }
+
+ table {
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;  
+ }
+
+ .ano {
+  font-size: 1.15em;
+  background-color: #ADFF2F;
+ }
+
+.hry {
+  font-size: 1.05em;
+  /*background-color: #ADD8E6;*/
+  background-color: #ADFF2F;
+}

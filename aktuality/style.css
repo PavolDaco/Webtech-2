@@ -1,0 +1,10 @@
+.table_aktuality th{
+   font-size: 1.25em;
+    color: navy;
+}
+
+#zoznam_stran {
+  width:20%;
+  margin-left: auto;
+  margin-right: auto;
+}
