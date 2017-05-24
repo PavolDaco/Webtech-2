@@ -132,11 +132,11 @@ body {
              <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_ABOUT_US']; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu">                      
-                        <li><a href="o_nas_historia.php">História ústavu</a></li>
-                        <li><a href="o_nas_vedenie.php">Vedenie ústavu</a></li>
+                        <li><a href="o_nas_historia.php"><?php echo $lang['MENU_HISTORY']; ?></a></li>
+                        <li><a href="o_nas_vedenie.php"><?php echo $lang['MENU_VEDENIE']; ?></a></li>
                         
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oddelenia ústavu</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_DEPARTMENTS']; ?></a>
                             <ul class="dropdown-menu">
                                     <li><a href="OAMM.php">Oddelenie aplikovanej mechaniky a mechatroniky</a></li>
                                     <li><a href="OIKR.php">Oddelenie informačných, komunikačných a riadiacich systémov</a></li>
@@ -159,25 +159,25 @@ body {
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_STUDY']; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level">                      
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pre uchádžačov o štúdium</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_UCHADZACI']; ?></a>
                             <ul class="dropdown-menu">
-                              <li><a href="uchadzaciBC.php">Bakalárske štúdium</a></li>
-                              	<li><a href="uchadzaciING.php">Inžinierske štúdium</a></li>
+                              <li><a href="uchadzaciBC.php"><?php echo $lang['MENU_BCSTUDY']; ?></a></li>
+                              	<li><a href="uchadzaciING.php"><?php echo $lang['MENU_INGSTUDY']; ?></a></li>
                                 
                             </ul>
                         </li>
 
 
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bakalárske štúdium</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_BCSTUDY']; ?></a>
                             <ul class="dropdown-menu">
-                             <li><a href="bc_info.php">Všeobecné informácie</a></li>
+                             <li><a href="bc_info.php"><?php echo $lang['MENU_INFO']; ?></a></li>
                           
                               <li class="dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bakalárske práce</a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_BCPRACE']; ?></a>
                                     <ul class="dropdown-menu">
-                                                <li><a href="bp_pokyny.php">Pokyny</a></li>
-                                                <li><a href="bp_volne.php">Voľné témy</a></li>
+                                                <li><a href="bp_pokyny.php"><?php echo $lang['MENU_POKYNY']; ?></a></li>
+                                                <li><a href="bp_volne.php"><?php echo $lang['MENU_VOLNETEMY']; ?></a></li>
                                                
                                      </ul>
                                 </li> 
@@ -185,22 +185,22 @@ body {
                         </li>
 
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inžinierske štúdium</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_INGSTUDY']; ?></a>
                             <ul class="dropdown-menu">
-                             <li><a href="ing_info.php">Všeobecné informácie</a></li>
+                             <li><a href="ing_info.php"><?php echo $lang['MENU_INFO']; ?></a></li>
                           
                               <li class="dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diplomové práce</a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_INGPRACE']; ?></a>
                                     <ul class="dropdown-menu">
-                                                <li><a href="dp_pokyny.php">Pokyny</a></li>
-                                                <li><a href="dp_volne.php">Voľné témy</a></li>
+                                                <li><a href="dp_pokyny.php"><?php echo $lang['MENU_POKYNY']; ?></a></li>
+                                                <li><a href="dp_volne.php"><?php echo $lang['MENU_VOLNETEMY']; ?></a></li>
                                                
                                      </ul>
                                 </li> 
                             </ul>
                         </li>
 
-                        <li><a href="phd_info.php">Doktorandské štúdium</a></li>
+                        <li><a href="phd_info.php"><?php echo $lang['MENU_PHD']; ?></a></li>
 
                     </ul>
                 </li>

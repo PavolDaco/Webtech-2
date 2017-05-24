@@ -30,6 +30,20 @@ $lang['MENU_CONTACT'] = 'Kontakt';
 $lang['MENU_3D_LED_CUBE'] = '3D LED kocka';
 
 
+$lang['MENU_HISTORY'] = 'História ústavu';
+$lang['MENU_VEDENIE'] = 'Vedenie ústavu';
+$lang['MENU_DEPARTMENTS'] = 'Oddelenia ústavu';
+
+$lang['MENU_UCHADZACI'] = 'Pre uchádzačov o štúdium';
+$lang['MENU_BCSTUDY'] = 'Bakalárske štúdium';
+$lang['MENU_INGSTUDY'] = 'Inžinierske štúdium';
+$lang['MENU_INFO'] = 'Všeobecné informácie';
+$lang['MENU_BCPRACE'] = 'Bakalárke práce';
+$lang['MENU_INGPRACE'] = 'Diplomové práce';
+$lang['MENU_POKYNY'] = 'Pokyny';
+$lang['MENU_VOLNETEMY'] = 'Voľné témy';
+$lang['MENU_PHD'] = 'Doktorandské štúdium';
+
 
 ////////////////////////////////////////
 
@@ -77,5 +91,20 @@ $lang['STAFF_FUNCTION'] = 'Funkcia';
 $lang['STAFF_PUBL'] = 'Žiadne publikácie';
 
 $lang['kocka']='Zobrazená kocka bola vytvorená v rámci diplomovej práce. Bol k nej vytvorený vzdialený prístup cez Internet, čo umožňuje užívateľovi vkladať do kocky vlastný kód, ktorý ovplyvňuje jej správanie sa.';
+
+
+$lang['AKT_VYBERTE'] = 'Vyberte typ aktualít'; 
+$lang['AKT_VSETKY'] = 'Všetky'; 
+$lang['AKT_PROP'] = 'Propagácia'; 
+$lang['AKT_OZNAMY'] = 'Oznamy'; 
+$lang['AKT_ZOZIVOTA'] = 'Zo života školy'; 
+$lang['AKT_NEPLATNE'] = 'Zobraziť aj neplatné aktuality'; 
+$lang['AKT_SHOW'] = 'Zobraziť'; 
+$lang['AKT_AKT'] = 'Aktuálne zobrazenie'; 
+$lang['AKT_OLD'] = 'Zobrazenie starých aktualít'; 
+$lang['AKT_YES'] = 'Áno'; 
+
+
+
 
 ?>

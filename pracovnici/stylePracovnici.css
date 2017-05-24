@@ -2,11 +2,21 @@
     display: none;
 }
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 7px;
+}
+
+
 .okno{
 
   z-index: 1;
   position: absolute; 
-  width:40%; 
+  width:55%; 
   background-color: rgba(0, 0, 0, 0.95);
   padding: 30px;
   color: white;   

@@ -30,6 +30,24 @@ $lang['MENU_CONTACT'] = 'Contact';
 $lang['MENU_3D_LED_CUBE'] = '3D LED cube';
 
 
+
+$lang['MENU_HISTORY'] = 'History of the Institute';
+$lang['MENU_VEDENIE'] = 'Head of the Institute';
+$lang['MENU_DEPARTMENTS'] = 'Departments of the Institute';
+
+$lang['MENU_UCHADZACI'] = 'For applicants for studies';
+$lang['MENU_BCSTUDY'] = 'Bachelor study';
+$lang['MENU_INGSTUDY'] = 'Engineering study';
+$lang['MENU_INFO'] = 'General information';
+$lang['MENU_BCPRACE'] = 'Bachelor Thesis';
+$lang['MENU_INGPRACE'] = 'Diploma theses';
+$lang['MENU_POKYNY'] = 'Instructions';
+$lang['MENU_VOLNETEMY'] = 'Free thesis';
+$lang['MENU_PHD'] = 'Doctoral study';
+
+
+
+
 //////////////////////////////////////////////////////////
 $lang['PROJ_CISLO'] = 'Project ID';  
 $lang['PROJ_NAZOV'] = 'Name';  
@@ -74,6 +92,21 @@ $lang['URL_o_nas']= 'index.php?lang=en';
 $lang['URL_studium']='index.php?lang=en';
 
 $lang['kocka']='Displayed cube was created within the diploma thesis. It was created for remote access via the Internet. It allows the user to insert custom code blocks and in this way to influence its behavior.';
+
+
+
+$lang['AKT_VYBERTE'] = 'Choose type of news'; 
+$lang['AKT_VSETKY'] = 'All'; 
+$lang['AKT_PROP'] = 'Promotion'; 
+$lang['AKT_OZNAMY'] = 'Announcements'; 
+$lang['AKT_ZOZIVOTA'] = "From school's life"; 
+$lang['AKT_NEPLATNE'] = 'Show old news'; 
+$lang['AKT_SHOW'] = 'Show'; 
+$lang['AKT_AKT'] = 'Current view'; 
+$lang['AKT_OLD'] = 'View old news'; 
+$lang['AKT_YES'] = 'Yes'; 
+
+
 
 ?>
 
