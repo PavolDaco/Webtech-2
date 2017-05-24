@@ -18,37 +18,38 @@ if (isset($_SESSION['isAdmin'])) {
 
  $sql = "SELECT id, name, surname FROM zamestnanci WHERE ldapLogin != ''";
  $result = $conn->query($sql);
- echo "<div id='okno_profil' class='okno_profil'>";
+ echo "<div id='okno_profil' class='okno_profil'>
+        <p><strong>Pre zmenu role pre daného užívateľa kliknite na meno</strong></p>";
     echo "<table id='table_roleStaff'>
-            <tr><th>login</th></tr>"; 
+            <tr><th>Meno a priezvisko</th></tr>"; 
     while($row = mysqli_fetch_assoc($result)) {  
       $akt_id = $row["id"];
       $checkboxy = "<form id='formRole' action='roles/update_roles.php' method='POST'><input type='hidden' name='id' value=".$row["id"].">";
 
       $sql2 = "SELECT * FROM RoleZamestnanci WHERE id_staff = $akt_id and id_role = 1";		
  		  $result2 = $conn->query($sql2);
- 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='user' value='user_yes' checked>User<br>";
- 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='user' value='user_no'>User<br>"; 
+ 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='user' value='user_yes' checked> User<br>";
+ 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='user' value='user_no'> User<br>"; 
 
  		  $sql2 = "SELECT * FROM RoleZamestnanci WHERE id_staff = $akt_id and id_role = 2";		
  		  $result2 = $conn->query($sql2);
- 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='hr' value='hr_yes' checked>HR<br>";
- 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='hr' value='hr_no'>HR<br>"; 
+ 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='hr' value='hr_yes' checked> HR<br>";
+ 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='hr' value='hr_no'> HR<br>"; 
 
  		  $sql2 = "SELECT * FROM RoleZamestnanci WHERE id_staff = $akt_id and id_role = 3";		
  		  $result2 = $conn->query($sql2);
- 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='reporter' value='reporter_yes' checked>Reporter<br>";
- 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='reporter' value='reporter_no'>Reporter<br>"; 
+ 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='reporter' value='reporter_yes' checked> Reporter<br>";
+ 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='reporter' value='reporter_no'> Reporter<br>"; 
 
  		  $sql2 = "SELECT * FROM RoleZamestnanci WHERE id_staff = $akt_id and id_role = 4";		
  		  $result2 = $conn->query($sql2);
- 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='editor' value='editor_yes' checked>Editor<br>";
- 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='editor' value='editor_no'>Editor<br>"; 
+ 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='editor' value='editor_yes' checked> Editor<br>";
+ 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='editor' value='editor_no'> Editor<br>"; 
 
  		  $sql2 = "SELECT * FROM RoleZamestnanci WHERE id_staff = $akt_id and id_role = 5";		
  		  $result2 = $conn->query($sql2);
- 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='admin' value='admin_yes' checked>Admin<br>";
- 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='admin' value='admin_no'>Admin<br>"; 
+ 		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='admin' value='admin_yes' checked> Admin<br>";
+ 		  else  $checkboxy = $checkboxy."<input type='checkbox' name='admin' value='admin_no'> Admin<br>"; 
 
  		  $checkboxy = $checkboxy."<button type='submit'>Odoslať</button></form>";
 

@@ -5,6 +5,7 @@
  mysqli_set_charset($conn, "utf8");
 ?>
   <title>Rozdelenie úloh</title>
+  <link rel="stylesheet" href="includes/style.css"> 
   <link rel="stylesheet" href="ulohy/style.css"> 
 
 <div class="container">

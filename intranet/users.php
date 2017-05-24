@@ -36,7 +36,7 @@ if (isset($_SESSION['isHr']) OR isset($_SESSION['isAdmin'])) {
        	 <br>Telefón: <br><input type='text' name='phone' >
        	 <br>Kancelária: <br><input type='text' name='room'>
        	 <br>Funkcia: <br><input type='text' name='function'>
-       	 <br><button type='submit'>Pridať užívateľa</button>
+       	 <br><br><button type='submit'>Pridať užívateľa</button>
        	</form>
        </div>";
 //////////////////////  DELETE USER ///////////////////////////////////////////
@@ -47,22 +47,21 @@ if (isset($_SESSION['isHr']) OR isset($_SESSION['isAdmin'])) {
       <span class='closebtn_users' style='float: right;'>&times;</span>
       <div><p style='text-align: center;'><strong>Deaktivovať užívateľov</strong></div>
       <table style='text-align: center;'>
-              <tr><th>Užívateľ</th></tr>"; 
+              <tr><th style='text-align: center;'>Užívateľ</th></tr>"; 
     while($row = mysqli_fetch_assoc($result)) { 
     $delete_text = "<div id='form_change_user'>
         <div>Ste si istý, že chcete deaktivovať užívateľa <h4>".$row["name"]." ".$row["surname"]." ?"."</h4><div>
         
-        <form id='form_delete_user' style='float: left;' action='users/delete_user.php' method='POST'>
+        <form id='form_delete_user' style='margin-left: auto; margin-right: auto;' action='users/delete_user.php' method='POST'>
          <input type='hidden' name='name' value=".$row["name"].">
          <input type='hidden' name='surname' value=".$row["surname"].">
-         <button type='submit'>Deaktivovať užívateľa</button>
+         <button  type='submit'>Deaktivovať užívateľa</button>
          </form>
        </div>"; 
 
-
     echo "<tr>
             <td><div class='clickable_users'>".$row["name"]." ".$row["surname"]."</div>
-                  <div class='okno_users' style='display:none;'>
+                  <div id='okno_users_delete' class='okno_users' style='display:none;'>
                   <span class='closebtn_users' style='float: right;'>&times;</span>"
                 .$delete_text."</div></td>";
         echo "</tr>";  
@@ -78,7 +77,7 @@ if (isset($_SESSION['isHr']) OR isset($_SESSION['isAdmin'])) {
       <span class='closebtn_users' style='float: right;'>&times;</span>
 		  <div><p style='text-align: center;'><strong>Upraviť užívateľov</strong></div>
 			<table style='text-align: center;'>
-              <tr><th>Užívateľ</th></tr>"; 
+              <tr><th style='text-align: center;'>Užívateľ</th></tr>"; 
 
     while($row = mysqli_fetch_assoc($result)) { 
     $change_form = "<div id='form_change_user'>
@@ -94,14 +93,14 @@ if (isset($_SESSION['isHr']) OR isset($_SESSION['isAdmin'])) {
        	 <br>Oddelenie: <br><input type='text' name='department' value=".$row["department"].">
        	 <br>Telefón: <br><input type='text' name='phone' value=".$row["phone"].">
        	 <br>Kancelária: <br><input type='text' name='room' value=".$row["room"].">
-       	 <br><button type='submit'>Upraviť užívateľa</button>
+       	 <br><br><button type='submit'>Upraviť užívateľa</button>
        	</form>
        </div>";	
 
 
     echo "<tr>
 	          <td><div class='clickable_users'>".$row["name"]." ".$row["surname"]."</div>
-	          	  	<div class='okno_users' style='display:none;'>
+	          	  	<div id='okno_users_change' class='okno_users' style='display:none;'>
 	          	  	<span class='closebtn_users' style='float: right;'>&times;</span>"
 	          	  .$change_form."</div></td>";
 	      echo "</tr>";  

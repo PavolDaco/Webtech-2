@@ -97,17 +97,21 @@
                 </button>";
              }   
             ?>
-            <button onclick="javascript:demoFromHTML()">PDF</button>
+            <?php
+            if (isset($_SESSION['isHr']) OR isset($_SESSION['isAdmin'])) {
+                echo "<button onclick=§javascript:demoFromHTML()§>PDF</button>";
+             }   
+            ?>         
     </form>
 
 <?php
-   /* if (isset($_SESSION['isUser']) AND !isset($_SESSION['isAdmin']) AND !isset($_SESSION['isHr'])) {
+    if (isset($_SESSION['isUser']) AND !isset($_SESSION['isAdmin']) AND !isset($_SESSION['isHr'])) {
         echo '<script type="text/javascript">',
          'userTable();',
          '</script>';
-     }*/
+     }
 ?>
-    <button onclick="userTable()">userTable</button>
+
 </div>
 <!-- Modal -->
 <div style="width: 100%" class="modal fade" id="myModal" role="dialog">

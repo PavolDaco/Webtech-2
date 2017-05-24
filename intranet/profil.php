@@ -6,17 +6,7 @@
  mysqli_set_charset($conn, "utf8");
 ?>
 
-
   <title>Profil</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 
   <link rel="stylesheet" href="includes/style.css"> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -36,7 +26,7 @@ if (isset($_SESSION['isUser']) OR isset($_SESSION['isAdmin'])) {
   $row = mysqli_fetch_assoc($result);
 
   /// profil
-  echo "<div id='okno_profil' class='okno_profil'>
+  echo "<div id='okno_profil' class='okno_profil col-xs-2'>
              <div style='display:none;' id='id' >".$row["id"]."</div>
          <h2><div class='divko' id='title1'>".$row["title1"]."</div> 
          <div class='divko' id='name'>".$row["name"]."</div> 
@@ -51,9 +41,30 @@ if (isset($_SESSION['isUser']) OR isset($_SESSION['isAdmin'])) {
          
          <br><button id='btn_edit_profil'>Upraviť profil</button>";
 
-      // Button na pridanie Newsletera a skryty formular
+      
+
+    	// Button na odstranenie Newsletera a skryty formular
+       echo "<button style='float:right;' id='delete_news' class='clickable_news'>Zrušiť odber newsletteru</button>
+          <div id='form3' class='okno_news col-xs-2' style='display:none;'>
+            <span class='closebtn_news' style='float: right;'>&times;</span>
+            <form action='includes/delete_newsletter.php' method='post' id='formular3'>Zrušiť newsletter<br>
+            <label for='mail'>Mail:</label><br/>
+              <input type='email' name='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' required><br>
+
+             <label for='jazyk'>Jazyk:</label><br/>
+             <select name='jazyk'>
+                <option value='sk'>SVK</option>
+                <option value='en'>ENG</option>
+            </select><br/> 
+
+            <input type='submit' name='submit' value='Odoslať' id='btn3' />      
+           </form>
+          </div>";
+        
+
+        // Button na pridanie Newsletera a skryty formular
       echo "<button style='float:right;' id='add_news' class='clickable_news'>Chcem odoberať newsletter</button>
-          <div id='form2' class='okno_news' style='display:none;'>
+          <div id='form2' class='okno_news col-xs-2' style='display:none;'>
             <span class='closebtn_news' style='float: right;'>&times;</span>
             <form action='includes/insert_newsletter.php' method='post' id='formular2'>Odoberať newsletter<br>
             <label for='mail'>Mail:</label><br/>
@@ -68,25 +79,7 @@ if (isset($_SESSION['isUser']) OR isset($_SESSION['isAdmin'])) {
               <input type='submit' name='submit' value='Odoslať' id='btn2'/>     
            </form>
           </div>";
-
-    	// Button na odstranenie Newsletera a skryty formular
-       echo "<button style='float:right;' id='delete_news' class='clickable_news'>Zrušiť odber newsletteru</button>
-          <div id='form3' class='okno_news' style='display:none;'>
-            <span class='closebtn_news' style='float: right;'>&times;</span>
-            <form action='includes/delete_newsletter.php' method='post' id='formular3'>Zrušiť newsletter<br>
-            <label for='mail'>Mail:</label><br/>
-              <input type='email' name='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' required><br>
-
-             <label for='jazyk'>Jazyk:</label><br/>
-             <select name='jazyk'>
-                <option value='sk'>SVK</option>
-                <option value='en'>ENG</option>
-            </select><br/> 
-
-            <input type='submit' name='submit' value='Odoslať' id='btn3' />      
-           </form>
-          </div>
-        </div>";
+        
 
         ///okno na upravu profilu
        echo "
@@ -106,6 +99,7 @@ if (isset($_SESSION['isUser']) OR isset($_SESSION['isAdmin'])) {
        	 <br>Kancelária: <br><input type='text' name='room' value=".$row["room"].">
        	 <br><button type='submit'>Potvrdiť</button>
        	</form>
+       </div>
        </div>";
 }
 

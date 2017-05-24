@@ -72,7 +72,7 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     else if(strpos($url,'ins_good') !== false) {
       echo "<div class='alert success'>
                 <span class='closebtn'>&times;</span>  
-                <strong>Super!</strong> Aktualita úspešne vložená.
+                <strong>Super!</strong> Aktualita úspešne vložená a poslaná Newsletter-om.
             </div>";
     }
 

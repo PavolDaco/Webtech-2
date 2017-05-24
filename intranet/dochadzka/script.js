@@ -70,6 +70,10 @@ function userTable() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             id = xmlhttp.responseText;
             var cln = document.getElementById(id).cloneNode(true);
+            cln.setAttribute("class","0");
+            var list = cln.childNodes;
+            for (var i = 1; i < list.length; i++)
+                list[i].setAttribute("class", "0");
             var tbody = document.getElementById("tbody2");
             while (tbody.hasChildNodes()){
                 tbody.removeChild(tbody.firstChild);
@@ -83,6 +87,7 @@ function userTable() {
         return 0;
     }
 }
+
 function edituj() {
     var i = document.getElementById('tbody2').childElementCount;
     for(var j = 0; j < i; j++) {
