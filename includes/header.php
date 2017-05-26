@@ -72,17 +72,17 @@ html {
   min-height: 100%;
 }
 body {
-
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-
+   position: fixed;
+   bottom: 0; 
+   width: 100%; 
+   height: 40px; 
+   background-color: black;
+   padding-top: 8px;
+   text-align: center;
+  
 }
 
 
@@ -105,7 +105,7 @@ body {
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                <?php 
-				$pages = array("aktuality.php","kocka.php","projekty.php","staff.php");
+				$pages = array("aktuality.php","kocka.php","projekty.php","staff.php","index.php","photogallery.php","videogallery.php", "contact.php");
 
 			if (in_array(basename($_SERVER['PHP_SELF']), $pages)) {		
 				$linkEN = basename($_SERVER['PHP_SELF'])."?lang=en";
@@ -132,16 +132,16 @@ body {
              <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_ABOUT_US']; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu">                      
-                        <li><a href="o_nas_historia.php"><?php echo $lang['MENU_HISTORY']; ?></a></li>
-                        <li><a href="o_nas_vedenie.php"><?php echo $lang['MENU_VEDENIE']; ?></a></li>
+                        <li><a href="<?php echo $lang['LINK_HISTORY'];?>"><?php echo $lang['MENU_HISTORY']; ?></a></li>
+                        <li><a href="<?php echo $lang['LINK_VEDENIE'];?>"><?php echo $lang['MENU_VEDENIE']; ?></a></li>
                         
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_DEPARTMENTS']; ?></a>
                             <ul class="dropdown-menu">
-                                    <li><a href="OAMM.php">Oddelenie aplikovanej mechaniky a mechatroniky</a></li>
-                                    <li><a href="OIKR.php">Oddelenie informačných, komunikačných a riadiacich systémov</a></li>
-                                    <li><a href="OEMP.php">Oddelenie elektroniky, mikropočítačov a PLC systémov</a></li>
-                                    <li><a href="OEAP.php">Oddelenie E-mobility, automatizácie a pohonov</a></li>
+                                    <li><a href="<?php echo $lang['LINK_ODDELENIA1'];?>">Oddelenie aplikovanej mechaniky a mechatroniky</a></li>
+                                    <li><a href="<?php echo $lang['LINK_ODDELENIA2'];?>">Oddelenie informačných, komunikačných a riadiacich systémov</a></li>
+                                    <li><a href="<?php echo $lang['LINK_ODDELENIA3'];?>">Oddelenie elektroniky, mikropočítačov a PLC systémov</a></li>
+                                    <li><a href="<?php echo $lang['LINK_ODDELENIA4'];?>">Oddelenie E-mobility, automatizácie a pohonov</a></li>
 
                             </ul>
                         </li>
@@ -161,8 +161,8 @@ body {
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_UCHADZACI']; ?></a>
                             <ul class="dropdown-menu">
-                              <li><a href="uchadzaciBC.php"><?php echo $lang['MENU_BCSTUDY']; ?></a></li>
-                              	<li><a href="uchadzaciING.php"><?php echo $lang['MENU_INGSTUDY']; ?></a></li>
+                              <li><a href="<?php echo $lang['LINK_BC'];?>"><?php echo $lang['MENU_BCSTUDY']; ?></a></li>
+                              	<li><a href="<?php echo $lang['LINK_ING'];?>"><?php echo $lang['MENU_INGSTUDY']; ?></a></li>
                                 
                             </ul>
                         </li>
@@ -171,13 +171,13 @@ body {
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_BCSTUDY']; ?></a>
                             <ul class="dropdown-menu">
-                             <li><a href="bc_info.php"><?php echo $lang['MENU_INFO']; ?></a></li>
+                             <li><a href="<?php echo $lang['LINK_BCINFO'];?>"><?php echo $lang['MENU_INFO']; ?></a></li>
                           
                               <li class="dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_BCPRACE']; ?></a>
                                     <ul class="dropdown-menu">
-                                                <li><a href="bp_pokyny.php"><?php echo $lang['MENU_POKYNY']; ?></a></li>
-                                                <li><a href="bp_volne.php"><?php echo $lang['MENU_VOLNETEMY']; ?></a></li>
+                                                <li><a href="<?php echo $lang['LINK_BCTEMYINFO'] ;?>"><?php echo $lang['MENU_POKYNY']; ?></a></li>
+                                                <li><a href="<?php echo $lang['LINK_BCTEMY'];?>"><?php echo $lang['MENU_VOLNETEMY']; ?></a></li>
                                                
                                      </ul>
                                 </li> 
@@ -187,20 +187,20 @@ body {
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_INGSTUDY']; ?></a>
                             <ul class="dropdown-menu">
-                             <li><a href="ing_info.php"><?php echo $lang['MENU_INFO']; ?></a></li>
+                             <li><a href="<?php echo $lang['LINK_INGINFO'] ;?>"><?php echo $lang['MENU_INFO']; ?></a></li>
                           
                               <li class="dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_INGPRACE']; ?></a>
                                     <ul class="dropdown-menu">
-                                                <li><a href="dp_pokyny.php"><?php echo $lang['MENU_POKYNY']; ?></a></li>
-                                                <li><a href="dp_volne.php"><?php echo $lang['MENU_VOLNETEMY']; ?></a></li>
+                                                <li><a href="<?php echo $lang['LINK_INGTEMYINFO'];?>"><?php echo $lang['MENU_POKYNY']; ?></a></li>
+                                                <li><a href="<?php echo $lang['LINK_INGTEMY'];?>"><?php echo $lang['MENU_VOLNETEMY']; ?></a></li>
                                                
                                      </ul>
                                 </li> 
                             </ul>
                         </li>
 
-                        <li><a href="phd_info.php"><?php echo $lang['MENU_PHD']; ?></a></li>
+                        <li><a href="<?php echo $lang['LINK_PHD'];?>"><?php echo $lang['MENU_PHD']; ?></a></li>
 
                     </ul>
                 </li>
@@ -213,16 +213,17 @@ body {
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_RESEARCH_TOPICS']; ?></a>
                             <ul class="dropdown-menu">
-                                	<li><a href="motokara.php">Elektrická motokára </a></li>
-									<li><a href="vozidlo.php">Autonómne vozidlo 6×6</a></li>
+                                	<li><a href="<?php  echo $lang['LINK_MOTO']; ?>"><?php echo $lang['MENU_MOTO']; ?></a></li>
+									<li><a href="<?php  echo $lang['LINK_VOZIDLO']; ?>"><?php echo $lang['MENU_VEHICLE']; ?></a></li>
 									<li><a href="kocka.php"><?php echo $lang['MENU_3D_LED_CUBE']; ?></a></li>
-									<li><a href="biomechatronika.php">Biomechatronika</a></li>
+									<li><a href="<?php echo $lang['LINK_BIO'];?>"><?php echo $lang['MENU_BIO']; ?></a></li>
 
 
                             </ul>
                         </li>
                     </ul>
                 </li>
+
 
 
                <li><a href="aktuality.php"><?php echo $lang['MENU_NEWS']; ?></a></li>
@@ -232,21 +233,21 @@ body {
                  <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_ACTIVITIES']; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><?php echo $lang['MENU_PHOTOS']; ?></a></li>
-						<li><a href="#"><?php echo $lang['MENU_VIDEO']; ?></a></li>
-						<li><a href="#"><?php echo $lang['MENU_MEDIA']; ?></a></li>
+                        <li><a href="photogallery.php"><?php echo $lang['MENU_PHOTOS']; ?></a></li>
+						<li><a href="videogallery.php"><?php echo $lang['MENU_VIDEO']; ?></a></li>
+						<li><a href="<?php echo $lang['LINK_MEDIA'];?>"><?php echo $lang['MENU_MEDIA']; ?></a></li>
 
                         <li class="dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Naše tématické web stránky</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_WEB']; ?></a>
                             <ul class="dropdown-menu">
-                               <li><a href="#">Elektromobilita (http://www.e-mobilita.fei.stuba.sk/)</a></li>
+                               <li><a href="http://www.e-mobilita.fei.stuba.sk/">Elektromobilita (http://www.e-mobilita.fei.stuba.sk/)</a></li>
                                
                             </ul>
                         </li>
                     </ul>
                 </li>
 
-                <li><a href="#"><?php echo $lang['MENU_CONTACT']; ?></a></li>
+                <li><a href="contact.php"><?php echo $lang['MENU_CONTACT']; ?></a></li>
 
               
             </ul>

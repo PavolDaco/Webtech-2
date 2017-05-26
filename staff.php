@@ -6,8 +6,8 @@ include_once 'pracovnici/simple_html_dom.php';
 mysqli_set_charset($conn, "utf8");
 
 
-echo "<title>Pracovníci</title><div class='container'><div style='margin-left:100px;'><br><input type='text' id='myInput' onkeyup='filter1()' placeholder='Filter oddelenia'>
-<input type='text' id='myInput2' onkeyup='filter2()' placeholder='Filter zaradenia.'></div>";
+echo "<title>Pracovníci</title><div class='container'><div style='margin-left:100px;'><br><input type='text' id='myInput' onkeyup='filter1()' placeholder='".$lang['STAFF_F1']."'>
+<input type='text' id='myInput2' onkeyup='filter2()' placeholder='".$lang['STAFF_F2']."'></div>";
 
 
 
@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
     
 
     }
-    echo "</table>";
+    echo "</table></div>";
 } 
 
 

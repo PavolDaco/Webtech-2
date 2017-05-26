@@ -1,7 +1,10 @@
-
+<title>Fotogaléria</title>
 <?php
-require "config.php";
+require "pracovnici/config.php";
 include "includes/header.php";
+
+ ini_set("display_errors", 1);
+  error_reporting(E_ERROR | E_WARNING);
 
 $addr = $_GET['id'];
 if (!isset($_GET['id'])) $addr = '1';
@@ -40,7 +43,7 @@ mysqli_free_result($result);
 echo "</td></tr><tr>";
 
 $path_parts = pathinfo(__FILE__);
-$priecinok = $path_parts['dirname']."/photos/".$direct;
+$priecinok = $path_parts['dirname']."/intranet/photos_videos/photos/".$direct;
 $files1 = scandir($priecinok);
 $cislo = count($files1);
 
@@ -51,7 +54,7 @@ $cislo = count($files1);
 
 for ($i=2; $i < $cislo ; $i++) { 
 	
-	echo "<td><div class=\"column\" id=\"img" . ($i - 1) . "\"><img src=\"intranet/photos_videos/photos/" . $direct . "/" . $files1[$i] . "\" onclick=\"openModal();currentSlide(" . ($i - 1) . ")\" class=\"hover-shadow\" style=\"width:100%\"></div></td>";
+	echo "<td><div class=\"column\" id=\"img" . ($i - 1) . "\"><img src=\"intranet/photos_videos/photos/" . $direct . "/" . $files1[$i] . "\" onclick=\"openModal();currentSlide(" . ($i - 1) . ")\" class=\"hover-shadow\" width='60%' height='auto'></div></td>";
 	if ((($i - 1) % 3) == 0)
 		echo "</tr><tr>";
 }
@@ -76,6 +79,11 @@ echo   "<a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;</a>
 
 
 <style type="text/css">
+.column{
+
+	height: 100%;
+}
+
 	table {
 		width: 100%;
 		height: 100%;
@@ -147,7 +155,7 @@ echo   "<a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;</a>
 	}
 
 	body {
-		background-image: url('includes/1.jpg');
+		/*background-image: url('includes/1.jpg');*/
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;

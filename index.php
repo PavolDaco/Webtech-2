@@ -1,6 +1,5 @@
 <?php
 include 'includes/header.php';
-
 ?> 
 <title>Home Page</title>
 <style>
@@ -8,11 +7,9 @@ include 'includes/header.php';
 body{
 	background-color:  #e6e6e6;
 }
-
 .row{
 	padding-top: 5px;
 }
-
 h3 {
     font-size: 24px;
     font-size: 24px;
@@ -257,7 +254,6 @@ body,
         opacity:0;
         -webkit-transform-origin: 0% 50%;
     }
-
 }
   .quote{
     font-family: "Brush Script MT", cursive;
@@ -265,7 +261,6 @@ body,
     color:  white;
     font-size: 3em;
   }
-
    .text{
    font-size: 3em;
    color: white;
@@ -301,10 +296,10 @@ body,
       <div class="col-md-4 information nopaddingleft nopaddingright hidden-sm hidden-xs">
          <h3>ÚAMT</h3>
          <ul class="information_menu">
-            <li class="active" data-id="1"><a href="#">Kto sme?</a></li>
-            <li data-id="2"><a href="#">Čím sa môžem stať?</a></li>
-            <li data-id="3"><a href="#">Vedel(a) si, že naše štúdium...</a></li>
-            <li data-id="4"><a href="#">Hrubá mzda absolventov</a></li>
+            <li class="active" data-id="1"><a href="#"><?php echo $lang['HOME_KTO'];?></a></li>
+            <li data-id="2"><a href="#"><?php echo $lang['HOME_CIM'];?></a></li>
+            <li data-id="3"><a href="#"><?php echo $lang['HOME_VEDEL'];?></a></li>
+            <li data-id="4"><a href="#"><?php echo $lang['HOME_MZDA'] ;?></a></li>
  
 
          </ul>
@@ -312,49 +307,24 @@ body,
       <div class="col-md-8 nopaddingleft nopaddingright">
          <div class="slideshow">
             <div class="overlay-id1 overlay-item">
-               <h3>Kto sme?</h3>
-                  <ul class="quickmenu">
+               <h3><?php echo $lang['HOME_KTO'];?></h3>
+                   <?php echo $lang['HOME_MENU1'] ;?>
 
-                    <li><a href="#" title="#">Ústav automobilovej mechatroniky bol zriadený k 1. júlu 2013 ako pedagogické a vedecko-výskumné pracovisko Fakulty elektrotechniky a informatiky STU v Bratislave.</a></li>
-       					<li><a href="#" title="#">Ústav automobilovej mechatroniky zabezpečuje výskum, vývoj a vzdelávanie v oblasti automobilovej mechatroniky a mechatronických systémov na základe integrácie a synergie mechanických, elektronických, informačných, komunikačných a riadiacich technológií do komplexných mechatronických systémov v automobiloch a ďalších odvetviach priemyslu.</a></li>
-                </ul>
             </div>
             <div class="overlay-id2 overlay-item">
-              <h3>Čím sa môžem stať?</h3>
-                  <ul class="quickmenu">
-
-                    <li><a href="#" title="#">1. NOVÝ BAKALÁRSKY ŠTUDIJNÝ PROGRAM AUTOMOBILOVÁ MECHATRONIKA</a></li>
-                   <li><a href="#" title="#">Bakalárske štúdium trvá 3 roky a je ukončené štátnou skúškou. Absolvovaním tejto časti štúdia získa študent titul "bakalár" (Bc.)</a></li>
-
-
-                    <li><a href="#" title="#">2.INŽINIERSKY ŠTUDIJNÝ PROGRAM APLIKOVANÁ MECHATRONIKA</a></li>
-                    <li><a href="#" title="#">Inžinierske štúdium trvá ďalšie dva roky a je ukončené štátnou skúškou a obhajobou diplomovej práce. Absolvent získa titul "inžinier" (Ing.).</a></li>
-
-                    <li><a href="#" title="#">3. DOKTORANDSKÝ PROGRAM MECHATRONICKÉ SYSTÉMY</a></li>
-                    <li><a href="#" title="#">V doktorandskom štúdiu sa po jeho ukončení udeľuje titul "philosophiae doctor" (PhD.).</a></li>
-
-                </ul>
+              <h3><?php echo $lang['HOME_CIM'];?></h3>
+                 <?php echo $lang['HOME_MENU2'] ;?>
             </div>
             <div class="overlay-id3 overlay-item">
-               <h3>Vedel(a) si, že naše štúdium...</h3>
-                  <ul class="quickmenu">
-                   <li><a href="#" title="#">...JE VHODNÉ AJ PRE ZÁUJEMCOV O INFORMATIKU?</a></li>
-                    <li><a href="#" title="#">Mechatronika spája informatiku, elektronické systémy, mechaniku a automatické riadenie do jedného integrovaného celku. U nás sa ako mladý človek so záujmom o informatiku aplikovanú v praxi určite nestratíš. ;)</a></li>
-                   
-                    <li><a href="#" title="#">...MÔŽE BYŤ CESTOU DO DIGITÁLNEJ TOVÁRNE?</a></li>
-                    <li><a href="#" title="#">Pripravuje sa ďalšia priemyselná revolúcia - INDUSTRY 4.0. Je tu obrovský priestor pre informatikov so záujmom o virtuálnu realitu a znalosťami z mechatroniky.</a></li>
-                </ul>
+               <h3><?php echo $lang['HOME_VEDEL'];?></h3>
+                 <?php echo $lang['HOME_MENU3'] ;?>
+
             </div>
             <div class="overlay-id4 overlay-item">
-               <h3>Hrubá mzda absolventov</h3>
-                  <ul class="quickmenu">
-                    <li><a href="#" title="#">Programátor 1200 €</a></li>
-                    <li><a href="#" title="#">CATIA konštruktér 1090 €</a></li>
-                    <li><a href="#" title="#">Ekonóm 750 €</a></li>
-                    <li><a href="#" title="#">Agronóm 670 €</a></li>
-                    <li><a href="#" title="#">Sociálny pracovník 520 €</a></li>
-                    <li><a href="#" title="#">Školský psychológ 510 €</a></li>
-                </ul>
+               <h3><?php echo $lang['HOME_MZDA'] ;?></h3>
+                 
+                 <?php echo $lang['HOME_MENU4'] ;?>
+
             </div>
             <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
                <!-- Indicators -->
@@ -403,5 +373,4 @@ body,
 
 <?php
 include 'includes/footer.php';
-
 ?>

@@ -1,7 +1,11 @@
-
+<title>Video</title>
 <?php
-require "config.php";
+require "pracovnici/config.php";
 include "includes/header.php";
+
+
+ ini_set("display_errors", 1);
+  error_reporting(E_ERROR | E_WARNING);
 
 $addr = $_GET['addr'];
 $yt = $_GET['yt'];
@@ -31,17 +35,6 @@ echo "<table><tr><td id=\"column1_video\"><h3>". $lang['VIDEO_VIDEO'] . "</h3>";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 if ($yt == 'yes'){
 	echo  "<iframe src=\"https://www.youtube.com/embed/" . $addr . "?rel=0\"></iframe>";
 	
@@ -64,10 +57,11 @@ echo "</td></tr></table>";
 
 	#column1_video {
 		width: auto;
-		height: 100%;
+		min-height: 600px;
 		background-color: black;
 		padding: 30px;
 		vertical-align: top;	
+		
 	}
 	#column2_video {
 		position: relative;
@@ -104,7 +98,7 @@ echo "</td></tr></table>";
 		color: white;
 	}
 	body {
-    background-image: url('includes/1.jpg');
+    /*background-image: url('includes/1.jpg');*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
