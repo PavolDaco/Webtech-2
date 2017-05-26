@@ -117,7 +117,7 @@ $lang['PHOTO_PHOTO'] = "Galérie";
 
 
 //Video
-$lang['VIDEO_ADDR'] = 'Link na video';
+$lang['VIDEO_ADDR'] = 'Kód videa';
 $lang['VIDEO_ADD'] = 'Pridaj video';
 $lang['VIDEO_UPLOAD'] = 'Nahraj video';
 $lang['VIDEO_ERR_EXST'] = 'Súbor s týmto názvom už existuje';
