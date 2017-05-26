@@ -108,21 +108,29 @@ $lang['AKT_YES'] = 'Áno';
 $lang['PHOTO_DATE'] = 'Dátum';
 $lang['PHOTO_TITLESK'] = 'Názov (SK)';
 $lang['PHOTO_TITLEEN'] = 'Názov (EN)';
-$lang['PHOTO_CHOOSE'] = 'Vyber obrázky: (max 50, max 2MB)';
+$lang['PHOTO_CHOOSE'] = 'Vyber obrázky:';
 $lang['PHOTO_UPLOAD'] = 'Nahraj obrázky';
 $lang['PHOTO_GALERY'] = 'Zvoľ galériu:';
-$lang['PHOTO_ERROR'] = 'Súbor sa nepodarilo nahrať';
+$lang['PHOTO_SQL1'] = "SELECT `Photos`.`ID`, `Photos`.`Title-SK`, `Photos`.`Datum`, `Photos`.`Folder` FROM `Photos` ";
+$lang['PHOTO_SQL2'] =  "SELECT `Photos`.`Title-SK`, `Photos`.`Datum`, `Photos`.`Folder` FROM `Photos` WHERE `Photos`.`ID` = '";
+$lang['PHOTO_PHOTO'] = "Galérie";
+
 
 //Video
 $lang['VIDEO_ADDR'] = 'Link na video';
 $lang['VIDEO_ADD'] = 'Pridaj video';
 $lang['VIDEO_UPLOAD'] = 'Nahraj video';
-$lang['VIDEO_ERR_EXST'] = 'Súbor s týmto náyvom už existuje';
+$lang['VIDEO_ERR_EXST'] = 'Súbor s týmto názvom už existuje';
 $lang['VIDEO_ERR_BIG'] = 'Súbor je príliš veľký';
 $lang['VIDEO_ERR_BAD'] = 'Súbor má nesprávny formát';
 $lang['VIDEO_UP_OK'] = 'Upload bol ukončený';
 $lang['VIDEO_ERR_NO'] = 'Chyba číslo ';
+$lang['VIDEO_VIDEO'] = 'Videá';
+$lang['VIDEO_SQL1'] = "SELECT `Videos`.`Title-SK`, `Videos`.`Adresa`, `Videos`.`YT` FROM `Videos` ";
 
-
+//contact
+$lang['CONTACT_ADDR'] = 'Adresa';
+$lang['CONTACT_COUNTRY'] = 'Slovenská republika<br>';
+$lang['CONTACT_SEC'] = 'Sekretariát<br>';
 
 ?>
