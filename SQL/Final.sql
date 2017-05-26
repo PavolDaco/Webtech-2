@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: localhost
--- Čas generovania: Pi 26.Máj 2017, 11:51
+-- Čas generovania: Pi 26.Máj 2017, 17:10
 -- Verzia serveru: 5.7.17-0ubuntu0.16.04.1
 -- Verzia PHP: 7.0.15-0ubuntu0.16.04.4
 
@@ -388,7 +388,12 @@ CREATE TABLE `Videos` (
 --
 
 INSERT INTO `Videos` (`ID`, `Title-SK`, `Title-EN`, `Adresa`, `YT`) VALUES
-(38, 'Študuj mechatroniku a budeš úspešný!', 'Study Automotive Mechatronics', 'Automobilova mechatronika FEI STU.mp4', 'no');
+(38, 'Študuj mechatroniku a budeš úspešný!', 'Study Automotive Mechatronics', 'Automobilova mechatronika FEI STU.mp4', 'no'),
+(39, 'Študuj mechatroniku a\r\nbudeš úspešný', 'Study mechatronics and be\r\nsuccessful', 'i5b--NtRj8M', 'yes'),
+(40, 'Aplikovaná mechatronika a\r\nelektromobilita', 'Aplied mechatronics and\r\nelectromobility', 'CLwEjKN9ixg', 'yes'),
+(41, 'Multimédiá a telematika pre\r\nmobilné platformy', 'Multimedia and Telematics\r\nfor Mobile Platforms', 'NKZmJB0PW3k', 'yes'),
+(42, 'ELO SYS 2014', 'ELO SYS 2014', '0qnpBOZY3Ys', 'yes'),
+(43, 'Digitálna továreň', 'Digital factory', 'JLm-UMDETFs', 'yes');
 
 -- --------------------------------------------------------
 
@@ -652,7 +657,7 @@ ALTER TABLE `pedagogika`
 -- AUTO_INCREMENT pre tabuľku `Photos`
 --
 ALTER TABLE `Photos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT pre tabuľku `Projekty`
 --
@@ -682,7 +687,7 @@ ALTER TABLE `sluzobneCesty`
 -- AUTO_INCREMENT pre tabuľku `Videos`
 --
 ALTER TABLE `Videos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT pre tabuľku `zamestnanci`
 --
