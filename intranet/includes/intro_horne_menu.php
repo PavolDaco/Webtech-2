@@ -2,10 +2,10 @@
  session_start();
 
     echo "<div id= horne_menu>";
-      echo '<a class="horne_menu" href="profil.php">Pedagogika</a>';
+      echo '<a class="horne_menu" href="pedagogika.php">Pedagogika</a>';
       echo '<a class="horne_menu" href="doktorandi.php">Doktorandi</a>';
       echo '<a class="horne_menu" href="publikacie.php">Publikácie</a>';
-      echo '<a class="horne_menu" href="sluzobne.php">Služobné cesty</a>';
+      echo '<a class="horne_menu" href="sluzobneCesty.php">Služobné cesty</a>';
       echo '<a class="horne_menu" href="nakupy.php">Nákupy</a>';
       echo '<a class="horne_menu" href="dochadzka.php">Dochádzka</a>';
       echo '<a class="horne_menu" href="ulohy.php">Rozdelenie úloh</a>';

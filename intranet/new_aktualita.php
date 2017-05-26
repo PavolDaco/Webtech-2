@@ -74,7 +74,6 @@ $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                 <span class='closebtn'>&times;</span>  
                 <strong>Super!</strong> Aktualita úspešne vložená a poslaná Newsletter-om.
             </div>";
-    }
+  }
 
-include 'includes/footer.php';
    

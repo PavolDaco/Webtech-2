@@ -180,9 +180,20 @@ function spravStlpce(){
         $date = $rok . "-" . $mesiac . "-" . $i;
         $day = date('l', strtotime($date));
         if (isWeekend($date)) {
-            echo "<th style='text-align:center; color: white; border-radius: 5px; background-color: black'>". substr($day, 0, 2) .'<br>' . $i . '</th>';
+            echo "<th style='text-align:center; color: white; border-radius: 5px; background-color: black'>". substr($day, 0, 2) .'</th>';
         } else {
-            echo "<th style='text-align:center'>". substr($day, 0, 2) .'<br>'.$i.'</th>';
+            echo "<th style='text-align:center'>". substr($day, 0, 2) .'</th>';
+        }
+    }
+    echo "</tr>";
+    echo "<tr><th rowspan='2'>Meno</th>";
+    for ($i = 1; $i <= $number; $i++) {
+        $date = $rok . "-" . $mesiac . "-" . $i;
+        $day = date('l', strtotime($date));
+        if (isWeekend($date)) {
+            echo "<th style='text-align:center; color: white; border-radius: 5px; background-color: black'>" . $i . '</th>';
+        } else {
+            echo "<th style='text-align:center'>".$i.'</th>';
         }
     }
 }
@@ -239,11 +250,9 @@ function selectReason(){
         echo "<option id='$ID' value= $typ> $typ </option>";
     }
 }
-
 function selectReasonPD(){
         echo "<option id='6' value='PD' selected> PD </option>";
 }
-
 function selectRok(){
     global $od, $do, $rok;
     for ($i = $od; $i < $do; $i++) {

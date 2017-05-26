@@ -1,8 +1,10 @@
 <?php
  session_start();
  include 'includes/dbh.php';
- include 'includes/intro_bocne_menu.php';
- include 'includes/intro_horne_menu.php';
+if (isset($_SESSION['login'])){
+     include 'includes/intro_bocne_menu.php';
+     include 'includes/intro_horne_menu.php';
+}   
  require 'dochadzka/tabulka.php';
  mysqli_set_charset($conn, "utf8");
 ?>
@@ -12,19 +14,21 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
 
     <script src="dochadzka/script.js"></script>
+    <script type="text/javascript" src="dochadzka/jspdf.debug.js"></script>
     <link rel="stylesheet" href="includes/style.css"> 
 
 <div class="container">
 
 <?php nacitajDb(); ?>
-
 <h1 style="text-align: center">Dochádzkový systém</h1><br>
 <table id="tableID1" class="table table-striped">
     <thead>
@@ -99,7 +103,7 @@
             ?>
             <?php
             if (isset($_SESSION['isHr']) OR isset($_SESSION['isAdmin'])) {
-                echo "<button onclick=§javascript:demoFromHTML()§>PDF</button>";
+                echo "<button onclick='javascript:demoFromHTML()'>PDF</button>";
              }   
             ?>         
     </form>

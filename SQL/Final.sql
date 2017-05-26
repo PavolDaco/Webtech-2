@@ -1,499 +1,709 @@
---- phpMyAdmin SQL Dump
---- version 4.5.4.1deb2ubuntu2
---- http://www.phpmyadmin.net
----
---- Hostite¾: localhost
---- Èas generovania: Út 23.Máj 2017, 20:27
---- Verzia serveru: 5.7.17-0ubuntu0.16.04.1
---- Verzia PHP: 7.0.15-0ubuntu0.16.04.4
--
--SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
--SET time_zone = "+00:00";
--
--
--/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
--/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
--/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
--/*!40101 SET NAMES utf8mb4 */;
--
----
---- Databáza: `Final`
----
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `Aktuality`
----
--
--CREATE TABLE `Aktuality` (
--  `id` int(11) NOT NULL,
--  `jazyk` varchar(5) COLLATE utf8_slovak_ci NOT NULL,
--  `titulok` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
--  `text` varchar(500) COLLATE utf8_slovak_ci NOT NULL,
--  `typ_aktuality` varchar(15) COLLATE utf8_slovak_ci NOT NULL,
--  `platnost` date DEFAULT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `Aktuality`
----
--
--INSERT INTO `Aktuality` (`id`, `jazyk`, `titulok`, `text`, `typ_aktuality`, `platnost`) VALUES
--(1, 'en', 'A', 'A', 'oznamy', '2017-04-10'),
--(2, 'sk', 'B', 'b', 'oznamy', '2017-04-10'),
--(3, 'en', 'C', 'C', 'oznamy', '2017-04-13'),
--(4, 'en', 'D', 'D', 'oznamy', '2017-04-13'),
--(5, 'sk', 'f', 'f', 'oznamy', '2017-04-13'),
--(6, 'en', 'H', 'H', 'oznamy', '2017-04-13'),
--(7, 'sk', 'm', 'm', 'oznamy', '2017-04-13'),
--(8, 'en', 'M', 'M', 'oznamy', '2017-04-13'),
--(9, 'sk', 't', 't', 'oznamy', '2017-04-13'),
--(10, 'sk', 'ggg', 'ggg', 'propagacia', '2017-04-28'),
--(11, 'sk', 'rrr', 'rrr', 'zivot', '2017-04-29'),
--(12, 'sk', 'SVOC', 'SVOC', 'zivot', '2017-04-30'),
--(13, 'en', 'Eng SVOC', 'Eng SVOC', 'zivot', '2017-04-30'),
--(14, 'sk', 'Pozvanka', 'pridte sa pozriet', 'propagacia', '2017-04-10'),
--(16, 'sk', 'asdads', 'asdasdasd', 'oznamy', '2018-10-10'),
--(17, 'sk', 'fsdd', 'fsdgg', 'oznamy', '2018-10-10'),
--(18, 'en', 'fdsdf', 'fdsfsdfsdf', 'propagacia', '2017-10-10'),
--(19, 'en', 'ffaaa', 'faffasdf', 'zivot', '2017-09-09'),
--(20, 'en', 'fgdfgdf', 'fsdfsdf', 'propagacia', '2018-10-10'),
--(21, 'en', 'dasfsd', 'dsfsdfsdfhhgf', 'propagacia', '2017-05-25'),
--(22, 'sk', 'dsfafsd', 'fdsgsgdf', 'propagacia', '2019-02-02'),
--(23, 'en', 'sefdfe', 'dfsdf', 'propagacia', '2017-08-08'),
--(24, 'sk', 'ttttt', 'tttt', 'propagacia', '2018-01-01'),
--(25, 'en', 'jjj', 'jjjj', 'propagacia', '2017-12-31'),
--(26, 'sk', 'hhhh', 'hhhhh', 'oznamy', '2017-04-30'),
--(27, 'sk', 'ggggg', 'ggggg', 'propagacia', '2018-10-10'),
--(28, 'en', 'zzzz', 'yyyyy', 'propagacia', '2017-05-25'),
--(29, 'en', 'fffff', 'fffff', 'oznamy', '2017-08-08'),
--(30, 'en', 'ggggg', 'jjjjj', 'propagacia', '2017-09-09'),
--(31, 'en', 'eeee', 'rrrr', 'propagacia', '2017-10-10'),
--(32, 'sk', 'uuuu', 'ttt', 'zivot', '2017-04-30'),
--(33, 'en', 'kkkkk', 'ttttt', 'oznamy', '2017-10-10'),
--(34, 'sk', 'uuuuu', 'tttt', 'oznamy', '2017-05-25'),
--(35, 'sk', 'oooo', 'qqqq', 'oznamy', '2017-10-10'),
--(36, 'sk', 'qqqq', 'eeee', 'propagacia', '2017-04-29'),
--(37, 'sk', 'Sutaz', 'nova sutaz', 'oznamy', '2017-08-08'),
--(38, 'sk', 'iuoiu', 'rrrrr', 'propagacia', '2017-08-08'),
--(39, 'sk', 'nnn', 'eeeee', 'oznamy', '2018-10-10'),
--(40, 'sk', 'SVOC', 'svocka', 'zivot', '2017-10-15'),
--(41, 'en', '6666', '666666', 'propagacia', '2022-02-28'),
--(42, 'sk', 'qwer', 'wqewqrwr', 'propagacia', '2017-09-09'),
--(43, 'sk', 'tttt', 'ttttt', 'propagacia', '2017-09-09'),
--(44, 'sk', 'eeee', 'eeeee', 'zivot', '2018-10-10'),
--(45, 'en', 'uuuuu', 'retertert', 'propagacia', '2017-08-08'),
--(46, 'sk', 'nova', 'aktualita', 'zivot', '2017-05-25'),
--(50, 'sk', 'aaaa', 'bbbb', 'oznamy', '2018-10-10'),
--(51, 'en', 'cccc', 'ddddd', 'oznamy', '2018-10-10'),
--(52, 'sk', '111', '2222', 'oznamy', '2017-09-09'),
--(53, 'en', '333', '444', 'oznamy', '2017-09-09'),
--(54, 'sk', 'aaa', 'aaaa', 'oznamy', '2017-08-08'),
--(55, 'sk', 'eeee', 'eeee', 'oznamy', '2018-10-10'),
--(56, 'sk', 'pppp', 'ppppp', 'oznamy', '2018-10-10'),
--(57, 'en', 'tttt', 'tttt', 'oznamy', '2017-05-25'),
--(58, 'sk', 'aaaaa', 'aaaaa', 'propagacia', '2017-05-25'),
--(59, 'sk', 'bbbbb', 'bbbb', 'zivot', '2017-08-08'),
--(60, 'en', 'mmmmmm', 'mmmmmmmmmmmmmmm', 'zivot', '2017-10-10'),
--(61, 'sk', 'Aktualita1SK', 'Text - Aktualita1SK', 'oznamy', '2017-09-09'),
--(62, 'en', 'Aktualita1EN', 'Aktualita1EN', 'propagacia', '2017-09-09'),
--(63, 'sk', 'qwe', 'rz', 'oznamy', '2018-10-10'),
--(83, 'sk', 'aaaaa', 'aaaaaa', 'oznamy', '2017-08-08'),
--(84, 'sk', 'titluok1', 'text1', 'propagacia', '2017-08-08'),
--(86, 'sk', 'titluok1', 'text1', 'oznamy', '2017-09-09'),
--(87, 'sk', 'tit1', 'txt1', 'propagacia', '2017-08-08');
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `nepritomnost`
----
--
--CREATE TABLE `nepritomnost` (
--  `id` int(11) NOT NULL,
--  `typ` varchar(20) COLLATE utf8_slovak_ci NOT NULL,
--  `nazov` varchar(40) COLLATE utf8_slovak_ci NOT NULL,
--  `farba` varchar(20) COLLATE utf8_slovak_ci NOT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `nepritomnost`
----
--
--INSERT INTO `nepritomnost` (`id`, `typ`, `nazov`, `farba`) VALUES
--(3, 'OÈR', 'Ošetrovanie èlena rodiny', 'red'),
--(5, 'SC', 'Sluobná cesta', 'blue'),
--(6, 'PD', 'Plan dovolenky', 'green'),
--(7, 'PN', 'Práce neschopnı', 'grey'),
--(8, 'RÈD', 'Reálne èerpaná dovolenka', 'orange');
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `Newsletter`
----
--
--CREATE TABLE `Newsletter` (
--  `id` int(11) NOT NULL,
--  `email` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
--  `jazyk` varchar(3) COLLATE utf8_slovak_ci NOT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `Newsletter`
----
--
--INSERT INTO `Newsletter` (`id`, `email`, `jazyk`) VALUES
--(25, 'aa@ccc.com', 'sk'),
--(24, 'aaa@bbb.com', 'sk'),
--(23, 'eee@fff.com', 'sk'),
--(22, 'fff@gmail.com', 'sk'),
--(27, 'ooo@mail.com', 'sk'),
--(28, 'oooo@mail.com', 'sk'),
--(21, 'palki15.daco@gmail.com', 'en'),
--(7, 'palki15.daco@gmail.com', 'sk'),
--(30, 'ppp@rrr.com', 'sk'),
--(10, 'qqq', ''),
--(26, 'qqq@www.com', 'sk');
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `Projekty`
----
--
--CREATE TABLE `Projekty` (
--  `id` int(11) NOT NULL,
--  `projectType` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
--  `number` varchar(20) COLLATE utf8_slovak_ci NOT NULL,
--  `titleSK` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
--  `titleEN` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
--  `start` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
--  `end` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
--  `coordinator` varchar(60) COLLATE utf8_slovak_ci NOT NULL,
--  `partners` varchar(200) COLLATE utf8_slovak_ci DEFAULT NULL,
--  `web` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
--  `internalCode` varchar(10) COLLATE utf8_slovak_ci DEFAULT NULL,
--  `annotationSK` varchar(2500) COLLATE utf8_slovak_ci DEFAULT NULL,
--  `annotationEN` varchar(2500) COLLATE utf8_slovak_ci NOT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `Projekty`
----
--
--INSERT INTO `Projekty` (`id`, `projectType`, `number`, `titleSK`, `titleEN`, `start`, `end`, `coordinator`, `partners`, `web`, `internalCode`, `annotationSK`, `annotationEN`) VALUES
--(1, 'VEGA', '1/0937/14 ', 'Pokroèilé metódy nelineárneho modelovania a riadenia mechatronickıch systémov', 'Advanced methods for nonlinear modeling and control of mechatronic systems', '2014', '2017', 'prof. Ing. Mikuláš Huba, PhD.', '', '', '1 425', 'Projekt sa zameriava na rozvoj metód nelineárneho riadenia a ich aplikácií. Zahròuje metódy algebrického a diferenciálneho prístupu k návrhu nelineárnych systémov, riadenie èasovo oneskorenıch (time delayed) systémov a systémov s obmedzeniami uvaovanıch ako súèas hybridnıch, autonómnych a inteligentnıch systémov, metódy simulácie, modelovania a automatizovaného návrhu s vyuitím podpornıch numerickıch a symbolickıch metód a programov. Venuje sa formulácii riešenıch problémov v rámci vnorenıch (embedded) systémov a PLC, spracovaniu signálov, zoh¾adneniu aspektov riadenia cez Internet, mobilné a rádiové siete, identifikácii a kompenzácii nelinearít, integrácii jednotlivıch prístupov pri implementácii a fyzickej realizácii konkrétnych algoritmov a štruktúr riadenia. Pôjde najmä o riadenie mechatronickıch, robotickıch a ïalších systémov s dominantnımi nelinearitami.', 'The project focuses on development of nonlinear control methods and their applications. It includes algebraic and differential approach to nonlinear control, control of time-delayed and constrained systems considered as a part of hybrid autonomous intelligent systems, simulations modeling and automatized design based on numeric and symbolic computer aided methods. It is dealing with formulation of solved problems within the embedded systems and PLCs, with signal processing, control via Internet, mobile and radio networks, with identification and compensation of nonlinearities, integration of particular approaches in implementing and physically accomplishing particular algorithms and structures. Thereby, one considers especially mechatronic and robotic systems and other systems with dominating nonlinear behavior.'),
--(2, 'VEGA', '1/0228/14 ', 'Modelovanie termohydraulickıch a napätostnıch pomerov vo vybranıch komponentoch tlakovodnıch jadrovıch reaktorov', 'Modelling of thermohydraulic and stress conditions in selected components of NPP with pressurized water reactor ', '2014', '2016', 'doc. Ing. Vladimír Kutiš, PhD.', '', '', '1 435', 'Cie¾om predkladaného projektu je tvorba matematickıch modelov vybranıch komponentov jadrovıch zariadení tlakovodného jadrového reaktora ako sú palivová kazeta, aktívna zóna ako aj celı jadrovı reaktor. Tieto komponenty budú analyzované z poh¾adu termohydrauliky ako aj z poh¾adu mechanického (napätostného) namáhania. Takto získané numerické vısledky budú konfrontované s dostupnımi experimentálnymi údajmi danıch zariadení, prièom cie¾om má by zvyšovanie bezpeènosti prevádzky tıchto zariadení. Pri tvorbe jednotlivıch matematickıch modelov budú pouité moderné numerické metódy, ako sú Computational Fluid Dynamics (CFD) a Metóda Koneènıch Prvkov (MKP), ktoré sú implementované v programoch ANSYS CFX a ANSYS Multiphysics. Súèasou predkladaného projektu bude realizácia prepojenia matematickıch modelov termohydrauliky a mechanického namáhania, ktoré bude realizované tak, aby jednotlivé fyzikálne domény boli priamo previazané. Vıstupom projektu okrem matematickıch modelov budú aj vedecké a odborné èlánky a príspevky.', 'The aim of this project is to create mathematical models of selected components of nuclear power plants like fuel assembly, the active zone as well as a nuclear reactor itself considering pressurized water reactor. These components will be analyzed in terms of thermo-hydraulics and mechanical point of view (stress loading). Obtained numerical results will be confronted with available experimental data to increase operational safety of these devices. In the process of developing the mathematical models modern numerical methods such as Computational Fluid Dynamics (CFD) and Finite Element Method (FEM) will be used. These methods are implemented in programs ANSYS CFX and ANSYS Multiphysics. The proposed project will interconnect the thermo-hydraulic and mechanical mathematical models, which will be implemented so that the individual physical domains were directly connected. The outcome of the project will be the mathematical models and also scientific and technical papers and conference contributions.'),
--(3, 'VEGA', '1/0453/15 ', 'Vıskum stiesneného krútenia uzatvorenıch prierezov', 'Research of nonuniform torsion of cross-sections', '2015', '2017', 'prof. Ing. Justín Murín, DrSc.', '', '', '1 479', 'Podstatou projektu je skúmanie úèinkov stiesneného krútenia v nosníkoch s uzatvorenım tenkostennım prierezom numerickımi metódami ako aj experimentálnym meraním na fyzikálnych modeloch. Bude vytvorenı novı 3D nosníkovı koneènı prvok so zahrnutím stiesneného krútenia uzatvorenıch prierezov, kde sa uplatní deformaènı úèinok sekundárneho krútiaceho momentu. Matica tuhosti a hmotnosti bude zostavená pre homogénny materiál ako aj pre kompozitné nosníky s pozdånou premenlivosou materiálovıch vlastností.\r\nOdvodené vzahy a rovnice budú implementované do poèítaèového programu pre elastostatickú a modálnu analızu s uvaovaním stiesneného krútenia. Bude navrhnuté a vyrobené meracie zariadenie, ktorım sa budú verifikova vısledky teoretickıch vıpoètov novım koneènım prvkom. Predpokladá sa, e vısledky riešenia projektu prispejú ku zmene tvrdenia normy EC 3, pod¾a ktorej vplyv stiesneného krútenia mono pri nosníkoch uzatvoreného prierezu zanedba. Vısledky nášho vıskumu majú za cie¾ zvıši bezpeènos projektovania mechanickıch sústav.', 'The project aim is to examine the effects of non-uniform torsion in thin-walled beams with closed cross-section by numerical methods and experimental measurements on physical models. A 3D beam finite element will be created including the non-uniform torsion with the secondary torsion moment deformation effect. The stiffness and mass matrix will be prepared for a homogeneous material as well as for composite beams with longitudinal variation of material properties. Derived relations and equations will be implemented in the computer programs for elastic-static and modal analyses. Measurement equipment will be designed, by which the results of theoretical calculations by the new finite elements will be verified. It is expected that the results of the project will contribute to review the arguments of the Eurocode 3, according to which the effect of non-uniform torsion can be neglected in the closed cross-section beams. The results of the project are intended to enhance the safety of the beam structures design.'),
--(4, 'KEGA', '035STU-4/2014 ', 'Návrh virtuálneho laboratória pre implementáciu pokroèilıch metodík vıuèby v novom študijnom programe Elektromobilita', 'Development of virtual laboratory for implementation of advanced methods of teaching in the new study program Electromobility', '2014', '2016', 'prof. Ing. Viktor Ferencey, PhD.', '', '', '1 709', 'Projekt je zameranı na vybudovanie moderného špecializovaného virtuálneho laboratória pre pripravovanı študijnı program Elektromobilita. V projekte sú navrhnuté pokroèilé metódy vıuèby, ktoré integrujú tvorivú implementáciu teoretickıch poznatkov priamo do virtuálneho modelovania a simulovania mechatronickıch systémov v inteligentnıch vozidlách s elektrickım pohonom, t.j. elektromobiloch.\r\nPre podporu špecializovaného vzdelávania a novú metodológiu v študijnom programe Elektromobilita bude v projekte spracovaná nová moderná študijná literatúra a vybudované Špecializované virtuálne laboratórium s inovatívnym vybavením pre teoretickú i praktickú vıuèbu predmetov v tomto študijnom programe. Všetky predmety programu Elektromobilita sú zamerané na virtuálne prototypovanie smart mechatronickıch systémov pouívanıch v elektromobiloch s náväznosou na nové systémy pohonu dopravnıch prostriedkov s vyuitím virtuálneho prototypovania.\r\nSúèasou projektu bude spracovanie študijnıch materiálov, vedeckıch monografií, tvorba inovatívnej web stránky, publikovanie v odbornıch èasopisoch a úèas na vedeckıch konferenciách. Špecializované virtuálne laboratórium bude vybavené mechatronickımi uèebnımi modulmi pre vıuèbu a štúdium sofistikovanıch technológií.', 'The project aim it to build a modern specialized virtual laboratory for prepared study program Electromobility. In this project, advanced teaching methods are proposed that integrate theoretical knowledge into practical application directly into mechatronic systems in vehicles with electric drive (electric vehicles). To promote specialized training and a new methodology in the study program Electromobility, the project will support processing of a new modern study literature and creating a dedicated virtual laboratory with innovative facilities for theoretical and practical training courses in this program of study. These courses aim at smart mechatronic systems used in electromobility systems with links to the new drive systems of vehicles using virtual prototyping. The project includes new study materials processing, writing scientific monographs, creating innovative websites, publications in peer-reviewed journals and participation in scientific conferences. Dedicated virtual laboratory will be equipped with educational mechatronic modules for teaching and learning sophisticated technology.'),
--(5, 'KEGA', '032STU-4/2013 ', 'Online laboratórium pre vıuèbu predmetov automatického riadenia', 'Online laboratory for teaching automation control subjects ', '1.1.2013', '31.12.2015', 'doc. Ing. Katarína áková, PhD.', '', '', '1 719', 'Projekt sa zameriava na tvorbu interaktívnych znovupouite¾nıch vzdelávacích objektov pre zvolené segmenty teórie automatického riadenia, na budovanie širšej škály experimentov ilustrujúcich aplikáciu študovanıch teoretickıch prístupov na riešenie praktickıch problémov, ktoré umoòujú a podporujú nadobúdanie vedomostí, zruèností, návykov a postojov v kvázi-autentickom prostredí.\r\nProjekt má za cie¾ podporova vyuitie nielen proprietárnych, ale aj open technológií, ktoré prinášajú viaceré vıhody v oblasti šírenia vısledkov a nesporne aj po finanènej stránke. Snahou je u¾ahèi prístup k laboratórnym experimentom v rámci rôznych foriem vzdelávania (dennıch, dištanènıch, resp. elektronickıch foriem).', 'The project is focussed on development of interactive reusable learning objects for chosen segments of automatic control, on building broader spectrum of experiments illustrating application of studied\r\ntheoretical approaches onto practical problems enabling and supporting acquisition of knowledge, skills, habits and attitudes in an quasi-authentic environment.\r\nThe project is going to support the use of not only proprietary but also open technologies that bring various advantages in the area of results dissemination and from the financial point of view as well. Our aim is to facilitate approach to laboratory experiments for students in daily or distance form of education.'),
--(6, 'KEGA', '030STU-4/2015 ', 'Multimediálna podpora vzdelávania v mechatronike', 'Multimedial education in mechatronics', '2015', '2017', 'doc. Ing. Danica Rosinová, PhD.', '', 'http://uamt.fei.stuba.sk/KEGA_MM/', '1 723', 'Svetovım trendom v oblasti modernej a bezbariérovej vıuèby sú jej interaktívne formy na báze internetu, videa, audiovizuálnych pomôcok a vzdialenıch laboratórií (on-line vzdelávanie), ktoré sa uplatòujú nielen v dištanènom vzdelávaní, ale aj v prezenènej forme vzdelávanie s podporou novıch technológií (technology augmented classroom teaching). Popri slide-show prezentáciách a edukaènıch miniaplikáciách (dynamické web stránky, flash animácie, Java Applets a pod.) preferujú svetové vıskumné univerzity vıvoj a tvorbu edukaènıch videí, ktorıch cie¾ovou skupinou sú poslucháèi konkrétneho predmetu (kurzu). Edukaèné videá sú vo¾ne dostupné a umoòujú študentom sledova vıklad danej problematiky kdeko¾vek a kedyko¾vek. Návrh a realizácia zrozumite¾ného a zaujímavo podaného edukaèného videa z technickej oblasti je komplexná úloha, ktorá si vyaduje synergiu odbornıch, pedagogickıch a umeleckıch kvalít jeho tvorcov. Projekt je zameranı na multimediálnu podporu vzdelávania v oblasti mechatroniky, s dôrazom na poznatky z aplikovanej informatiky, automatizácie a príbuznıch vednıch disciplín. Cie¾om projektu je vybudovanie multimediálneho laboratória na tvorbu kvalitnıch edukaènıch videomateriálov pre prezenènú aj dištanènú formu univerzitného vzdelávania v oblasti mechatroniky a vytvorenie a otestovanie viacerıch modulov takıchto materiálov. Vıstupy projektu budú ïalej vyuite¾né pre úèely vzdelávania odborníkov z praxe vrámci celoivotného vzdelávania, a tie popularizácie mechatroniky a automatizácie u širokej verejnosti a iakov strednıch škôl - potenciálnych študentov vysokıch škôl technického zamerania.', 'Presently, interactive education forms based on exploitation of Internet, video, audiovisual aids and remote laboratories (on-line education) are world trends in modern and barrier-free education;\r\nit is applied not only in distance education but in the attendance teaching as technology augmented classroom teaching. Along with slide-shows and educational miniapplications (dynamic websites,\r\nflash animations, Java Applets etc.) research universities usually prefer to develop their own education videos targeted to the audience in a single course. Education videos are freely available and enable the students to follow the explanatory discourse on the subject topic anytime and anywhere. Design and realization of a comprehensible and interesting educational video on a technological field is a quite complex task requiring synergy of technical, educational and artistic qualities of its creators. The project deals with the multimedia support of education in mechatronics engineering, with the focus on applied informatics, automation and related fields. The objective of the project is to build a multimedia laboratory for creating high-quality educational videomaterial for both distance and attendance education in mechatronics engineering. Project outcomes will be further employed in life-long education of practitioners, and for popularization of mechatronics and automation among the public and potential university students of technology.'),
--(7, 'KEGA', '011STU-4/2015 ', 'Elektronické pedagogicko-experimentálne laboratóriá mechatroniky', 'Electronic educational-experimental laboratories of Mechatronics', '2015', '2017', 'doc. Ing. Peter Drahoš, PhD.', '', 'http://uamt.fei.stuba.sk/kega/', '1 724', 'Projekt sa zaoberá vytvorením modernej vedomostnej a experimentálnej základne pre vıuèbu mechatroniky s dôrazom na jej elektronické súèasti. Vzh¾adom na to, e mechatronika integruje viaceré oblasti poznania a ich spojením vytvára synergickı efekt, budú v rámci projektu budú vypracované nové metódy a formy vo vıuèbe, ktoré študentom umonia získa nové poznatky s praktickou skúsenosou s vyuívaním modernıch elektronickıch prvkov a systémov, ktoré tvoria neoddelite¾nú súèas komplexnıch mechatronickıch systémov v oblasti vırobkov spotrebnej elektroniky, energetiky, automobilovej techniky a v zdravotníctve.\r\nPodnetnou vızvou pre podanie projektu bol vznik novıch študijnıch programoch""Automobilová mechatronika"" (Bc. program) a ""Aplikovaná mechatronika a elektromobilita"" (Ing. program). Pre tieto študijné programy budú vytvorené elektronické uèebné texty pre 7 predmetov.\r\nZa úèelom ïalšieho zvyšovania kvality vıuèby a vıskumu sa plánuje v rámci v rámci riešenia projektu vytvori 5 novıch experimentálnych pracovísk pod¾a najnovších trendov v elektronike, snímacej technike a riadiacich systémoch, ktoré budú ma viacúèelové vyuitie v priamej pedagogike, v individuálnych a tímovıch študentskıch projektoch ako aj pri vıskumnej a vıvojovej èinnosti ústavu.\r\nCie¾om projektu je zvıši odborné kompetencie študentov, uèite¾ov a vıskumnıch pracovníkov a všetkıch zúèastnenıch v tıchto oblastiach: moderné senzory a MEMS, aktuátory na báze smart materiálov, elektrické trakèné pohony, mikroradièe a DSP pre vstavané riadiace systémy a spracovanie signálov, návrh riadiacich algoritmov a ich programovanie, elektronika a integrované obvody (ASICs) pre mechatroniku. Ïalším dôleitım sub-cie¾om riešenej problematiky je získa široké kompetencie v komunikaènıch systémoch pre rôzne aplikaèné oblasti mechatronickıch systémov najmä v automobilovom priemysle.\r\nNavrhovanı projekt bude podporovanı prostredníctvom modernıch audiovizuálnych systémov, prostredníctvom web stránky a videí s multimediálnym spracovaním.', 'The project deals with the creation of modern knowledge and experimental basis for education in Mechatronics Engineering with the emphasis on electronic components. Due to the fact that mechatronics integrates several fields of knowledge and their junction yields a synergy effect, new methods and forms of eduation will be elaborated within the project allowing students to acquire new knowledge combined with practical experience in using modern electronic components and systems; such systems are integral parts of complex pervasive mechatronic systems (in consumer electronics, energy and automotive industries, healthcare). Inspiration for elaboration of the proposed project was launching of new study programs ""Automotive Mechatronics"" (Bachelor degree), and ""Applied Mechatronics and Electromobility"" (Master degree). For these study programs electronic textbooks for 7 subjects will be created. To further increase quality of education and research, 5 new experimental workplaces are planned to be created within the project to according to the latest development trends electronics, sensing technology and control systems having multi-purpose exploitation in direct teaching, individual and team projects as well as in research and development activities of the Institute. The objective of the project is to increase professional competences of students, teachers and researchers, and all involved in the areas: advanced sensors and MEMS, smart materials based actuators, electric traction motors, microcontrollers and digital signal processors (DSP´s) for embedded control systems and signal processing, design of control algorithms and their programming, electronics and integrated circuits (ASICs) for mechatronics. Another important sub-objective is to acquire wide competences in communication systems for various application areas of mechatronic systems, in particular in automotive industry. Modern audiovisual systems, web pages and multimedia processed videos will be widely used to support project results.'),
--(8, 'APVV', 'APVV-0246-12 ', 'Pokroèilé metódy modelovania a simulácie SMART mechatronickıch systémov', 'Advanced Methods and Simulations of SMART Mechatronic Systems', '1.10.2013', '30.9.2016', 'prof. Ing. Justín Murín, DrSc. ', '', '', 'AK14', 'V prvej fáze riešenia projektu bude kladenı dôraz na materiálové, technické a prístrojové zabezpeèenie experimentálnych èastí, ktoré budú v projekte riešené. V tejto fáze takisto budú odvodené MKP rovnice pre 3D-FGM nosníky ako aj multifyzikálne modely pre SMA. Súèasou prvej fázy riešenia projektu bude taktie zaèatá príprava fyzikálnych experimentov za úèelom verifikácie matematickıch modelov FGM a SMA systémov. V nasledovnom období riešenia projektu bude vykonaná verifikácia matematickıch modelov na vybranıch experimentálnych vzorkách, ktoré boli dôsledne experimentálne analyzované z h¾adiska materiálového zloenia. Vısledky experimentálnych meraní na SMA aktuátore budú vyuité v nasledovnom období riešenia projektu pri návrhu a realizácii alternatívneho spôsobu uchytenia SMA aktuátora. Bude nasledova vytvorenie nelineárneho modelu aktuátora SMA a návrhu novıch metód syntézy zameranıch na riadenie polohy a potlaèenie dominantnıch porúch. V tomto období budú súèasne prebieha vıskumné práce na teoretickom odvodení MKP rovníc pre FGM škrupinu a jej spojenia s 3D-FGM nosníkovım prvkom do kombinovaného nosníkovo-škrupinového MEMSu. V závereènej fáze projektu bude kladenı dôraz jednak na verifikáciu odvodenıch MKP rovníc pre nosníkovo-škrupinovı MEMS pomocou fyzikálneho experimentu ako aj na riadenie SMA aktuátora konvenènımi a inteligentnımi metódami riadenia.', 'In the first phase, attention will be given to the material, technical and equipment set-up required for the first set experiments. At the same time, the FGM-beam FEM equations will be derived and SMA models designed. In addition, the first sets of experiments will be used for the verification of numerical models of 3D-FGM and SMA systems. A complex verification of numerical models will take place on selected samples whose chemistry has been consistently analyzed. Results of SMA actuator measurements will be used in the consecutive stages of the project in the design and application of alternative anchoring for SMA actuators. Next the nonlinear model of SMA actuator and new methods of synthesis focused on position control and error elimination will be proposed. This research will take place in parallel with the theoretical analysis and FEM equations derivation of FGM shells. In the final stage, emphasis will be given to both the verification of the derived FGM beam-shell equations by real sample measurements and the control of the SMA actuator by conventional and intelligent methods.'),
--(9, 'APVV', 'APVV-0343-12 ', 'Poèítaèová podpora návrhu robustnıch nelineárnych regulátorov', 'Computer aided robust nonlinear control design', '1.10.2013', '31.3.2017', 'prof. Ing. Mikuláš Huba, PhD. ', '', '', 'AK29 ', 'Projekt sa zaoberá vypracovaním podporného poèítaèového systému na návrh robustnıch nelineárnych regulátorov s obmedzeniami vo verzii pre Matlab/Simulink a web a vytvorením integrovaného elektronického prostredia v LMS Moodle, ktoré ho spája s webovou stránkou projektu, s elearningovımi modulmi a s prístupom k vzdialenım experimentom umoòujúcim jeho overenie online. Systém je zaloenı na novej metóde návrhu regulátorov vychádzajúcej s obmedzovania odchılok od poadovanıch tvarov vstupnıch a vıstupnıch, resp. stavovıch velièín. Táto integruje vısledky viacerıch doteraz izolovanıch prístupov k návrhu regulátorov - tradiènú teóriu PID regulátorov, modernı stavovı prístup s teóriou pozorovate¾ov, èasovo optimálne riadenie, nelineárne systémy a riadenie systémov s ve¾kım dopravnım oneskorením a robustnı návrh regulátorov. Vyvíjanı systém bude vhodnı pre širokú triedu neurèitıch a nelineárnych objektov, ktoré predstavujú väèšinu benıch aplikácií v praxi. Systém bude pozostáva z centrálnej pracovnej stanice umoòujúcej dostatoène rıchle generovanie tzv. portrétu správania riadeného objektu s uvaovanım typom regulátora, z úloiska vytvorenıch portrétov správania a z grafickıch staníc, ktoré umonia na základe špecifikácie neurèitıch parametrov riadeného objektu a zadanıch kvalitatívnych poiadaviek na riadené procesy urèi optimálne nastavenie regulátora zaruèujúce pre zadané poiadavky dosiahnutie najvyššej monej dynamiky prechodovıch dejov aj pri zoh¾adnení neurèitostí.', 'The project deals with development and introduction into practice of the computer aided system for design of robust constrained nonlinear control (in versions for Matlab/Simulink and web) and of the integrated electronic environment in LMS Moodle interconnecting the system with the project web page, with the elearning modules and with access to remote experiments enabling its online verification. The system will be based on a new robust control method based on constraining deviations from required shapes of the input, output, or state variables. This is holistically integrating several up to now isolated control design approaches - the traditional PID control, modern state & disturbance observer approach, minimum time control, nonlinear control, control of systems with long dead time and robust control. The developed system is intended for a broad class of uncertain and nonlinear plants that represent a majority of all applications in practice. The system will consist of a central work station enabling a sufficiently fast generation of the so called performance portrait of given plant with a considered type of control, from a repository of generated performance portraits and from graphical terminals enabling by means of specifying parameters of given plant and the required shape-related performance measures to determine the optimal controller tuning guaranteeing the fastest possible transients responses in the control loop under consideration of the given uncertainties.'),
--(10, 'APVV', 'APVV-0772-12 ', 'Moderné metódy riadenia s vyuitím FPGA štruktúr', 'Advanced control methods based on FPGA structures ', '1.10.2013', '30.9.2017', 'doc. Ing. Alena Kozáková, PhD. ', '', '', 'AK39 ', 'Projekt rieši aktuálne otázky vıskumu a vıvoja modernıch metód riadenia s vyuitím hardvérovıch realizácií konvenènıch (PID) ako aj modernıch (optimálne, robustné, prediktívne) algoritmov riadenia pre procesy s rıchlou dynamikou. V súèasnosti dominujú vo vıskume a implementácii modernıch riadiacich systémov tieto smery: riešenia na báze mikroprocesorov (softvérovı prístup), jednoúèelové riešenia ASIC a riešenia na báze programovate¾nıch hradlovıch polí (Field Programmable Gate Arrays, FPGA), ktoré predstavujú konfigurovate¾né obvody vysokého stupòa integrácie (VLSI) schopné integrova rôzne logické a riadiace funkcie. Hardvérové implementácie algoritmov riadenia sú v porovnaní so softvérovımi realizáciami vo všeobecnosti o nieko¾ko rádov rıchlejšie, pretoe spracovanie v nich prebieha paralelne, navyše sú kompaktnejšie a vo všeobecnosti lacnejšie. Hlavnım cie¾om projektu je vıskum a vıvoj algoritmov na báze FPGA štruktúr, ktorı bude skúmanı na vıvojovıch FPGA systémoch a verifikovanı na fyzikálnych laboratórnych modeloch s rıchlou dynamikou.', 'The project deals with research and development of advanced control methods based on HW implementation of conventional (PID) as well as modern optimal, robust and predictive algorithms applicable in control of plants with fast dynamics. Predominating approaches in the research of modern control systems implementation are microprocessor-based solutions (software approach), ASIC (dedicated approach) and the FPGA based approach. Field Programmable Gate Arrays (FPGA) are configurable circuits of very-large-scale-integration (VLSI) able to integrate various logical and control functions. In general, HW implementations of control algorithms are faster by several orders compared with SW implementations due to parallel processing of information; moreover they are more compact and also less expensive. The main objective of the project is research and development of FPGA-based control algorithms. Their research and development will be studied on available FPGA development kits and verified on laboratory plants with fast dynamics.'),
--(11, 'APVV', 'APVV-14-0613 ', 'Širokopásmovı MEMS detektor terahertzového iarenia', 'Broadband MEMS detector of terahertz radiaton ', '2015', '2018', 'doc. Ing. Vladimír Kutiš, PhD. ', '', '', NULL, 'Projekt je zameranı na vıskum a vıvoj novıch typov širokopásmovıch detektorov pre terahertzovú (THz) oblas frekvencií. Novı typ detektora je navrhnutı v koncepte mikro-elektro-mechanického systému a vyuíva bolometrickı princíp snímania. Konštrukènı návrh detektora pozostáva z mikrobolometrického snímacieho prvku viazaného na širokopásmovú anténu. Tepelná konverzia dopadajúceho THz iarenia je prebieha na tenkej polyimidovej membráne, ktorá umoní dosiahnu nielen vysokú tepelnú konverznú úèinnos (zvıšenie citlivosti) ale zároveò umoní tie realizova návrhy detektorov do vysokıch frekvencií s vyrovnanou amplitúdovou charakteristikou. Navrhnutı novı koncept MEMS detektorov bude optimalizovanı sofistikovanım procesom modelovania a simulácie v priamej vzájomnej iterácii s experimentálnou funkènou a detekènou analızou. Finálnym zavàšením riešenia projektu bude tie vypracovaná metodológia merania, charakterizácie, širokopásmovej THz detekcie a simulácie MEMS detekèného prvku aplikovate¾ná nielen vo vede ale aj vedeckej vıchove.', 'The project is aimed on research and development of new types of broadband detectors for terahertz frequency range. This new type of detector is designed in a concept of micro-electro-mechanical system and uses the bolometric sensing principle. The design construction of the detector consists of a microbolometric sensing device coupled to a broadband antenna. Thermal conversion of the incident THz radiation takes place on a thin polyimide membrane which enables (a) to achieve high thermal conversion efficiency and (b) to design detectors with balanced amplitude characteristics even at high frequency range. The proposed MEMS detector concept will be optimized by a sophisticated process of modeling and simulation in direct mutual iteration with experimental analysis of functionality and detection capability. The completion of the project will be given by the developed state-of-the-art methodology of characterization, broadband THz detection and simulation of the MEMS detector device applicable in the research and education.'),
--(12, 'Medzinárodné projekty/Cooperation', 'SK06-II-01-004 ', 'Podpora medzinárodnej mobility medzi STU Bratislava, NTNU Trondheim a Universität Liechtenstein', 'Support of international mobilites between STU Bratislava, NTNU Trondheim, and Universität Liechtenstein', '2.6.2015', '30.9.2016', 'zodpovednı za ÚAMT - prof. Ing. Mikuláš Huba, PhD. ', 'Norwegian University of Science and Technology Trondheim (prof. Skogestad, prof. Johansen, prof. Hovd)|Universität Liechtenstein, Liechtenstein (prof. Droege)', '', NULL, 'Projekt rieši aktuálne otázky vıskumu a vıvoja modernıch metód riadenia s vyuitím hardvérovıch realizácií konvenènıch (PID) ako aj modernıch (optimálne, robustné, prediktívne) algoritmov riadenia pre procesy s rıchlou dynamikou. V súèasnosti dominujú vo vıskume a implementácii modernıch riadiacich systémov tieto smery: riešenia na báze mikroprocesorov (softvérovı prístup), jednoúèelové riešenia ASIC a riešenia na báze programovate¾nıch hradlovıch polí (Field Programmable Gate Arrays, FPGA), ktoré predstavujú konfigurovate¾né obvody vysokého stupòa integrácie (VLSI) schopné integrova rôzne logické a riadiace funkcie. Hardvérové implementácie algoritmov riadenia sú v porovnaní so softvérovımi realizáciami vo všeobecnosti o nieko¾ko rádov rıchlejšie, pretoe spracovanie v nich prebieha paralelne, navyše sú kompaktnejšie a vo všeobecnosti lacnejšie. Hlavnım cie¾om projektu je vıskum a vıvoj algoritmov na báze FPGA štruktúr, ktorı bude skúmanı na vıvojovıch FPGA systémoch a verifikovanı na fyzikálnych laboratórnych modeloch s rıchlou dynamikou.', 'The aim of the project is to support international mobility of students, PhD students, and staff members of four participating faculties of STU in Bratislava with partners from NTNU Trondheim and Universität Liechtenstein. It will initiate academic cooperation between the University of Liechtenstein and STU Bratislava in construction, architecture, and space planning, focusing on the use of alternative energy sources in operation of buildings, including computer-aided simulations of energy needs and internal environment, and spatial planning of rural settlements as well. The project also contributes to further strengthening of already existing cooperation between NTNU Trondheim and faculties of STU in Bratislava in the field of advanced methods of automatic control and to progress of inter-faculty cooperation at STU in Bratislava.'),
--(13, 'Iné domáce projekty/Other domestic projects', 'TB', 'Softvérové riadenie smerovej dynamiky vozidla UGV 6x6', 'Softvérové riadenie smerovej dynamiky vozidla UGV 6x6', '2015', '2015', 'Ing. Martin Bugár, PhD. ', '', '', '7506', NULL, ''),
--(14, 'Iné domáce projekty/Other domestic projects', 'VW', 'Predlovanie ivotnosti akumulátorového systému', 'Predlovanie ivotnosti akumulátorového systému', '2015', '2015', 'Ing. Martin Bugár, PhD. ', '', '', '7509', NULL, ''),
--(15, 'Iné domáce projekty/Other domestic projects', 'MV', 'REST platforma pre online riadenie experimentov', 'REST Platform for Online Control of Experiments', '2015', '2015', 'Ing. Miroslav Gula', '', '', '1361', 'Tento projekt je súèasou rozsiahlejšieho cie¾a o vytvorenie univerzálneho protokolu pre vzdialené riadenie reálnych sústav a tie balíka softvérovıch nástrojov na jeho implementáciu. Hlavnım cie¾om celého úsilia je zjednoduši a urıchli budovanie modulárnych online laboratórií.\r\nÚlohami projektu sú návrh a vytvorenie nástroaj pre vzdialenı prístup k softvéru Scilab, zavàšenie implementácie podobného nástroja urèeného pre softvérovı balík Matlab/Simulink, a návrh a èiastoèná implementácia mechatronického systému, ktorı bude v budúcnosti slúi na demonštráciu spomenutıch nástrojov a následne ako uèebná pomôcka.', 'The project is a part of an extensive endeavor to create universal protocol for remote control of real plants, and a suite of software tools to implement this protocol. The main objective of this whole endeavor is to simplify and accelerate implementation of modular online laboratories. Tasks of this project include design and implementation of a software tool for remote access to Scilab, completion of implementation of a similar tool for Matlab/Simulink, and design and partial implementation of a mechatronic system which will serve for demonstration of mentioned tools and later on as teaching aid.');
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `Role`
----
--
--CREATE TABLE `Role` (
--  `id` int(11) NOT NULL,
--  `name` varchar(20) COLLATE utf8_slovak_ci NOT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `Role`
----
--
--INSERT INTO `Role` (`id`, `name`) VALUES
--(1, 'user'),
--(2, 'hr'),
--(3, 'reporter'),
--(4, 'editor'),
--(5, 'admin');
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `RoleZamestnanci`
----
--
--CREATE TABLE `RoleZamestnanci` (
--  `id` int(11) NOT NULL,
--  `id_staff` int(11) NOT NULL,
--  `id_role` int(11) NOT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `RoleZamestnanci`
----
--
--INSERT INTO `RoleZamestnanci` (`id`, `id_staff`, `id_role`) VALUES
--(13, 1, 1),
--(14, 1, 3),
--(15, 1, 4),
--(7, 6, 2),
--(9, 6, 4),
--(10, 16, 3),
--(124, 56, 1),
--(89, 57, 1),
--(91, 57, 2),
--(92, 57, 3),
--(93, 57, 4),
--(90, 57, 5),
--(108, 58, 1),
--(109, 58, 2),
--(110, 58, 3),
--(111, 58, 4),
--(112, 58, 5);
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `zamestnanci`
----
--
--CREATE TABLE `zamestnanci` (
--  `id` int(11) NOT NULL,
--  `name` varchar(40) COLLATE utf8_slovak_ci NOT NULL,
--  `surname` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
--  `title1` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
--  `title2` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
--  `ldapLogin` varchar(30) COLLATE utf8_slovak_ci NOT NULL,
--  `photo` varchar(30) COLLATE utf8_slovak_ci NOT NULL,
--  `room` varchar(15) COLLATE utf8_slovak_ci NOT NULL,
--  `phone` varchar(11) COLLATE utf8_slovak_ci DEFAULT NULL,
--  `department` varchar(80) COLLATE utf8_slovak_ci NOT NULL,
--  `staffRole` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
--  `function` varchar(100) COLLATE utf8_slovak_ci NOT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `zamestnanci`
----
--
--INSERT INTO `zamestnanci` (`id`, `name`, `surname`, `title1`, `title2`, `ldapLogin`, `photo`, `room`, `phone`, `department`, `staffRole`, `function`) VALUES
--(1, 'Vladislav', 'Baèa', 'Ing.', '', '', 'baca.jpg', 'T005', '264', 'OEMP', 'doktorand', ''),
--(2, 'Peter', 'Balko', 'Ing.', '', '', '', 'D 102', '395', 'OIKR', 'doktorand', ''),
--(3, 'Richard', 'Balogh', 'Ing.', ' PhD.', '', 'balogh.jpg', 'D 110', '411', 'OEMP', 'teacher', 'zástupca vedúceho oddelenia'),
--(4, 'Igor', 'Bélai', 'Ing.', ' PhD.', '', '', 'D 126', '478', 'OEMP', 'teacher', ''),
--(5, 'Katarína', 'Beringerová', '', '', '', '', 'A 705', '672', 'AHU', 'teacher', ''),
--(6, 'Pavol', 'Bisták', 'Ing.', ' PhD.', 'bistak', 'bistak.jpg', 'D 120', '695', 'OEAP', 'teacher', ''),
--(7, 'Dmitrii', 'Borkin', 'Ing.', '', '', '', 'D 102', '395', 'OIKR', 'doktorand', ''),
--(8, 'Martin', 'Bugár', 'Ing.', ' PhD.', '', '', 'A 708', '579', 'OEAP', 'teacher', ''),
--(9, 'Ján', 'Cigánek', 'Ing.', ' PhD.', '', '', 'D 104', '686', 'OIKR', 'teacher', ''),
--(10, 'Peter', 'Drahoš', 'doc. Ing.', ' PhD.', '', '', 'D 118', '669', 'OEMP', 'teacher', ''),
--(11, 'František', 'Erdödy', '', '', '', 'erdody.jpg', 'A S39', '818', 'AHU', 'teacher', ''),
--(12, 'Viktor', 'Ferencey', 'prof. Ing.', ' PhD.', '', 'ferencey.jpg', 'A 802', '438', 'OEAP', 'teacher', 'zástupca vedúceho oddelenia'),
--(13, 'Peter', 'Fuchs', 'doc. Ing.', ' PhD.', '', '', 'B S05', '826', 'OEMP', 'researcher', ''),
--(14, 'Gabriel', 'Gálik', 'Ing.', '', '', '', 'A 706', '559', 'OAMM', 'researcher', ''),
--(15, 'Vladimír', 'Goga', 'doc. Ing.', ' PhD.', '', '', 'A 702', '687', 'OAMM', 'teacher', ''),
--(16, 'Miroslav', 'Gula', 'Ing.', '', 'xgulam', 'gula.jpg', 'D 103', '628', 'OIKR', 'doktorand', ''),
--(17, 'Oto', 'Haffner', 'Ing.', ' PhD.', '', 'haffner.jpg', 'D 125', '315', 'OIKR ', 'teacher', ''),
--(18, 'Juraj', 'Hrabovskı', 'Ing.', ' PhD.', '', '', 'A 706', '559', 'OAMM', 'teacher', ''),
--(19, 'Mikuláš', 'Huba', 'prof. Ing.', ' PhD.', '', 'huba.jpg', 'D 112', '771', 'OEAP', 'teacher', 'riadite¾ ústavu; vedúci oddelenia'),
--(20, 'Mária', 'Hypiusová', 'Ing.', ' PhD.', '', '', 'D 122', '193', 'OIKR', 'teacher', ''),
--(21, 'Štefan', 'Chamraz', 'Ing.', ' PhD.', '', '', 'D 107', '848', 'OEMP', 'teacher', ''),
--(22, 'Jakub', 'Jakubec', 'Ing.', ' PhD.', '', '', 'A 707', '452', 'OAMM ', 'researcher', ''),
--(23, 'Igor', 'Jakubièka', 'Ing.', '', '', 'jakubicka.jpg', 'T005', '264', 'OEMP', 'doktorand', ''),
--(24, 'Katarína', 'Kermietová', '', '', '', '', 'D 116', '598', 'AHU', 'teacher', 'zástupca vedúceho oddelenia'),
--(25, 'Ivan', 'Klimo', 'Ing.', '', '', '', 'D 101', '509', 'OEMP', 'doktorand', ''),
--(26, 'Michal', 'Kocúr', 'Ing.', ' PhD.', 'xkocurm2', 'kocur.jpg', 'D 104', '686', 'OIKR ', 'teacher', ''),
--(27, 'Štefan', 'Kozák', 'prof. Ing.', ' PhD.', '', 'kozak.jpg', 'D 115', '281', 'OEMP', 'teacher', 'zástupca riadite¾a ústavu pre rozvoj ústavu; vedúci oddelenia'),
--(28, 'Alena', 'Kozáková', 'doc. Ing.', ' PhD.', '', '', 'D 111', '563', 'OIKR', 'teacher', ''),
--(29, 'Erik', 'Kuèera', 'Ing.', ' PhD.', '', '', 'D 125', '315', 'OIKR ', 'teacher', ''),
--(30, 'Vladimír', 'Kutiš', 'doc. Ing.', ' PhD.', '', 'kutis.jpg', 'A 701', '562', 'OAMM ', 'teacher', 'zástupca vedúceho oddelenia'),
--(31, 'Alek', 'Lichtman', 'Ing.', '', '', '', 'D 101', '509', 'OEMP', 'doktorand', ''),
--(32, 'Justín', 'Murín', 'prof. Ing.', ' DrSc.', '', 'murin.jpg', 'A 704', '611', 'OAMM', 'teacher', 'zástupca riadite¾a ústavu pre vedeckú èinnos; vedúci oddelenia'),
--(33, 'Jakub', 'Osuskı', 'Ing.', ' PhD.', '', 'osusky.jpg', 'D 123', '356', 'OIKR ', 'teacher', ''),
--(34, 'Tomáš', 'Paciga', 'Ing.', '', '', '', 'A 707', '452', 'OAMM', 'doktorand', ''),
--(35, 'Juraj', 'Paulech', 'Ing.', ' PhD.', '', 'paulech.jpg', 'A 701', '562', 'OAMM', 'teacher', ''),
--(36, 'Matej', 'Rábek', 'Ing.', '', 'xrabek', 'rabek.jpg', 'D 103', '628', 'OIKR', 'doktorand', ''),
--(37, 'Danica', 'Rosinová', 'doc. Ing.', ' PhD.', '', 'rosinova.jpg', 'D 111', '563', 'OIKR', 'teacher', 'vedúci oddelenia'),
--(38, 'Tibor', 'Sedlár', 'Ing. ', '', '', '', 'A 803', '399', 'OAMM', 'teacher', ''),
--(39, 'Erich', 'Stark', 'Ing.', '', '', 'stark.jpg', 'C 014', '', 'OIKR', 'doktorand', ''),
--(40, 'Peter', 'apák', 'Ing.', ' PhD.', '', '', 'D 121', '569', 'OEAP', 'teacher', ''),
--(41, 'Katarína', 'áková', 'doc. Ing.', ' PhD.', 'zakova', 'zakova.jpg', 'D 119', '742', 'OIKR', 'teacher', 'zástupca riadite¾a ústavu pre pedagogickú èinnos; zástupca vedúceho oddelenia'),
--(56, 'Pavol', 'Daèo', '', '', 'xdaco', '', '', '', '', '', ''),
--(57, 'Michal', 'Koplinger', '', '', 'xkoplingerm', '', '', NULL, '', '', ''),
--(58, 'Tomáš', 'Dadoò', '', '', 'xdzadont', '', '', NULL, '', '', '');
--
---- --------------------------------------------------------
--
----
---- Štruktúra tabu¾ky pre tabu¾ku `zaznam`
----
--
--CREATE TABLE `zaznam` (
--  `id` int(11) NOT NULL,
--  `zamestnanec_id` int(11) NOT NULL,
--  `nepritomnost_id` int(11) NOT NULL,
--  `datum` date DEFAULT NULL
--) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
--
----
---- Sahujem dáta pre tabu¾ku `zaznam`
----
--
--INSERT INTO `zaznam` (`id`, `zamestnanec_id`, `nepritomnost_id`, `datum`) VALUES
--(906, 4, 6, '2017-03-25'),
--(908, 1, 3, '2017-03-10'),
--(914, 1, 5, '2017-03-09'),
--(915, 1, 5, '2017-03-08'),
--(916, 4, 5, '2017-03-08'),
--(917, 37, 3, '2017-03-01'),
--(919, 37, 3, '2017-03-03'),
--(920, 37, 3, '2017-03-04'),
--(921, 37, 3, '2017-03-06'),
--(922, 38, 6, '2017-03-06'),
--(923, 39, 6, '2017-03-13'),
--(924, 39, 6, '2017-03-11'),
--(925, 41, 6, '2017-03-12'),
--(927, 56, 6, '2017-03-02'),
--(928, 56, 6, '2017-03-03'),
--(930, 56, 6, '2017-03-06'),
--(931, 56, 6, '2017-03-04'),
--(933, 38, 6, '2017-03-09'),
--(934, 56, 6, '2017-03-05'),
--(935, 56, 6, '2017-03-07'),
--(936, 56, 6, '2017-03-08'),
--(937, 38, 6, '2017-03-15'),
--(938, 37, 6, '2017-03-15'),
--(940, 39, 6, '2017-03-16'),
--(941, 1, 6, '2017-03-13'),
--(942, 1, 6, '2017-03-15'),
--(943, 1, 6, '2017-03-16'),
--(944, 1, 6, '2017-03-17'),
--(951, 1, 6, '2017-03-07'),
--(954, 56, 6, '2017-03-09'),
--(966, 56, 6, '2017-03-20'),
--(970, 56, 6, '2017-03-23'),
--(974, 56, 6, '2017-03-13');
--
----
---- K¾úèe pre exportované tabu¾ky
----
--
----
---- Indexy pre tabu¾ku `Aktuality`
----
--ALTER TABLE `Aktuality`
--  ADD PRIMARY KEY (`id`);
--
----
---- Indexy pre tabu¾ku `nepritomnost`
----
--ALTER TABLE `nepritomnost`
--  ADD PRIMARY KEY (`id`);
--
----
---- Indexy pre tabu¾ku `Newsletter`
----
--ALTER TABLE `Newsletter`
--  ADD PRIMARY KEY (`id`),
--  ADD UNIQUE KEY `email` (`email`,`jazyk`);
--
----
---- Indexy pre tabu¾ku `Projekty`
----
--ALTER TABLE `Projekty`
--  ADD PRIMARY KEY (`id`);
--
----
---- Indexy pre tabu¾ku `Role`
----
--ALTER TABLE `Role`
--  ADD PRIMARY KEY (`id`),
--  ADD KEY `id` (`id`);
--
----
---- Indexy pre tabu¾ku `RoleZamestnanci`
----
--ALTER TABLE `RoleZamestnanci`
--  ADD PRIMARY KEY (`id`),
--  ADD UNIQUE KEY `id` (`id`,`id_staff`,`id_role`),
--  ADD UNIQUE KEY `id_2` (`id`,`id_staff`,`id_role`),
--  ADD UNIQUE KEY `id_staff_2` (`id_staff`,`id_role`),
--  ADD KEY `id_staff` (`id_staff`),
--  ADD KEY `id_role` (`id_role`);
--
----
---- Indexy pre tabu¾ku `zamestnanci`
----
--ALTER TABLE `zamestnanci`
--  ADD PRIMARY KEY (`id`);
--
----
---- Indexy pre tabu¾ku `zaznam`
----
--ALTER TABLE `zaznam`
--  ADD PRIMARY KEY (`id`);
--
----
---- AUTO_INCREMENT pre exportované tabu¾ky
----
--
----
---- AUTO_INCREMENT pre tabu¾ku `Aktuality`
----
--ALTER TABLE `Aktuality`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
----
---- AUTO_INCREMENT pre tabu¾ku `nepritomnost`
----
--ALTER TABLE `nepritomnost`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
----
---- AUTO_INCREMENT pre tabu¾ku `Newsletter`
----
--ALTER TABLE `Newsletter`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
----
---- AUTO_INCREMENT pre tabu¾ku `Projekty`
----
--ALTER TABLE `Projekty`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
----
---- AUTO_INCREMENT pre tabu¾ku `Role`
----
--ALTER TABLE `Role`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
----
---- AUTO_INCREMENT pre tabu¾ku `RoleZamestnanci`
----
--ALTER TABLE `RoleZamestnanci`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
----
---- AUTO_INCREMENT pre tabu¾ku `zamestnanci`
----
--ALTER TABLE `zamestnanci`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
----
---- AUTO_INCREMENT pre tabu¾ku `zaznam`
----
--ALTER TABLE `zaznam`
--  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=975;
----
---- Obmedzenie pre exportované tabu¾ky
----
--
----
---- Obmedzenie pre tabu¾ku `RoleZamestnanci`
----
--ALTER TABLE `RoleZamestnanci`
--  ADD CONSTRAINT `RoleZamestnanci_ibfk_3` FOREIGN KEY (`id_staff`) REFERENCES `zamestnanci` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
--  ADD CONSTRAINT `RoleZamestnanci_ibfk_4` FOREIGN KEY (`id_role`) REFERENCES `Role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
--
--/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
--/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
--/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
+--
+-- HostiteÄ¾: localhost
+-- ÄŒas generovania: Pi 26.MÃ¡j 2017, 11:51
+-- Verzia serveru: 5.7.17-0ubuntu0.16.04.1
+-- Verzia PHP: 7.0.15-0ubuntu0.16.04.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- DatabÃ¡za: `Final`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `Aktuality`
+--
+
+CREATE TABLE `Aktuality` (
+  `id` int(11) NOT NULL,
+  `jazyk` varchar(5) COLLATE utf8_slovak_ci NOT NULL,
+  `titulok` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
+  `text` varchar(500) COLLATE utf8_slovak_ci NOT NULL,
+  `typ_aktuality` varchar(15) COLLATE utf8_slovak_ci NOT NULL,
+  `platnost` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `Aktuality`
+--
+
+INSERT INTO `Aktuality` (`id`, `jazyk`, `titulok`, `text`, `typ_aktuality`, `platnost`) VALUES
+(1, 'en', 'A', 'A', 'oznamy', '2017-04-10'),
+(2, 'sk', 'B', 'b', 'oznamy', '2017-04-10'),
+(3, 'en', 'C', 'C', 'oznamy', '2017-04-13'),
+(4, 'en', 'D', 'D', 'oznamy', '2017-04-13'),
+(5, 'sk', 'f', 'f', 'oznamy', '2017-04-13'),
+(6, 'en', 'H', 'H', 'oznamy', '2017-04-13'),
+(7, 'sk', 'm', 'm', 'oznamy', '2017-04-13'),
+(8, 'en', 'M', 'M', 'oznamy', '2017-04-13'),
+(9, 'sk', 't', 't', 'oznamy', '2017-04-13'),
+(10, 'sk', 'ggg', 'ggg', 'propagacia', '2017-04-28'),
+(11, 'sk', 'rrr', 'rrr', 'zivot', '2017-04-29'),
+(12, 'sk', 'SVOC', 'SVOC', 'zivot', '2017-04-30'),
+(13, 'en', 'Eng SVOC', 'Eng SVOC', 'zivot', '2017-04-30'),
+(14, 'sk', 'Pozvanka', 'pridte sa pozriet', 'propagacia', '2017-04-10'),
+(16, 'sk', 'asdads', 'asdasdasd', 'oznamy', '2018-10-10'),
+(17, 'sk', 'fsdd', 'fsdgg', 'oznamy', '2018-10-10'),
+(18, 'en', 'fdsdf', 'fdsfsdfsdf', 'propagacia', '2017-10-10'),
+(19, 'en', 'ffaaa', 'faffasdf', 'zivot', '2017-09-09'),
+(20, 'en', 'fgdfgdf', 'fsdfsdf', 'propagacia', '2018-10-10'),
+(21, 'en', 'dasfsd', 'dsfsdfsdfhhgf', 'propagacia', '2017-05-25'),
+(22, 'sk', 'dsfafsd', 'fdsgsgdf', 'propagacia', '2019-02-02'),
+(23, 'en', 'sefdfe', 'dfsdf', 'propagacia', '2017-08-08'),
+(24, 'sk', 'ttttt', 'tttt', 'propagacia', '2018-01-01'),
+(25, 'en', 'jjj', 'jjjj', 'propagacia', '2017-12-31'),
+(26, 'sk', 'hhhh', 'hhhhh', 'oznamy', '2017-04-30'),
+(27, 'sk', 'ggggg', 'ggggg', 'propagacia', '2018-10-10'),
+(28, 'en', 'zzzz', 'yyyyy', 'propagacia', '2017-05-25'),
+(29, 'en', 'fffff', 'fffff', 'oznamy', '2017-08-08'),
+(30, 'en', 'ggggg', 'jjjjj', 'propagacia', '2017-09-09'),
+(31, 'en', 'eeee', 'rrrr', 'propagacia', '2017-10-10'),
+(32, 'sk', 'uuuu', 'ttt', 'zivot', '2017-04-30'),
+(33, 'en', 'kkkkk', 'ttttt', 'oznamy', '2017-10-10'),
+(34, 'sk', 'uuuuu', 'tttt', 'oznamy', '2017-05-25'),
+(35, 'sk', 'oooo', 'qqqq', 'oznamy', '2017-10-10'),
+(36, 'sk', 'qqqq', 'eeee', 'propagacia', '2017-04-29'),
+(37, 'sk', 'Sutaz', 'nova sutaz', 'oznamy', '2017-08-08'),
+(38, 'sk', 'iuoiu', 'rrrrr', 'propagacia', '2017-08-08'),
+(39, 'sk', 'nnn', 'eeeee', 'oznamy', '2018-10-10'),
+(40, 'sk', 'SVOC', 'svocka', 'zivot', '2017-10-15'),
+(41, 'en', '6666', '666666', 'propagacia', '2022-02-28'),
+(42, 'sk', 'qwer', 'wqewqrwr', 'propagacia', '2017-09-09'),
+(43, 'sk', 'tttt', 'ttttt', 'propagacia', '2017-09-09'),
+(44, 'sk', 'eeee', 'eeeee', 'zivot', '2018-10-10'),
+(45, 'en', 'uuuuu', 'retertert', 'propagacia', '2017-08-08'),
+(46, 'sk', 'nova', 'aktualita', 'zivot', '2017-05-25'),
+(50, 'sk', 'aaaa', 'bbbb', 'oznamy', '2018-10-10'),
+(51, 'en', 'cccc', 'ddddd', 'oznamy', '2018-10-10'),
+(52, 'sk', '111', '2222', 'oznamy', '2017-09-09'),
+(53, 'en', '333', '444', 'oznamy', '2017-09-09'),
+(54, 'sk', 'aaa', 'aaaa', 'oznamy', '2017-08-08'),
+(55, 'sk', 'eeee', 'eeee', 'oznamy', '2018-10-10'),
+(56, 'sk', 'pppp', 'ppppp', 'oznamy', '2018-10-10'),
+(57, 'en', 'tttt', 'tttt', 'oznamy', '2017-05-25'),
+(58, 'sk', 'aaaaa', 'aaaaa', 'propagacia', '2017-05-25'),
+(59, 'sk', 'bbbbb', 'bbbb', 'zivot', '2017-08-08'),
+(60, 'en', 'mmmmmm', 'mmmmmmmmmmmmmmm', 'zivot', '2017-10-10'),
+(61, 'sk', 'Aktualita1SK', 'Text - Aktualita1SK', 'oznamy', '2017-09-09'),
+(62, 'en', 'Aktualita1EN', 'Aktualita1EN', 'propagacia', '2017-09-09'),
+(63, 'sk', 'qwe', 'rz', 'oznamy', '2018-10-10'),
+(83, 'sk', 'aaaaa', 'aaaaaa', 'oznamy', '2017-08-08'),
+(84, 'sk', 'titluok1', 'text1', 'propagacia', '2017-08-08'),
+(86, 'sk', 'titluok1', 'text1', 'oznamy', '2017-09-09'),
+(87, 'sk', 'tit1', 'txt1', 'propagacia', '2017-08-08'),
+(88, 'sk', 'SK aktualita', 'Text SK aktuality', 'propagacia', '2017-08-08'),
+(89, 'sk', 'Aktualita SK 3', 'Text Aktualita SK 3', 'zivot', '2017-08-08'),
+(90, 'en', 'Aktualita EN 5', 'Aktualita EN 5', 'oznamy', '2017-09-09');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `doktorandi`
+--
+
+CREATE TABLE `doktorandi` (
+  `id` int(11) NOT NULL,
+  `meno` varchar(60) COLLATE utf8_slovak_ci NOT NULL,
+  `priloha` varchar(60) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `href` varchar(1000) COLLATE utf8_slovak_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `doktorandi`
+--
+
+INSERT INTO `doktorandi` (`id`, `meno`, `priloha`, `href`) VALUES
+(35, 'dokument1', 'google', 'https://www.google.com'),
+(43, 'dokument1', 'pdf.pdf', 'doktorandi/uploads/pdf.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `nakupy`
+--
+
+CREATE TABLE `nakupy` (
+  `id` int(11) NOT NULL,
+  `text` varchar(10000) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `nakupy`
+--
+
+INSERT INTO `nakupy` (`id`, `text`) VALUES
+(15, 'hello  aaaa'),
+(16, 'ahoj');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `nepritomnost`
+--
+
+CREATE TABLE `nepritomnost` (
+  `id` int(11) NOT NULL,
+  `typ` varchar(20) COLLATE utf8_slovak_ci NOT NULL,
+  `nazov` varchar(40) COLLATE utf8_slovak_ci NOT NULL,
+  `farba` varchar(20) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `nepritomnost`
+--
+
+INSERT INTO `nepritomnost` (`id`, `typ`, `nazov`, `farba`) VALUES
+(3, 'OÄŒR', 'OÅ¡etrovanie Älena rodiny', 'red'),
+(5, 'SC', 'SluÅ¾obnÃ¡ cesta', 'blue'),
+(6, 'PD', 'Plan dovolenky', 'green'),
+(7, 'PN', 'PrÃ¡ce neschopnÃ½', 'grey'),
+(8, 'RÄŒD', 'ReÃ¡lne ÄerpanÃ¡ dovolenka', 'orange');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `Newsletter`
+--
+
+CREATE TABLE `Newsletter` (
+  `id` int(11) NOT NULL,
+  `email` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
+  `jazyk` varchar(3) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `Newsletter`
+--
+
+INSERT INTO `Newsletter` (`id`, `email`, `jazyk`) VALUES
+(22, 'fff@gmail.com', 'sk'),
+(21, 'palki15.daco@centrum.sk', 'en'),
+(31, 'xdaco@stuba.sk', 'sk');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `pedagogika`
+--
+
+CREATE TABLE `pedagogika` (
+  `id` int(11) NOT NULL,
+  `meno` varchar(60) COLLATE utf8_slovak_ci NOT NULL,
+  `priloha` varchar(60) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `href` varchar(1000) COLLATE utf8_slovak_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `pedagogika`
+--
+
+INSERT INTO `pedagogika` (`id`, `meno`, `priloha`, `href`) VALUES
+(35, 'dokument1', 'google', 'https://www.google.com'),
+(43, 'dokument1', 'pdf.pdf', 'pedagogika/uploads/pdf.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `Photos`
+--
+
+CREATE TABLE `Photos` (
+  `ID` int(11) NOT NULL,
+  `Datum` date NOT NULL,
+  `Title-SK` varchar(100) COLLATE utf8_slovak_ci NOT NULL,
+  `Title-EN` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Folder` varchar(100) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `Photos`
+--
+
+INSERT INTO `Photos` (`ID`, `Datum`, `Title-SK`, `Title-EN`, `Folder`) VALUES
+(1, '2017-02-07', 'DeÅˆ otvorenÃ½ch dverÃ­ na ÃšAMT FEI STU', 'Open day at UAMT FEI STU', 'event001'),
+(2, '2015-09-25', 'Noc vÃ½skumnÃ­kov', 'Night of researchers', 'event002');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `Projekty`
+--
+
+CREATE TABLE `Projekty` (
+  `id` int(11) NOT NULL,
+  `projectType` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
+  `number` varchar(20) COLLATE utf8_slovak_ci NOT NULL,
+  `titleSK` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
+  `titleEN` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
+  `start` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
+  `end` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
+  `coordinator` varchar(60) COLLATE utf8_slovak_ci NOT NULL,
+  `partners` varchar(200) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `web` varchar(150) COLLATE utf8_slovak_ci NOT NULL,
+  `internalCode` varchar(10) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `annotationSK` varchar(2500) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `annotationEN` varchar(2500) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `Projekty`
+--
+
+INSERT INTO `Projekty` (`id`, `projectType`, `number`, `titleSK`, `titleEN`, `start`, `end`, `coordinator`, `partners`, `web`, `internalCode`, `annotationSK`, `annotationEN`) VALUES
+(1, 'VEGA', '1/0937/14 ', 'PokroÄilÃ© metÃ³dy nelineÃ¡rneho modelovania a riadenia mechatronickÃ½ch systÃ©mov', 'Advanced methods for nonlinear modeling and control of mechatronic systems', '2014', '2017', 'prof. Ing. MikulÃ¡Å¡ Huba, PhD.', '', '', '1 425', 'Projekt sa zameriava na rozvoj metÃ³d nelineÃ¡rneho riadenia a ich aplikÃ¡ciÃ­. ZahrÅˆuje metÃ³dy algebrickÃ©ho a diferenciÃ¡lneho prÃ­stupu k nÃ¡vrhu nelineÃ¡rnych systÃ©mov, riadenie Äasovo oneskorenÃ½ch (time delayed) systÃ©mov a systÃ©mov s obmedzeniami uvaÅ¾ovanÃ½ch ako sÃºÄasÅ¥ hybridnÃ½ch, autonÃ³mnych a inteligentnÃ½ch systÃ©mov, metÃ³dy simulÃ¡cie, modelovania a automatizovanÃ©ho nÃ¡vrhu s vyuÅ¾itÃ­m podpornÃ½ch numerickÃ½ch a symbolickÃ½ch metÃ³d a programov. Venuje sa formulÃ¡cii rieÅ¡enÃ½ch problÃ©mov v rÃ¡mci vnorenÃ½ch (embedded) systÃ©mov a PLC, spracovaniu signÃ¡lov, zohÄ¾adneniu aspektov riadenia cez Internet, mobilnÃ© a rÃ¡diovÃ© siete, identifikÃ¡cii a kompenzÃ¡cii nelinearÃ­t, integrÃ¡cii jednotlivÃ½ch prÃ­stupov pri implementÃ¡cii a fyzickej realizÃ¡cii konkrÃ©tnych algoritmov a Å¡truktÃºr riadenia. PÃ´jde najmÃ¤ o riadenie mechatronickÃ½ch, robotickÃ½ch a ÄalÅ¡Ã­ch systÃ©mov s dominantnÃ½mi nelinearitami.', 'The project focuses on development of nonlinear control methods and their applications. It includes algebraic and differential approach to nonlinear control, control of time-delayed and constrained systems considered as a part of hybrid autonomous intelligent systems, simulations modeling and automatized design based on numeric and symbolic computer aided methods. It is dealing with formulation of solved problems within the embedded systems and PLCs, with signal processing, control via Internet, mobile and radio networks, with identification and compensation of nonlinearities, integration of particular approaches in implementing and physically accomplishing particular algorithms and structures. Thereby, one considers especially mechatronic and robotic systems and other systems with dominating nonlinear behavior.'),
+(2, 'VEGA', '1/0228/14 ', 'Modelovanie termohydraulickÃ½ch a napÃ¤tostnÃ½ch pomerov vo vybranÃ½ch komponentoch tlakovodnÃ½ch jadrovÃ½ch reaktorov', 'Modelling of thermohydraulic and stress conditions in selected components of NPP with pressurized water reactor ', '2014', '2016', 'doc. Ing. VladimÃ­r KutiÅ¡, PhD.', '', '', '1 435', 'CieÄ¾om predkladanÃ©ho projektu je tvorba matematickÃ½ch modelov vybranÃ½ch komponentov jadrovÃ½ch zariadenÃ­ tlakovodnÃ©ho jadrovÃ©ho reaktora ako sÃº palivovÃ¡ kazeta, aktÃ­vna zÃ³na ako aj celÃ½ jadrovÃ½ reaktor. Tieto komponenty budÃº analyzovanÃ© z pohÄ¾adu termohydrauliky ako aj z pohÄ¾adu mechanickÃ©ho (napÃ¤tostnÃ©ho) namÃ¡hania. Takto zÃ­skanÃ© numerickÃ© vÃ½sledky budÃº konfrontovanÃ© s dostupnÃ½mi experimentÃ¡lnymi Ãºdajmi danÃ½ch zariadenÃ­, priÄom cieÄ¾om mÃ¡ byÅ¥ zvyÅ¡ovanie bezpeÄnosti prevÃ¡dzky tÃ½chto zariadenÃ­. Pri tvorbe jednotlivÃ½ch matematickÃ½ch modelov budÃº pouÅ¾itÃ© modernÃ© numerickÃ© metÃ³dy, ako sÃº Computational Fluid Dynamics (CFD) a MetÃ³da KoneÄnÃ½ch Prvkov (MKP), ktorÃ© sÃº implementovanÃ© v programoch ANSYS CFX a ANSYS Multiphysics. SÃºÄasÅ¥ou predkladanÃ©ho projektu bude realizÃ¡cia prepojenia matematickÃ½ch modelov termohydrauliky a mechanickÃ©ho namÃ¡hania, ktorÃ© bude realizovanÃ© tak, aby jednotlivÃ© fyzikÃ¡lne domÃ©ny boli priamo previazanÃ©. VÃ½stupom projektu okrem matematickÃ½ch modelov budÃº aj vedeckÃ© a odbornÃ© ÄlÃ¡nky a prÃ­spevky.', 'The aim of this project is to create mathematical models of selected components of nuclear power plants like fuel assembly, the active zone as well as a nuclear reactor itself considering pressurized water reactor. These components will be analyzed in terms of thermo-hydraulics and mechanical point of view (stress loading). Obtained numerical results will be confronted with available experimental data to increase operational safety of these devices. In the process of developing the mathematical models modern numerical methods such as Computational Fluid Dynamics (CFD) and Finite Element Method (FEM) will be used. These methods are implemented in programs ANSYS CFX and ANSYS Multiphysics. The proposed project will interconnect the thermo-hydraulic and mechanical mathematical models, which will be implemented so that the individual physical domains were directly connected. The outcome of the project will be the mathematical models and also scientific and technical papers and conference contributions.'),
+(3, 'VEGA', '1/0453/15 ', 'VÃ½skum stiesnenÃ©ho krÃºtenia uzatvorenÃ½ch prierezov', 'Research of nonuniform torsion of cross-sections', '2015', '2017', 'prof. Ing. JustÃ­n MurÃ­n, DrSc.', '', '', '1 479', 'Podstatou projektu je skÃºmanie ÃºÄinkov stiesnenÃ©ho krÃºtenia v nosnÃ­koch s uzatvorenÃ½m tenkostennÃ½m prierezom numerickÃ½mi metÃ³dami ako aj experimentÃ¡lnym meranÃ­m na fyzikÃ¡lnych modeloch. Bude vytvorenÃ½ novÃ½ 3D nosnÃ­kovÃ½ koneÄnÃ½ prvok so zahrnutÃ­m stiesnenÃ©ho krÃºtenia uzatvorenÃ½ch prierezov, kde sa uplatnÃ­ deformaÄnÃ½ ÃºÄinok sekundÃ¡rneho krÃºtiaceho momentu. Matica tuhosti a hmotnosti bude zostavenÃ¡ pre homogÃ©nny materiÃ¡l ako aj pre kompozitnÃ© nosnÃ­ky s pozdÄºÅ¾nou premenlivosÅ¥ou materiÃ¡lovÃ½ch vlastnostÃ­.\r\nOdvodenÃ© vzÅ¥ahy a rovnice budÃº implementovanÃ© do poÄÃ­taÄovÃ©ho programu pre elastostatickÃº a modÃ¡lnu analÃ½zu s uvaÅ¾ovanÃ­m stiesnenÃ©ho krÃºtenia. Bude navrhnutÃ© a vyrobenÃ© meracie zariadenie, ktorÃ½m sa budÃº verifikovaÅ¥ vÃ½sledky teoretickÃ½ch vÃ½poÄtov novÃ½m koneÄnÃ½m prvkom. PredpokladÃ¡ sa, Å¾e vÃ½sledky rieÅ¡enia projektu prispejÃº ku zmene tvrdenia normy EC 3, podÄ¾a ktorej vplyv stiesnenÃ©ho krÃºtenia moÅ¾no pri nosnÃ­koch uzatvorenÃ©ho prierezu zanedbaÅ¥. VÃ½sledky nÃ¡Å¡ho vÃ½skumu majÃº za cieÄ¾ zvÃ½Å¡iÅ¥ bezpeÄnosÅ¥ projektovania mechanickÃ½ch sÃºstav.', 'The project aim is to examine the effects of non-uniform torsion in thin-walled beams with closed cross-section by numerical methods and experimental measurements on physical models. A 3D beam finite element will be created including the non-uniform torsion with the secondary torsion moment deformation effect. The stiffness and mass matrix will be prepared for a homogeneous material as well as for composite beams with longitudinal variation of material properties. Derived relations and equations will be implemented in the computer programs for elastic-static and modal analyses. Measurement equipment will be designed, by which the results of theoretical calculations by the new finite elements will be verified. It is expected that the results of the project will contribute to review the arguments of the Eurocode 3, according to which the effect of non-uniform torsion can be neglected in the closed cross-section beams. The results of the project are intended to enhance the safety of the beam structures design.'),
+(4, 'KEGA', '035STU-4/2014 ', 'NÃ¡vrh virtuÃ¡lneho laboratÃ³ria pre implementÃ¡ciu pokroÄilÃ½ch metodÃ­k vÃ½uÄby v novom Å¡tudijnom programe Elektromobilita', 'Development of virtual laboratory for implementation of advanced methods of teaching in the new study program Electromobility', '2014', '2016', 'prof. Ing. Viktor Ferencey, PhD.', '', '', '1 709', 'Projekt je zameranÃ½ na vybudovanie modernÃ©ho Å¡pecializovanÃ©ho virtuÃ¡lneho laboratÃ³ria pre pripravovanÃ½ Å¡tudijnÃ½ program Elektromobilita. V projekte sÃº navrhnutÃ© pokroÄilÃ© metÃ³dy vÃ½uÄby, ktorÃ© integrujÃº tvorivÃº implementÃ¡ciu teoretickÃ½ch poznatkov priamo do virtuÃ¡lneho modelovania a simulovania mechatronickÃ½ch systÃ©mov v inteligentnÃ½ch vozidlÃ¡ch s elektrickÃ½m pohonom, t.j. elektromobiloch.\r\nPre podporu Å¡pecializovanÃ©ho vzdelÃ¡vania a novÃº metodolÃ³giu v Å¡tudijnom programe Elektromobilita bude v projekte spracovanÃ¡ novÃ¡ modernÃ¡ Å¡tudijnÃ¡ literatÃºra a vybudovanÃ© Å pecializovanÃ© virtuÃ¡lne laboratÃ³rium s inovatÃ­vnym vybavenÃ­m pre teoretickÃº i praktickÃº vÃ½uÄbu predmetov v tomto Å¡tudijnom programe. VÅ¡etky predmety programu Elektromobilita sÃº zameranÃ© na virtuÃ¡lne prototypovanie smart mechatronickÃ½ch systÃ©mov pouÅ¾Ã­vanÃ½ch v elektromobiloch s nÃ¡vÃ¤znosÅ¥ou na novÃ© systÃ©my pohonu dopravnÃ½ch prostriedkov s vyuÅ¾itÃ­m virtuÃ¡lneho prototypovania.\r\nSÃºÄasÅ¥ou projektu bude spracovanie Å¡tudijnÃ½ch materiÃ¡lov, vedeckÃ½ch monografiÃ­, tvorba inovatÃ­vnej web strÃ¡nky, publikovanie v odbornÃ½ch Äasopisoch a ÃºÄasÅ¥ na vedeckÃ½ch konferenciÃ¡ch. Å pecializovanÃ© virtuÃ¡lne laboratÃ³rium bude vybavenÃ© mechatronickÃ½mi uÄebnÃ½mi modulmi pre vÃ½uÄbu a Å¡tÃºdium sofistikovanÃ½ch technolÃ³giÃ­.', 'The project aim it to build a modern specialized virtual laboratory for prepared study program Electromobility. In this project, advanced teaching methods are proposed that integrate theoretical knowledge into practical application directly into mechatronic systems in vehicles with electric drive (electric vehicles). To promote specialized training and a new methodology in the study program Electromobility, the project will support processing of a new modern study literature and creating a dedicated virtual laboratory with innovative facilities for theoretical and practical training courses in this program of study. These courses aim at smart mechatronic systems used in electromobility systems with links to the new drive systems of vehicles using virtual prototyping. The project includes new study materials processing, writing scientific monographs, creating innovative websites, publications in peer-reviewed journals and participation in scientific conferences. Dedicated virtual laboratory will be equipped with educational mechatronic modules for teaching and learning sophisticated technology.'),
+(5, 'KEGA', '032STU-4/2013 ', 'Online laboratÃ³rium pre vÃ½uÄbu predmetov automatickÃ©ho riadenia', 'Online laboratory for teaching automation control subjects ', '1.1.2013', '31.12.2015', 'doc. Ing. KatarÃ­na Å½Ã¡kovÃ¡, PhD.', '', '', '1 719', 'Projekt sa zameriava na tvorbu interaktÃ­vnych znovupouÅ¾iteÄ¾nÃ½ch vzdelÃ¡vacÃ­ch objektov pre zvolenÃ© segmenty teÃ³rie automatickÃ©ho riadenia, na budovanie Å¡irÅ¡ej Å¡kÃ¡ly experimentov ilustrujÃºcich aplikÃ¡ciu Å¡tudovanÃ½ch teoretickÃ½ch prÃ­stupov na rieÅ¡enie praktickÃ½ch problÃ©mov, ktorÃ© umoÅ¾ÅˆujÃº a podporujÃº nadobÃºdanie vedomostÃ­, zruÄnostÃ­, nÃ¡vykov a postojov v kvÃ¡zi-autentickom prostredÃ­.\r\nProjekt mÃ¡ za cieÄ¾ podporovaÅ¥ vyuÅ¾itie nielen proprietÃ¡rnych, ale aj open technolÃ³giÃ­, ktorÃ© prinÃ¡Å¡ajÃº viacerÃ© vÃ½hody v oblasti Å¡Ã­renia vÃ½sledkov a nesporne aj po finanÄnej strÃ¡nke. Snahou je uÄ¾ahÄiÅ¥ prÃ­stup k laboratÃ³rnym experimentom v rÃ¡mci rÃ´znych foriem vzdelÃ¡vania (dennÃ½ch, diÅ¡tanÄnÃ½ch, resp. elektronickÃ½ch foriem).', 'The project is focussed on development of interactive reusable learning objects for chosen segments of automatic control, on building broader spectrum of experiments illustrating application of studied\r\ntheoretical approaches onto practical problems enabling and supporting acquisition of knowledge, skills, habits and attitudes in an quasi-authentic environment.\r\nThe project is going to support the use of not only proprietary but also open technologies that bring various advantages in the area of results dissemination and from the financial point of view as well. Our aim is to facilitate approach to laboratory experiments for students in daily or distance form of education.'),
+(6, 'KEGA', '030STU-4/2015 ', 'MultimediÃ¡lna podpora vzdelÃ¡vania v mechatronike', 'Multimedial education in mechatronics', '2015', '2017', 'doc. Ing. Danica RosinovÃ¡, PhD.', '', 'http://uamt.fei.stuba.sk/KEGA_MM/', '1 723', 'SvetovÃ½m trendom v oblasti modernej a bezbariÃ©rovej vÃ½uÄby sÃº jej interaktÃ­vne formy na bÃ¡ze internetu, videa, audiovizuÃ¡lnych pomÃ´cok a vzdialenÃ½ch laboratÃ³riÃ­ (on-line vzdelÃ¡vanie), ktorÃ© sa uplatÅˆujÃº nielen v diÅ¡tanÄnom vzdelÃ¡vanÃ­, ale aj v prezenÄnej forme vzdelÃ¡vanie s podporou novÃ½ch technolÃ³giÃ­ (technology augmented classroom teaching). Popri slide-show prezentÃ¡ciÃ¡ch a edukaÄnÃ½ch miniaplikÃ¡ciÃ¡ch (dynamickÃ© web strÃ¡nky, flash animÃ¡cie, Java Applets a pod.) preferujÃº svetovÃ© vÃ½skumnÃ© univerzity vÃ½voj a tvorbu edukaÄnÃ½ch videÃ­, ktorÃ½ch cieÄ¾ovou skupinou sÃº posluchÃ¡Äi konkrÃ©tneho predmetu (kurzu). EdukaÄnÃ© videÃ¡ sÃº voÄ¾ne dostupnÃ© a umoÅ¾ÅˆujÃº Å¡tudentom sledovaÅ¥ vÃ½klad danej problematiky kdekoÄ¾vek a kedykoÄ¾vek. NÃ¡vrh a realizÃ¡cia zrozumiteÄ¾nÃ©ho a zaujÃ­mavo podanÃ©ho edukaÄnÃ©ho videa z technickej oblasti je komplexnÃ¡ Ãºloha, ktorÃ¡ si vyÅ¾aduje synergiu odbornÃ½ch, pedagogickÃ½ch a umeleckÃ½ch kvalÃ­t jeho tvorcov. Projekt je zameranÃ½ na multimediÃ¡lnu podporu vzdelÃ¡vania v oblasti mechatroniky, s dÃ´razom na poznatky z aplikovanej informatiky, automatizÃ¡cie a prÃ­buznÃ½ch vednÃ½ch disciplÃ­n. CieÄ¾om projektu je vybudovanie multimediÃ¡lneho laboratÃ³ria na tvorbu kvalitnÃ½ch edukaÄnÃ½ch videomateriÃ¡lov pre prezenÄnÃº aj diÅ¡tanÄnÃº formu univerzitnÃ©ho vzdelÃ¡vania v oblasti mechatroniky a vytvorenie a otestovanie viacerÃ½ch modulov takÃ½chto materiÃ¡lov. VÃ½stupy projektu budÃº Äalej vyuÅ¾iteÄ¾nÃ© pre ÃºÄely vzdelÃ¡vania odbornÃ­kov z praxe vrÃ¡mci celoÅ¾ivotnÃ©ho vzdelÃ¡vania, a tieÅ¾ popularizÃ¡cie mechatroniky a automatizÃ¡cie u Å¡irokej verejnosti a Å¾iakov strednÃ½ch Å¡kÃ´l - potenciÃ¡lnych Å¡tudentov vysokÃ½ch Å¡kÃ´l technickÃ©ho zamerania.', 'Presently, interactive education forms based on exploitation of Internet, video, audiovisual aids and remote laboratories (on-line education) are world trends in modern and barrier-free education;\r\nit is applied not only in distance education but in the attendance teaching as technology augmented classroom teaching. Along with slide-shows and educational miniapplications (dynamic websites,\r\nflash animations, Java Applets etc.) research universities usually prefer to develop their own education videos targeted to the audience in a single course. Education videos are freely available and enable the students to follow the explanatory discourse on the subject topic anytime and anywhere. Design and realization of a comprehensible and interesting educational video on a technological field is a quite complex task requiring synergy of technical, educational and artistic qualities of its creators. The project deals with the multimedia support of education in mechatronics engineering, with the focus on applied informatics, automation and related fields. The objective of the project is to build a multimedia laboratory for creating high-quality educational videomaterial for both distance and attendance education in mechatronics engineering. Project outcomes will be further employed in life-long education of practitioners, and for popularization of mechatronics and automation among the public and potential university students of technology.'),
+(7, 'KEGA', '011STU-4/2015 ', 'ElektronickÃ© pedagogicko-experimentÃ¡lne laboratÃ³riÃ¡ mechatroniky', 'Electronic educational-experimental laboratories of Mechatronics', '2015', '2017', 'doc. Ing. Peter DrahoÅ¡, PhD.', '', 'http://uamt.fei.stuba.sk/kega/', '1 724', 'Projekt sa zaoberÃ¡ vytvorenÃ­m modernej vedomostnej a experimentÃ¡lnej zÃ¡kladne pre vÃ½uÄbu mechatroniky s dÃ´razom na jej elektronickÃ© sÃºÄasti. VzhÄ¾adom na to, Å¾e mechatronika integruje viacerÃ© oblasti poznania a ich spojenÃ­m vytvÃ¡ra synergickÃ½ efekt, budÃº v rÃ¡mci projektu budÃº vypracovanÃ© novÃ© metÃ³dy a formy vo vÃ½uÄbe, ktorÃ© Å¡tudentom umoÅ¾nia zÃ­skaÅ¥ novÃ© poznatky s praktickou skÃºsenosÅ¥ou s vyuÅ¾Ã­vanÃ­m modernÃ½ch elektronickÃ½ch prvkov a systÃ©mov, ktorÃ© tvoria neoddeliteÄ¾nÃº sÃºÄasÅ¥ komplexnÃ½ch mechatronickÃ½ch systÃ©mov v oblasti vÃ½robkov spotrebnej elektroniky, energetiky, automobilovej techniky a v zdravotnÃ­ctve.\r\nPodnetnou vÃ½zvou pre podanie projektu bol vznik novÃ½ch Å¡tudijnÃ½ch programoch""AutomobilovÃ¡ mechatronika"" (Bc. program) a ""AplikovanÃ¡ mechatronika a elektromobilita"" (Ing. program). Pre tieto Å¡tudijnÃ© programy budÃº vytvorenÃ© elektronickÃ© uÄebnÃ© texty pre 7 predmetov.\r\nZa ÃºÄelom ÄalÅ¡ieho zvyÅ¡ovania kvality vÃ½uÄby a vÃ½skumu sa plÃ¡nuje v rÃ¡mci v rÃ¡mci rieÅ¡enia projektu vytvoriÅ¥ 5 novÃ½ch experimentÃ¡lnych pracovÃ­sk podÄ¾a najnovÅ¡Ã­ch trendov v elektronike, snÃ­macej technike a riadiacich systÃ©moch, ktorÃ© budÃº maÅ¥ viacÃºÄelovÃ© vyuÅ¾itie v priamej pedagogike, v individuÃ¡lnych a tÃ­movÃ½ch Å¡tudentskÃ½ch projektoch ako aj pri vÃ½skumnej a vÃ½vojovej Äinnosti Ãºstavu.\r\nCieÄ¾om projektu je zvÃ½Å¡iÅ¥ odbornÃ© kompetencie Å¡tudentov, uÄiteÄ¾ov a vÃ½skumnÃ½ch pracovnÃ­kov a vÅ¡etkÃ½ch zÃºÄastnenÃ½ch v tÃ½chto oblastiach: modernÃ© senzory a MEMS, aktuÃ¡tory na bÃ¡ze smart materiÃ¡lov, elektrickÃ© trakÄnÃ© pohony, mikroradiÄe a DSP pre vstavanÃ© riadiace systÃ©my a spracovanie signÃ¡lov, nÃ¡vrh riadiacich algoritmov a ich programovanie, elektronika a integrovanÃ© obvody (ASICs) pre mechatroniku. ÄalÅ¡Ã­m dÃ´leÅ¾itÃ½m sub-cieÄ¾om rieÅ¡enej problematiky je zÃ­skaÅ¥ Å¡irokÃ© kompetencie v komunikaÄnÃ½ch systÃ©moch pre rÃ´zne aplikaÄnÃ© oblasti mechatronickÃ½ch systÃ©mov najmÃ¤ v automobilovom priemysle.\r\nNavrhovanÃ½ projekt bude podporovanÃ½ prostrednÃ­ctvom modernÃ½ch audiovizuÃ¡lnych systÃ©mov, prostrednÃ­ctvom web strÃ¡nky a videÃ­ s multimediÃ¡lnym spracovanÃ­m.', 'The project deals with the creation of modern knowledge and experimental basis for education in Mechatronics Engineering with the emphasis on electronic components. Due to the fact that mechatronics integrates several fields of knowledge and their junction yields a synergy effect, new methods and forms of eduation will be elaborated within the project allowing students to acquire new knowledge combined with practical experience in using modern electronic components and systems; such systems are integral parts of complex pervasive mechatronic systems (in consumer electronics, energy and automotive industries, healthcare). Inspiration for elaboration of the proposed project was launching of new study programs ""Automotive Mechatronics"" (Bachelor degree), and ""Applied Mechatronics and Electromobility"" (Master degree). For these study programs electronic textbooks for 7 subjects will be created. To further increase quality of education and research, 5 new experimental workplaces are planned to be created within the project to according to the latest development trends electronics, sensing technology and control systems having multi-purpose exploitation in direct teaching, individual and team projects as well as in research and development activities of the Institute. The objective of the project is to increase professional competences of students, teachers and researchers, and all involved in the areas: advanced sensors and MEMS, smart materials based actuators, electric traction motors, microcontrollers and digital signal processors (DSPÂ´s) for embedded control systems and signal processing, design of control algorithms and their programming, electronics and integrated circuits (ASICs) for mechatronics. Another important sub-objective is to acquire wide competences in communication systems for various application areas of mechatronic systems, in particular in automotive industry. Modern audiovisual systems, web pages and multimedia processed videos will be widely used to support project results.'),
+(8, 'APVV', 'APVV-0246-12 ', 'PokroÄilÃ© metÃ³dy modelovania a simulÃ¡cie SMART mechatronickÃ½ch systÃ©mov', 'Advanced Methods and Simulations of SMART Mechatronic Systems', '1.10.2013', '30.9.2016', 'prof. Ing. JustÃ­n MurÃ­n, DrSc. ', '', '', 'AK14', 'V prvej fÃ¡ze rieÅ¡enia projektu bude kladenÃ½ dÃ´raz na materiÃ¡lovÃ©, technickÃ© a prÃ­strojovÃ© zabezpeÄenie experimentÃ¡lnych ÄastÃ­, ktorÃ© budÃº v projekte rieÅ¡enÃ©. V tejto fÃ¡ze takisto budÃº odvodenÃ© MKP rovnice pre 3D-FGM nosnÃ­ky ako aj multifyzikÃ¡lne modely pre SMA. SÃºÄasÅ¥ou prvej fÃ¡zy rieÅ¡enia projektu bude taktieÅ¾ zaÄatÃ¡ prÃ­prava fyzikÃ¡lnych experimentov za ÃºÄelom verifikÃ¡cie matematickÃ½ch modelov FGM a SMA systÃ©mov. V nasledovnom obdobÃ­ rieÅ¡enia projektu bude vykonanÃ¡ verifikÃ¡cia matematickÃ½ch modelov na vybranÃ½ch experimentÃ¡lnych vzorkÃ¡ch, ktorÃ© boli dÃ´sledne experimentÃ¡lne analyzovanÃ© z hÄ¾adiska materiÃ¡lovÃ©ho zloÅ¾enia. VÃ½sledky experimentÃ¡lnych meranÃ­ na SMA aktuÃ¡tore budÃº vyuÅ¾itÃ© v nasledovnom obdobÃ­ rieÅ¡enia projektu pri nÃ¡vrhu a realizÃ¡cii alternatÃ­vneho spÃ´sobu uchytenia SMA aktuÃ¡tora. Bude nasledovaÅ¥ vytvorenie nelineÃ¡rneho modelu aktuÃ¡tora SMA a nÃ¡vrhu novÃ½ch metÃ³d syntÃ©zy zameranÃ½ch na riadenie polohy a potlaÄenie dominantnÃ½ch porÃºch. V tomto obdobÃ­ budÃº sÃºÄasne prebiehaÅ¥ vÃ½skumnÃ© prÃ¡ce na teoretickom odvodenÃ­ MKP rovnÃ­c pre FGM Å¡krupinu a jej spojenia s 3D-FGM nosnÃ­kovÃ½m prvkom do kombinovanÃ©ho nosnÃ­kovo-Å¡krupinovÃ©ho MEMSu. V zÃ¡vereÄnej fÃ¡ze projektu bude kladenÃ½ dÃ´raz jednak na verifikÃ¡ciu odvodenÃ½ch MKP rovnÃ­c pre nosnÃ­kovo-Å¡krupinovÃ½ MEMS pomocou fyzikÃ¡lneho experimentu ako aj na riadenie SMA aktuÃ¡tora konvenÄnÃ½mi a inteligentnÃ½mi metÃ³dami riadenia.', 'In the first phase, attention will be given to the material, technical and equipment set-up required for the first set experiments. At the same time, the FGM-beam FEM equations will be derived and SMA models designed. In addition, the first sets of experiments will be used for the verification of numerical models of 3D-FGM and SMA systems. A complex verification of numerical models will take place on selected samples whose chemistry has been consistently analyzed. Results of SMA actuator measurements will be used in the consecutive stages of the project in the design and application of alternative anchoring for SMA actuators. Next the nonlinear model of SMA actuator and new methods of synthesis focused on position control and error elimination will be proposed. This research will take place in parallel with the theoretical analysis and FEM equations derivation of FGM shells. In the final stage, emphasis will be given to both the verification of the derived FGM beam-shell equations by real sample measurements and the control of the SMA actuator by conventional and intelligent methods.'),
+(9, 'APVV', 'APVV-0343-12 ', 'PoÄÃ­taÄovÃ¡ podpora nÃ¡vrhu robustnÃ½ch nelineÃ¡rnych regulÃ¡torov', 'Computer aided robust nonlinear control design', '1.10.2013', '31.3.2017', 'prof. Ing. MikulÃ¡Å¡ Huba, PhD. ', '', '', 'AK29 ', 'Projekt sa zaoberÃ¡ vypracovanÃ­m podpornÃ©ho poÄÃ­taÄovÃ©ho systÃ©mu na nÃ¡vrh robustnÃ½ch nelineÃ¡rnych regulÃ¡torov s obmedzeniami vo verzii pre Matlab/Simulink a web a vytvorenÃ­m integrovanÃ©ho elektronickÃ©ho prostredia v LMS Moodle, ktorÃ© ho spÃ¡ja s webovou strÃ¡nkou projektu, s elearningovÃ½mi modulmi a s prÃ­stupom k vzdialenÃ½m experimentom umoÅ¾ÅˆujÃºcim jeho overenie online. SystÃ©m je zaloÅ¾enÃ½ na novej metÃ³de nÃ¡vrhu regulÃ¡torov vychÃ¡dzajÃºcej s obmedzovania odchÃ½lok od poÅ¾adovanÃ½ch tvarov vstupnÃ½ch a vÃ½stupnÃ½ch, resp. stavovÃ½ch veliÄÃ­n. TÃ¡to integruje vÃ½sledky viacerÃ½ch doteraz izolovanÃ½ch prÃ­stupov k nÃ¡vrhu regulÃ¡torov - tradiÄnÃº teÃ³riu PID regulÃ¡torov, modernÃ½ stavovÃ½ prÃ­stup s teÃ³riou pozorovateÄ¾ov, Äasovo optimÃ¡lne riadenie, nelineÃ¡rne systÃ©my a riadenie systÃ©mov s veÄ¾kÃ½m dopravnÃ½m oneskorenÃ­m a robustnÃ½ nÃ¡vrh regulÃ¡torov. VyvÃ­janÃ½ systÃ©m bude vhodnÃ½ pre Å¡irokÃº triedu neurÄitÃ½ch a nelineÃ¡rnych objektov, ktorÃ© predstavujÃº vÃ¤ÄÅ¡inu beÅ¾nÃ½ch aplikÃ¡ciÃ­ v praxi. SystÃ©m bude pozostÃ¡vaÅ¥ z centrÃ¡lnej pracovnej stanice umoÅ¾ÅˆujÃºcej dostatoÄne rÃ½chle generovanie tzv. portrÃ©tu sprÃ¡vania riadenÃ©ho objektu s uvaÅ¾ovanÃ½m typom regulÃ¡tora, z ÃºloÅ¾iska vytvorenÃ½ch portrÃ©tov sprÃ¡vania a z grafickÃ½ch stanÃ­c, ktorÃ© umoÅ¾nia na zÃ¡klade Å¡pecifikÃ¡cie neurÄitÃ½ch parametrov riadenÃ©ho objektu a zadanÃ½ch kvalitatÃ­vnych poÅ¾iadaviek na riadenÃ© procesy urÄiÅ¥ optimÃ¡lne nastavenie regulÃ¡tora zaruÄujÃºce pre zadanÃ© poÅ¾iadavky dosiahnutie najvyÅ¡Å¡ej moÅ¾nej dynamiky prechodovÃ½ch dejov aj pri zohÄ¾adnenÃ­ neurÄitostÃ­.', 'The project deals with development and introduction into practice of the computer aided system for design of robust constrained nonlinear control (in versions for Matlab/Simulink and web) and of the integrated electronic environment in LMS Moodle interconnecting the system with the project web page, with the elearning modules and with access to remote experiments enabling its online verification. The system will be based on a new robust control method based on constraining deviations from required shapes of the input, output, or state variables. This is holistically integrating several up to now isolated control design approaches - the traditional PID control, modern state & disturbance observer approach, minimum time control, nonlinear control, control of systems with long dead time and robust control. The developed system is intended for a broad class of uncertain and nonlinear plants that represent a majority of all applications in practice. The system will consist of a central work station enabling a sufficiently fast generation of the so called performance portrait of given plant with a considered type of control, from a repository of generated performance portraits and from graphical terminals enabling by means of specifying parameters of given plant and the required shape-related performance measures to determine the optimal controller tuning guaranteeing the fastest possible transients responses in the control loop under consideration of the given uncertainties.'),
+(10, 'APVV', 'APVV-0772-12 ', 'ModernÃ© metÃ³dy riadenia s vyuÅ¾itÃ­m FPGA Å¡truktÃºr', 'Advanced control methods based on FPGA structures ', '1.10.2013', '30.9.2017', 'doc. Ing. Alena KozÃ¡kovÃ¡, PhD. ', '', '', 'AK39 ', 'Projekt rieÅ¡i aktuÃ¡lne otÃ¡zky vÃ½skumu a vÃ½voja modernÃ½ch metÃ³d riadenia s vyuÅ¾itÃ­m hardvÃ©rovÃ½ch realizÃ¡ciÃ­ konvenÄnÃ½ch (PID) ako aj modernÃ½ch (optimÃ¡lne, robustnÃ©, prediktÃ­vne) algoritmov riadenia pre procesy s rÃ½chlou dynamikou. V sÃºÄasnosti dominujÃº vo vÃ½skume a implementÃ¡cii modernÃ½ch riadiacich systÃ©mov tieto smery: rieÅ¡enia na bÃ¡ze mikroprocesorov (softvÃ©rovÃ½ prÃ­stup), jednoÃºÄelovÃ© rieÅ¡enia ASIC a rieÅ¡enia na bÃ¡ze programovateÄ¾nÃ½ch hradlovÃ½ch polÃ­ (Field Programmable Gate Arrays, FPGA), ktorÃ© predstavujÃº konfigurovateÄ¾nÃ© obvody vysokÃ©ho stupÅˆa integrÃ¡cie (VLSI) schopnÃ© integrovaÅ¥ rÃ´zne logickÃ© a riadiace funkcie. HardvÃ©rovÃ© implementÃ¡cie algoritmov riadenia sÃº v porovnanÃ­ so softvÃ©rovÃ½mi realizÃ¡ciami vo vÅ¡eobecnosti o niekoÄ¾ko rÃ¡dov rÃ½chlejÅ¡ie, pretoÅ¾e spracovanie v nich prebieha paralelne, navyÅ¡e sÃº kompaktnejÅ¡ie a vo vÅ¡eobecnosti lacnejÅ¡ie. HlavnÃ½m cieÄ¾om projektu je vÃ½skum a vÃ½voj algoritmov na bÃ¡ze FPGA Å¡truktÃºr, ktorÃ½ bude skÃºmanÃ½ na vÃ½vojovÃ½ch FPGA systÃ©moch a verifikovanÃ½ na fyzikÃ¡lnych laboratÃ³rnych modeloch s rÃ½chlou dynamikou.', 'The project deals with research and development of advanced control methods based on HW implementation of conventional (PID) as well as modern optimal, robust and predictive algorithms applicable in control of plants with fast dynamics. Predominating approaches in the research of modern control systems implementation are microprocessor-based solutions (software approach), ASIC (dedicated approach) and the FPGA based approach. Field Programmable Gate Arrays (FPGA) are configurable circuits of very-large-scale-integration (VLSI) able to integrate various logical and control functions. In general, HW implementations of control algorithms are faster by several orders compared with SW implementations due to parallel processing of information; moreover they are more compact and also less expensive. The main objective of the project is research and development of FPGA-based control algorithms. Their research and development will be studied on available FPGA development kits and verified on laboratory plants with fast dynamics.'),
+(11, 'APVV', 'APVV-14-0613 ', 'Å irokopÃ¡smovÃ½ MEMS detektor terahertzovÃ©ho Å¾iarenia', 'Broadband MEMS detector of terahertz radiaton ', '2015', '2018', 'doc. Ing. VladimÃ­r KutiÅ¡, PhD. ', '', '', NULL, 'Projekt je zameranÃ½ na vÃ½skum a vÃ½voj novÃ½ch typov Å¡irokopÃ¡smovÃ½ch detektorov pre terahertzovÃº (THz) oblasÅ¥ frekvenciÃ­. NovÃ½ typ detektora je navrhnutÃ½ v koncepte mikro-elektro-mechanickÃ©ho systÃ©mu a vyuÅ¾Ã­va bolometrickÃ½ princÃ­p snÃ­mania. KonÅ¡trukÄnÃ½ nÃ¡vrh detektora pozostÃ¡va z mikrobolometrickÃ©ho snÃ­macieho prvku viazanÃ©ho na Å¡irokopÃ¡smovÃº antÃ©nu. TepelnÃ¡ konverzia dopadajÃºceho THz Å¾iarenia je prebieha na tenkej polyimidovej membrÃ¡ne, ktorÃ¡ umoÅ¾nÃ­ dosiahnuÅ¥ nielen vysokÃº tepelnÃº konverznÃº ÃºÄinnosÅ¥ (zvÃ½Å¡enie citlivosti) ale zÃ¡roveÅˆ umoÅ¾nÃ­ tieÅ¾ realizovaÅ¥ nÃ¡vrhy detektorov do vysokÃ½ch frekvenciÃ­ s vyrovnanou amplitÃºdovou charakteristikou. NavrhnutÃ½ novÃ½ koncept MEMS detektorov bude optimalizovanÃ½ sofistikovanÃ½m procesom modelovania a simulÃ¡cie v priamej vzÃ¡jomnej iterÃ¡cii s experimentÃ¡lnou funkÄnou a detekÄnou analÃ½zou. FinÃ¡lnym zavÅ•Å¡enÃ­m rieÅ¡enia projektu bude tieÅ¾ vypracovanÃ¡ metodolÃ³gia merania, charakterizÃ¡cie, Å¡irokopÃ¡smovej THz detekcie a simulÃ¡cie MEMS detekÄnÃ©ho prvku aplikovateÄ¾nÃ¡ nielen vo vede ale aj vedeckej vÃ½chove.', 'The project is aimed on research and development of new types of broadband detectors for terahertz frequency range. This new type of detector is designed in a concept of micro-electro-mechanical system and uses the bolometric sensing principle. The design construction of the detector consists of a microbolometric sensing device coupled to a broadband antenna. Thermal conversion of the incident THz radiation takes place on a thin polyimide membrane which enables (a) to achieve high thermal conversion efficiency and (b) to design detectors with balanced amplitude characteristics even at high frequency range. The proposed MEMS detector concept will be optimized by a sophisticated process of modeling and simulation in direct mutual iteration with experimental analysis of functionality and detection capability. The completion of the project will be given by the developed state-of-the-art methodology of characterization, broadband THz detection and simulation of the MEMS detector device applicable in the research and education.'),
+(12, 'MedzinÃ¡rodnÃ© projekty/Cooperation', 'SK06-II-01-004 ', 'Podpora medzinÃ¡rodnej mobility medzi STU Bratislava, NTNU Trondheim a UniversitÃ¤t Liechtenstein', 'Support of international mobilites between STU Bratislava, NTNU Trondheim, and UniversitÃ¤t Liechtenstein', '2.6.2015', '30.9.2016', 'zodpovednÃ½ za ÃšAMT - prof. Ing. MikulÃ¡Å¡ Huba, PhD. ', 'Norwegian University of Science and Technology Trondheim (prof. Skogestad, prof. Johansen, prof. Hovd)|UniversitÃ¤t Liechtenstein, Liechtenstein (prof. Droege)', '', NULL, 'Projekt rieÅ¡i aktuÃ¡lne otÃ¡zky vÃ½skumu a vÃ½voja modernÃ½ch metÃ³d riadenia s vyuÅ¾itÃ­m hardvÃ©rovÃ½ch realizÃ¡ciÃ­ konvenÄnÃ½ch (PID) ako aj modernÃ½ch (optimÃ¡lne, robustnÃ©, prediktÃ­vne) algoritmov riadenia pre procesy s rÃ½chlou dynamikou. V sÃºÄasnosti dominujÃº vo vÃ½skume a implementÃ¡cii modernÃ½ch riadiacich systÃ©mov tieto smery: rieÅ¡enia na bÃ¡ze mikroprocesorov (softvÃ©rovÃ½ prÃ­stup), jednoÃºÄelovÃ© rieÅ¡enia ASIC a rieÅ¡enia na bÃ¡ze programovateÄ¾nÃ½ch hradlovÃ½ch polÃ­ (Field Programmable Gate Arrays, FPGA), ktorÃ© predstavujÃº konfigurovateÄ¾nÃ© obvody vysokÃ©ho stupÅˆa integrÃ¡cie (VLSI) schopnÃ© integrovaÅ¥ rÃ´zne logickÃ© a riadiace funkcie. HardvÃ©rovÃ© implementÃ¡cie algoritmov riadenia sÃº v porovnanÃ­ so softvÃ©rovÃ½mi realizÃ¡ciami vo vÅ¡eobecnosti o niekoÄ¾ko rÃ¡dov rÃ½chlejÅ¡ie, pretoÅ¾e spracovanie v nich prebieha paralelne, navyÅ¡e sÃº kompaktnejÅ¡ie a vo vÅ¡eobecnosti lacnejÅ¡ie. HlavnÃ½m cieÄ¾om projektu je vÃ½skum a vÃ½voj algoritmov na bÃ¡ze FPGA Å¡truktÃºr, ktorÃ½ bude skÃºmanÃ½ na vÃ½vojovÃ½ch FPGA systÃ©moch a verifikovanÃ½ na fyzikÃ¡lnych laboratÃ³rnych modeloch s rÃ½chlou dynamikou.', 'The aim of the project is to support international mobility of students, PhD students, and staff members of four participating faculties of STU in Bratislava with partners from NTNU Trondheim and UniversitÃ¤t Liechtenstein. It will initiate academic cooperation between the University of Liechtenstein and STU Bratislava in construction, architecture, and space planning, focusing on the use of alternative energy sources in operation of buildings, including computer-aided simulations of energy needs and internal environment, and spatial planning of rural settlements as well. The project also contributes to further strengthening of already existing cooperation between NTNU Trondheim and faculties of STU in Bratislava in the field of advanced methods of automatic control and to progress of inter-faculty cooperation at STU in Bratislava.'),
+(13, 'InÃ© domÃ¡ce projekty/Other domestic projects', 'TB', 'SoftvÃ©rovÃ© riadenie smerovej dynamiky vozidla UGV 6x6', 'SoftvÃ©rovÃ© riadenie smerovej dynamiky vozidla UGV 6x6', '2015', '2015', 'Ing. Martin BugÃ¡r, PhD. ', '', '', '7506', NULL, ''),
+(14, 'InÃ© domÃ¡ce projekty/Other domestic projects', 'VW', 'PredlÅ¾ovanie Å¾ivotnosti akumulÃ¡torovÃ©ho systÃ©mu', 'PredlÅ¾ovanie Å¾ivotnosti akumulÃ¡torovÃ©ho systÃ©mu', '2015', '2015', 'Ing. Martin BugÃ¡r, PhD. ', '', '', '7509', NULL, ''),
+(15, 'InÃ© domÃ¡ce projekty/Other domestic projects', 'MV', 'REST platforma pre online riadenie experimentov', 'REST Platform for Online Control of Experiments', '2015', '2015', 'Ing. Miroslav Gula', '', '', '1361', 'Tento projekt je sÃºÄasÅ¥ou rozsiahlejÅ¡ieho cieÄ¾a o vytvorenie univerzÃ¡lneho protokolu pre vzdialenÃ© riadenie reÃ¡lnych sÃºstav a tieÅ¾ balÃ­ka softvÃ©rovÃ½ch nÃ¡strojov na jeho implementÃ¡ciu. HlavnÃ½m cieÄ¾om celÃ©ho Ãºsilia je zjednoduÅ¡iÅ¥ a urÃ½chliÅ¥ budovanie modulÃ¡rnych online laboratÃ³riÃ­.\r\nÃšlohami projektu sÃº nÃ¡vrh a vytvorenie nÃ¡stroaj pre vzdialenÃ½ prÃ­stup k softvÃ©ru Scilab, zavÅ•Å¡enie implementÃ¡cie podobnÃ©ho nÃ¡stroja urÄenÃ©ho pre softvÃ©rovÃ½ balÃ­k Matlab/Simulink, a nÃ¡vrh a ÄiastoÄnÃ¡ implementÃ¡cia mechatronickÃ©ho systÃ©mu, ktorÃ½ bude v budÃºcnosti slÃºÅ¾iÅ¥ na demonÅ¡trÃ¡ciu spomenutÃ½ch nÃ¡strojov a nÃ¡sledne ako uÄebnÃ¡ pomÃ´cka.', 'The project is a part of an extensive endeavor to create universal protocol for remote control of real plants, and a suite of software tools to implement this protocol. The main objective of this whole endeavor is to simplify and accelerate implementation of modular online laboratories. Tasks of this project include design and implementation of a software tool for remote access to Scilab, completion of implementation of a similar tool for Matlab/Simulink, and design and partial implementation of a mechatronic system which will serve for demonstration of mentioned tools and later on as teaching aid.');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `publikacie`
+--
+
+CREATE TABLE `publikacie` (
+  `id` int(11) NOT NULL,
+  `meno` varchar(60) COLLATE utf8_slovak_ci NOT NULL,
+  `priloha` varchar(60) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `href` varchar(1000) COLLATE utf8_slovak_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `publikacie`
+--
+
+INSERT INTO `publikacie` (`id`, `meno`, `priloha`, `href`) VALUES
+(35, 'dokument1', 'google', 'https://www.google.com'),
+(43, 'dokument1', 'pdf.pdf', 'publikacie/uploads/pdf.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `Role`
+--
+
+CREATE TABLE `Role` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `Role`
+--
+
+INSERT INTO `Role` (`id`, `name`) VALUES
+(1, 'user'),
+(2, 'hr'),
+(3, 'reporter'),
+(4, 'editor'),
+(5, 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `RoleZamestnanci`
+--
+
+CREATE TABLE `RoleZamestnanci` (
+  `id` int(11) NOT NULL,
+  `id_staff` int(11) NOT NULL,
+  `id_role` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `RoleZamestnanci`
+--
+
+INSERT INTO `RoleZamestnanci` (`id`, `id_staff`, `id_role`) VALUES
+(7, 6, 2),
+(9, 6, 5),
+(10, 16, 5),
+(125, 26, 5),
+(126, 36, 5),
+(127, 41, 5),
+(134, 56, 5),
+(90, 57, 5),
+(112, 58, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `sluzobneCesty`
+--
+
+CREATE TABLE `sluzobneCesty` (
+  `id` int(11) NOT NULL,
+  `meno` varchar(60) COLLATE utf8_slovak_ci NOT NULL,
+  `priloha` varchar(60) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `href` varchar(1000) COLLATE utf8_slovak_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `sluzobneCesty`
+--
+
+INSERT INTO `sluzobneCesty` (`id`, `meno`, `priloha`, `href`) VALUES
+(35, 'dokument1', 'google', 'https://www.google.com'),
+(43, 'dokument1', 'pdf.pdf', 'sluzobneCesty/uploads/pdf.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `Videos`
+--
+
+CREATE TABLE `Videos` (
+  `ID` int(11) NOT NULL,
+  `Title-SK` varchar(100) COLLATE utf8_slovak_ci NOT NULL,
+  `Title-EN` varchar(100) COLLATE utf8_slovak_ci NOT NULL,
+  `Adresa` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
+  `YT` varchar(5) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `Videos`
+--
+
+INSERT INTO `Videos` (`ID`, `Title-SK`, `Title-EN`, `Adresa`, `YT`) VALUES
+(38, 'Å tuduj mechatroniku a budeÅ¡ ÃºspeÅ¡nÃ½!', 'Study Automotive Mechatronics', 'Automobilova mechatronika FEI STU.mp4', 'no');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `zamestnanci`
+--
+
+CREATE TABLE `zamestnanci` (
+  `id` int(11) NOT NULL,
+  `name` varchar(40) COLLATE utf8_slovak_ci NOT NULL,
+  `surname` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
+  `title1` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
+  `title2` varchar(10) COLLATE utf8_slovak_ci NOT NULL,
+  `ldapLogin` varchar(30) COLLATE utf8_slovak_ci NOT NULL,
+  `photo` varchar(30) COLLATE utf8_slovak_ci NOT NULL,
+  `room` varchar(15) COLLATE utf8_slovak_ci NOT NULL,
+  `phone` varchar(11) COLLATE utf8_slovak_ci DEFAULT NULL,
+  `department` varchar(80) COLLATE utf8_slovak_ci NOT NULL,
+  `staffRole` varchar(50) COLLATE utf8_slovak_ci NOT NULL,
+  `function` varchar(100) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `zamestnanci`
+--
+
+INSERT INTO `zamestnanci` (`id`, `name`, `surname`, `title1`, `title2`, `ldapLogin`, `photo`, `room`, `phone`, `department`, `staffRole`, `function`) VALUES
+(1, 'Vladislav', 'BaÄa', 'Ing.', '', '', 'baca.jpg', 'T005', '264', 'OEMP', 'doktorand', ''),
+(2, 'Peter', 'Balko', 'Ing.', '', '', '', 'D 102', '395', 'OIKR', 'doktorand', ''),
+(3, 'Richard', 'Balogh', 'Ing.', ' PhD.', '', 'balogh.jpg', 'D 110', '411', 'OEMP', 'teacher', 'zÃ¡stupca vedÃºceho oddelenia'),
+(4, 'Igor', 'BÃ©lai', 'Ing.', ' PhD.', '', '', 'D 126', '478', 'OEMP', 'teacher', ''),
+(5, 'KatarÃ­na', 'BeringerovÃ¡', '', '', '', '', 'A 705', '672', 'AHU', 'teacher', ''),
+(6, 'Pavol', 'BistÃ¡k', 'Ing.', ' PhD.', 'bistak', 'bistak.jpg', 'D 120', '695', 'OEAP', 'teacher', ''),
+(7, 'Dmitrii', 'Borkin', 'Ing.', '', '', '', 'D 102', '395', 'OIKR', 'doktorand', ''),
+(8, 'Martin', 'BugÃ¡r', 'Ing.', ' PhD.', '', '', 'A 708', '579', 'OEAP', 'teacher', ''),
+(9, 'JÃ¡n', 'CigÃ¡nek', 'Ing.', ' PhD.', '', '', 'D 104', '686', 'OIKR', 'teacher', ''),
+(10, 'Peter', 'DrahoÅ¡', 'doc. Ing.', ' PhD.', '', '', 'D 118', '669', 'OEMP', 'teacher', ''),
+(11, 'FrantiÅ¡ek', 'ErdÃ¶dy', '', '', '', 'erdody.jpg', 'A S39', '818', 'AHU', 'teacher', ''),
+(12, 'Viktor', 'Ferencey', 'prof. Ing.', ' PhD.', '', 'ferencey.jpg', 'A 802', '438', 'OEAP', 'teacher', 'zÃ¡stupca vedÃºceho oddelenia'),
+(13, 'Peter', 'Fuchs', 'doc. Ing.', ' PhD.', '', '', 'B S05', '826', 'OEMP', 'researcher', ''),
+(14, 'Gabriel', 'GÃ¡lik', 'Ing.', '', '', '', 'A 706', '559', 'OAMM', 'researcher', ''),
+(15, 'VladimÃ­r', 'Goga', 'doc. Ing.', ' PhD.', '', '', 'A 702', '687', 'OAMM', 'teacher', ''),
+(16, 'Miroslav', 'Gula', 'Ing.', '', 'xgulam', 'gula.jpg', 'D 103', '628', 'OIKR', 'doktorand', ''),
+(17, 'Oto', 'Haffner', 'Ing.', ' PhD.', '', 'haffner.jpg', 'D 125', '315', 'OIKR ', 'teacher', ''),
+(18, 'Juraj', 'HrabovskÃ½', 'Ing.', ' PhD.', '', '', 'A 706', '559', 'OAMM', 'teacher', ''),
+(19, 'MikulÃ¡Å¡', 'Huba', 'prof. Ing.', ' PhD.', '', 'huba.jpg', 'D 112', '771', 'OEAP', 'teacher', 'riaditeÄ¾ Ãºstavu; vedÃºci oddelenia'),
+(20, 'MÃ¡ria', 'HypiusovÃ¡', 'Ing.', ' PhD.', '', '', 'D 122', '193', 'OIKR', 'teacher', ''),
+(21, 'Å tefan', 'Chamraz', 'Ing.', ' PhD.', '', '', 'D 107', '848', 'OEMP', 'teacher', ''),
+(22, 'Jakub', 'Jakubec', 'Ing.', ' PhD.', '', '', 'A 707', '452', 'OAMM ', 'researcher', ''),
+(23, 'Igor', 'JakubiÄka', 'Ing.', '', '', 'jakubicka.jpg', 'T005', '264', 'OEMP', 'doktorand', ''),
+(24, 'KatarÃ­na', 'KermietovÃ¡', '', '', '', '', 'D 116', '598', 'AHU', 'teacher', 'zÃ¡stupca vedÃºceho oddelenia'),
+(25, 'Ivan', 'Klimo', 'Ing.', '', '', '', 'D 101', '509', 'OEMP', 'doktorand', ''),
+(26, 'Michal', 'KocÃºr', 'Ing.', ' PhD.', 'xkocurm2', 'kocur.jpg', 'D 104', '686', 'OIKR ', 'teacher', ''),
+(27, 'Å tefan', 'KozÃ¡k', 'prof. Ing.', ' PhD.', '', 'kozak.jpg', 'D 115', '281', 'OEMP', 'teacher', 'zÃ¡stupca riaditeÄ¾a Ãºstavu pre rozvoj Ãºstavu; vedÃºci oddelenia'),
+(28, 'Alena', 'KozÃ¡kovÃ¡', 'doc. Ing.', ' PhD.', '', '', 'D 111', '563', 'OIKR', 'teacher', ''),
+(29, 'Erik', 'KuÄera', 'Ing.', ' PhD.', '', '', 'D 125', '315', 'OIKR ', 'teacher', ''),
+(30, 'VladimÃ­r', 'KutiÅ¡', 'doc. Ing.', ' PhD.', '', 'kutis.jpg', 'A 701', '562', 'OAMM ', 'teacher', 'zÃ¡stupca vedÃºceho oddelenia'),
+(31, 'Alek', 'Lichtman', 'Ing.', '', '', '', 'D 101', '509', 'OEMP', 'doktorand', ''),
+(32, 'JustÃ­n', 'MurÃ­n', 'prof. Ing.', ' DrSc.', '', 'murin.jpg', 'A 704', '611', 'OAMM', 'teacher', 'zÃ¡stupca riaditeÄ¾a Ãºstavu pre vedeckÃº ÄinnosÅ¥; vedÃºci oddelenia'),
+(33, 'Jakub', 'OsuskÃ½', 'Ing.', ' PhD.', '', 'osusky.jpg', 'D 123', '356', 'OIKR ', 'teacher', ''),
+(34, 'TomÃ¡Å¡', 'Paciga', 'Ing.', '', '', '', 'A 707', '452', 'OAMM', 'doktorand', ''),
+(35, 'Juraj', 'Paulech', 'Ing.', ' PhD.', '', 'paulech.jpg', 'A 701', '562', 'OAMM', 'teacher', ''),
+(36, 'Matej', 'RÃ¡bek', 'Ing.', '', 'xrabek', 'rabek.jpg', 'D 103', '628', 'OIKR', 'doktorand', ''),
+(37, 'Danica', 'RosinovÃ¡', 'doc. Ing.', ' PhD.', '', 'rosinova.jpg', 'D 111', '563', 'OIKR', 'teacher', 'vedÃºci oddelenia'),
+(38, 'Tibor', 'SedlÃ¡r', 'Ing. ', '', '', '', 'A 803', '399', 'OAMM', 'teacher', ''),
+(39, 'Erich', 'Stark', 'Ing.', '', '', 'stark.jpg', 'C 014', '', 'OIKR', 'doktorand', ''),
+(40, 'Peter', 'Å¤apÃ¡k', 'Ing.', ' PhD.', '', '', 'D 121', '569', 'OEAP', 'teacher', ''),
+(41, 'KatarÃ­na', 'Å½Ã¡kovÃ¡', 'doc. Ing.', ' PhD.', 'zakova', 'zakova.jpg', 'D 119', '742', 'OIKR', 'teacher', 'zÃ¡stupca riaditeÄ¾a Ãºstavu pre pedagogickÃº ÄinnosÅ¥; zÃ¡stupca vedÃºceho oddelenia'),
+(56, 'Pavol', 'DaÄo', '', '', 'xdaco', '', '', '', '', '', ''),
+(57, 'Michal', 'Koplinger', '', '', 'xkoplingerm', '', '', NULL, '', '', ''),
+(58, 'TomÃ¡Å¡', 'DÅ¾adoÅˆ', '', '', 'xdzadont', '', '', NULL, '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Å truktÃºra tabuÄ¾ky pre tabuÄ¾ku `zaznam`
+--
+
+CREATE TABLE `zaznam` (
+  `id` int(11) NOT NULL,
+  `zamestnanec_id` int(11) NOT NULL,
+  `nepritomnost_id` int(11) NOT NULL,
+  `datum` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- SÅ¥ahujem dÃ¡ta pre tabuÄ¾ku `zaznam`
+--
+
+INSERT INTO `zaznam` (`id`, `zamestnanec_id`, `nepritomnost_id`, `datum`) VALUES
+(906, 4, 6, '2017-03-25'),
+(908, 1, 3, '2017-03-10'),
+(914, 1, 5, '2017-03-09'),
+(915, 1, 5, '2017-03-08'),
+(916, 4, 5, '2017-03-08'),
+(917, 37, 3, '2017-03-01'),
+(919, 37, 3, '2017-03-03'),
+(920, 37, 3, '2017-03-04'),
+(921, 37, 3, '2017-03-06'),
+(922, 38, 6, '2017-03-06'),
+(923, 39, 6, '2017-03-13'),
+(924, 39, 6, '2017-03-11'),
+(925, 41, 6, '2017-03-12'),
+(927, 56, 6, '2017-03-02'),
+(928, 56, 6, '2017-03-03'),
+(930, 56, 6, '2017-03-06'),
+(931, 56, 6, '2017-03-04'),
+(933, 38, 6, '2017-03-09'),
+(934, 56, 6, '2017-03-05'),
+(935, 56, 6, '2017-03-07'),
+(936, 56, 6, '2017-03-08'),
+(937, 38, 6, '2017-03-15'),
+(938, 37, 6, '2017-03-15'),
+(940, 39, 6, '2017-03-16'),
+(941, 1, 6, '2017-03-13'),
+(942, 1, 6, '2017-03-15'),
+(943, 1, 6, '2017-03-16'),
+(944, 1, 6, '2017-03-17'),
+(951, 1, 6, '2017-03-07'),
+(954, 56, 6, '2017-03-09'),
+(966, 56, 6, '2017-03-20'),
+(970, 56, 6, '2017-03-23'),
+(974, 56, 6, '2017-03-13');
+
+--
+-- KÄ¾ÃºÄe pre exportovanÃ© tabuÄ¾ky
+--
+
+--
+-- Indexy pre tabuÄ¾ku `Aktuality`
+--
+ALTER TABLE `Aktuality`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `doktorandi`
+--
+ALTER TABLE `doktorandi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `nakupy`
+--
+ALTER TABLE `nakupy`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `nepritomnost`
+--
+ALTER TABLE `nepritomnost`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `Newsletter`
+--
+ALTER TABLE `Newsletter`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`,`jazyk`);
+
+--
+-- Indexy pre tabuÄ¾ku `pedagogika`
+--
+ALTER TABLE `pedagogika`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `Photos`
+--
+ALTER TABLE `Photos`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexy pre tabuÄ¾ku `Projekty`
+--
+ALTER TABLE `Projekty`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `publikacie`
+--
+ALTER TABLE `publikacie`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `Role`
+--
+ALTER TABLE `Role`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `RoleZamestnanci`
+--
+ALTER TABLE `RoleZamestnanci`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`,`id_staff`,`id_role`),
+  ADD UNIQUE KEY `id_2` (`id`,`id_staff`,`id_role`),
+  ADD UNIQUE KEY `id_staff_2` (`id_staff`,`id_role`),
+  ADD KEY `id_staff` (`id_staff`),
+  ADD KEY `id_role` (`id_role`);
+
+--
+-- Indexy pre tabuÄ¾ku `sluzobneCesty`
+--
+ALTER TABLE `sluzobneCesty`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `Videos`
+--
+ALTER TABLE `Videos`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexy pre tabuÄ¾ku `zamestnanci`
+--
+ALTER TABLE `zamestnanci`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexy pre tabuÄ¾ku `zaznam`
+--
+ALTER TABLE `zaznam`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pre exportovanÃ© tabuÄ¾ky
+--
+
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `Aktuality`
+--
+ALTER TABLE `Aktuality`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `doktorandi`
+--
+ALTER TABLE `doktorandi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `nakupy`
+--
+ALTER TABLE `nakupy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `nepritomnost`
+--
+ALTER TABLE `nepritomnost`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `Newsletter`
+--
+ALTER TABLE `Newsletter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `pedagogika`
+--
+ALTER TABLE `pedagogika`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `Photos`
+--
+ALTER TABLE `Photos`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `Projekty`
+--
+ALTER TABLE `Projekty`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `publikacie`
+--
+ALTER TABLE `publikacie`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `Role`
+--
+ALTER TABLE `Role`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `RoleZamestnanci`
+--
+ALTER TABLE `RoleZamestnanci`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `sluzobneCesty`
+--
+ALTER TABLE `sluzobneCesty`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `Videos`
+--
+ALTER TABLE `Videos`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `zamestnanci`
+--
+ALTER TABLE `zamestnanci`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+--
+-- AUTO_INCREMENT pre tabuÄ¾ku `zaznam`
+--
+ALTER TABLE `zaznam`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=977;
+--
+-- Obmedzenie pre exportovanÃ© tabuÄ¾ky
+--
+
+--
+-- Obmedzenie pre tabuÄ¾ku `RoleZamestnanci`
+--
+ALTER TABLE `RoleZamestnanci`
+  ADD CONSTRAINT `RoleZamestnanci_ibfk_3` FOREIGN KEY (`id_staff`) REFERENCES `zamestnanci` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `RoleZamestnanci_ibfk_4` FOREIGN KEY (`id_role`) REFERENCES `Role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

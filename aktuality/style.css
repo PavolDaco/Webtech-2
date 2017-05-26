@@ -8,3 +8,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+html {
+	 overflow-x:hidden;
+}

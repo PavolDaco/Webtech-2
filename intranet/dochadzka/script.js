@@ -87,7 +87,6 @@ function userTable() {
         return 0;
     }
 }
-
 function edituj() {
     var i = document.getElementById('tbody2').childElementCount;
     for(var j = 0; j < i; j++) {

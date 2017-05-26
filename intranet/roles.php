@@ -1,8 +1,10 @@
 <?php
  session_start();
  include 'includes/dbh.php';
- include 'includes/intro_bocne_menu.php';
- include 'includes/intro_horne_menu.php'; 
+if (isset($_SESSION['login'])){
+     include 'includes/intro_bocne_menu.php';
+     include 'includes/intro_horne_menu.php';
+}
  mysqli_set_charset($conn, "utf8");
 ?>
   <title>Role</title>

@@ -29,9 +29,10 @@ table {
 }
 
 .okno_profil {
-  position: relative; 
+  position: absolute; 
+  left: 250px;
   margin-top: 25px;
-  width: 95%; 
+  width: 70%; 
   background-color: #128EE6;
   padding: 30px;  
   border: 1px solid blue;   
@@ -42,7 +43,7 @@ table {
 .okno_roles, .okno_users {
   position: absolute; 
   z-index: 1;
-  top: 0px;
+  top: 25px;
   left: 35%;
   width: 30%; 
   height: 100%;
@@ -99,9 +100,10 @@ table {
 */
 
 #bocne_menu {
+  margin-left: 5px;
   width: 170px;
   float: left;
-  min-height: 250px;
+  min-height: 220px;
 }
 
 #horne_menu {

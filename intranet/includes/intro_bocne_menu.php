@@ -15,9 +15,9 @@
 
 <?php
   $login = $_SESSION['login'];
-
+   
   if (isset($_SESSION['login'])) {
-       echo '<a class="logout bocne_menu" href="includes/logout.php">Odhlásiť</a><br>';
+       echo '<a class="logout bocne_menu" style="margin-left: 5px;" href="includes/logout.php">Odhlásiť</a><br>';
   }
     
    $sql = "SELECT id_role FROM RoleZamestnanci WHERE id_staff = (SELECT id FROM zamestnanci WHERE ldapLogin = '$login')";
@@ -36,8 +36,14 @@
     $row = mysqli_fetch_assoc($result);
 
 ///////////////////////// BOCNE MENU /////////////////////////////////////////////////
-    echo "<div id= bocne_menu>";
-    echo "Prihlásený: ".$row["name"]." ".$row["surname"]."<br><br>";
+    echo "<div id=bocne_menu>";
+    echo "<strong>Prihlásený: ".$row["name"]." ".$row["surname"]."</strong><br>";
+    echo "<strong>Vaše role: </strong><br>";
+    if (isset($_SESSION['isUser'])) echo "User<br>";
+    if (isset($_SESSION['isHr'])) echo "Hr<br>";
+    if (isset($_SESSION['isReporter'])) echo "Reporter<br>";
+    if (isset($_SESSION['isEditor'])) echo "Editor<br>";
+    if (isset($_SESSION['isAdmin'])) echo "Admin<br>";
 
     /// vsetci Useri vidia kartu Moj profil
     if (isset($_SESSION['isUser']) OR isset($_SESSION['isAdmin'])) {
@@ -56,18 +62,18 @@
    if (isset($_SESSION['isReporter']) OR isset($_SESSION['isAdmin'])) {
     echo '<br><br>
          <a class="bocne_menu" href="new_aktualita.php">Pridať aktualitu</a><br>
-         <a class="bocne_menu" href="../final/aktuality/new_aktualita.php">Pridať video</a><br>    
-         <a class="bocne_menu" href="../final/aktuality/new_aktualita.php">Pridať fotky</a><br>';  /// spravny linky pridat
+         <a class="bocne_menu" href="videos.php">Pridať video</a><br>    
+         <a class="bocne_menu" href="photos.php">Pridať fotky</a><br>';  
    }
 
    if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin'])) {
     echo '<br><br>
-         <a class="bocne_menu" href="../final/aktuality/new_aktualita.php">Správa dokumentov</a><br>';  /// spravny linky pridat
+         <a class="bocne_menu" href="pedagogika.php">Správa dokumentov</a><br>';  /// spravny linky pridat
    }
 
    if (isset($_SESSION['isAdmin'])) {
     echo '<br><br>
-         <a class="bocne_menu" href="roles.php">Správa rolí</a><br>';  /// spravny linky pridat
+         <a class="bocne_menu" href="roles.php">Správa rolí</a><br>';  
    }
   echo "</div>";   // koniec div bocne_menu
 ?> 
