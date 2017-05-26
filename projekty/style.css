@@ -1,23 +1,28 @@
+
 table {
     border-collapse: collapse;
 }
 
-table, th, td {
-    border: 1px solid black;
-    padding: 2px;
+table {
+    margin: 10px;
+    border: 1px solid lightgray;
 }
 
-.okno{
-  z-index: 1;
-  position: absolute; 
-  width: 65%; 
-  background-color: rgba(204, 204, 204, 0.95);
-  padding: 30px;  
-  border: 2px solid blue;   
-  min-width: 325px;
+.okno {
+
+    z-index: 1;
+    position: absolute;
+    width: 65%;
+    background-color: Gray;
+    padding: 30px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    min-width: 325px;
 
 }
 
 .closebtn {
-  cursor:pointer;
+    cursor: pointer;
+    font-size: 40px;
 }
