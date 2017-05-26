@@ -121,7 +121,7 @@ $lang['PHOTO_SQL2'] =  "SELECT `Photos`.`Title-EN`, `Photos`.`Datum`, `Photos`.`
 
 
 //Video
-$lang['VIDEO_ADDR'] = 'Link to video';
+$lang['VIDEO_ADDR'] = 'Video Code';
 $lang['VIDEO_ADD'] = 'Add video';
 $lang['VIDEO_UPLOAD'] = 'Upload video';
 $lang['VIDEO_ERR_EXST'] = 'File already exists';
