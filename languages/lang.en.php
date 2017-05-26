@@ -112,10 +112,13 @@ $lang['AKT_YES'] = 'Yes';
 $lang['PHOTO_DATE'] = 'Date';
 $lang['PHOTO_TITLESK'] = 'Title (SK)';
 $lang['PHOTO_TITLEEN'] = 'Title (EN)';
-$lang['PHOTO_CHOOSE'] = 'Choose images: (max 50, max 2MB)';
+$lang['PHOTO_CHOOSE'] = 'Choose images:';
 $lang['PHOTO_UPLOAD'] = 'Upload images:';
 $lang['PHOTO_GALERY'] = 'Choose gallery:';
-$lang['PHOTO_ERROR'] = 'Upload failed';
+$lang['PHOTO_PHOTO'] = "Galeries";
+$lang['PHOTO_SQL1'] = "SELECT `Photos`.`ID`, `Photos`.`Title-EN`, `Photos`.`Datum`, `Photos`.`Folder` FROM `Photos` ";
+$lang['PHOTO_SQL2'] =  "SELECT `Photos`.`Title-EN`, `Photos`.`Datum`, `Photos`.`Folder` FROM `Photos` WHERE `Photos`.`ID` = '";
+
 
 //Video
 $lang['VIDEO_ADDR'] = 'Link to video';
@@ -126,7 +129,14 @@ $lang['VIDEO_ERR_BIG'] = 'File is too large';
 $lang['VIDEO_ERR_BAD'] = 'Bad extension';
 $lang['VIDEO_UP_OK'] = 'Upload Complete';
 $lang['VIDEO_ERR_NO'] = 'Error no. ';
+$lang['VIDEO_SQL1'] = "SELECT `Videos`.`Title-EN`, `Videos`.`Adresa`, `Videos`.`YT` FROM `Videos` ";
+$lang['VIDEO_VIDEO'] = 'Videos';
 
+
+//contact
+$lang['CONTACT_ADDR'] = 'Address';
+$lang['CONTACT_COUNTRY'] = 'Slovak Republic<br>';
+$lang['CONTACT_SEC'] = 'Secretariat<br>';
 
 
 
