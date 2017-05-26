@@ -7,7 +7,7 @@ mysqli_set_charset($conn, "utf8");
 
 
 echo "<title>Pracovníci</title><div class='container'><div style='margin-left:100px;'><br><input type='text' id='myInput' onkeyup='filter1()' placeholder='".$lang['STAFF_F1']."'>
-<input type='text' id='myInput2' onkeyup='filter2()' placeholder='".$lang['STAFF_F2']."'></div>";
+<input type='text' id='myInput2' onkeyup='filter2()' placeholder='".$lang['STAFF_F2']."'></div><br>";
 
 
 
