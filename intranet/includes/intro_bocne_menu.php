@@ -17,7 +17,9 @@
   $login = $_SESSION['login'];
    
   if (isset($_SESSION['login'])) {
-       echo '<a class="logout bocne_menu" style="margin-left: 5px;" href="includes/logout.php">Odhlásiť</a><br>';
+      echo "<nav style='position:absolute; top:0; left: 0;width: 170px; height: 10px' class=\"navbar navbar-inverse\">";
+       echo '<a class class="logout bocne_menu" style="position: relative; left:30%; top: 20%;margin-left: 5px;" href="includes/logout.php">Odhlásiť</a><br>';
+       echo "</nav>";
   }
     
    $sql = "SELECT id_role FROM RoleZamestnanci WHERE id_staff = (SELECT id FROM zamestnanci WHERE ldapLogin = '$login')";
@@ -36,6 +38,7 @@
     $row = mysqli_fetch_assoc($result);
 
 ///////////////////////// BOCNE MENU /////////////////////////////////////////////////
+    echo "<nav style='position:absolute; top: 52px; width: 170px' class=\"navbar navbar-inverse\">";
     echo "<div id=bocne_menu>";
     echo "<strong>Prihlásený: ".$row["name"]." ".$row["surname"]."</strong><br>";
     echo "<strong>Vaše role: </strong><br>";
@@ -76,4 +79,5 @@
          <a class="bocne_menu" href="roles.php">Správa rolí</a><br>';  
    }
   echo "</div>";   // koniec div bocne_menu
+    echo "</nav>";
 ?> 

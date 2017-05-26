@@ -1,14 +1,15 @@
 <?php
- session_start();
-if (isset($_SESSION['login'])){
-     include 'includes/intro_bocne_menu.php';
-     include 'includes/intro_horne_menu.php';
-}   
- mysqli_set_charset($conn, "utf8");
+session_start();
+if (isset($_SESSION['login'])) {
+    include 'includes/intro_bocne_menu.php';
+    include 'includes/intro_horne_menu.php';
+}
+mysqli_set_charset($conn, "utf8");
 
 if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin']) OR isset($_SESSION['isUser'])) {
- echo'
+    echo '
     <title>Nákupy</title>
+    <link rel="stylesheet" href="includes/style.css">
     <script src="nakupy/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -26,9 +27,8 @@ if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin']) OR isset($_SESSI
     </style>
 </head>
 <body onload="nacitajTabulku()">
-
+<div class="container" style="position: absolute; top: 40px; left: 160px; width: 85%; min-width: 500px">
 <h1 style="text-align: center">Nákupy</h1><br>
-<div class="container">
     <table id="tableID1" class="table table-striped">
         <thead>
         <tr>
@@ -40,10 +40,10 @@ if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin']) OR isset($_SESSI
         <tbody id="tbody">
         </tbody>
     </table>';
-  if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin'])) {
-    echo'<button style="margin: 10px" class="btn btn-default" onclick="edit()">editovací mód</button>';
-  } 
- echo'
+    if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin'])) {
+        echo '<button style="margin: 10px" class="btn btn-default" onclick="edit()">editovací mód</button>';
+    }
+    echo '
     <div class="form-group">
         <label id="novyTextLabel" style="visibility: hidden" for="comment">Nový text:</label>
         <textarea style="visibility: hidden; width: 100%" class="form-control" id="novyText" onkeyup="textAreaAdjust(this)"></textarea>
@@ -51,9 +51,7 @@ if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin']) OR isset($_SESSI
     </div>
 </div>';
 
-}
-
- else echo "<div id='okno_profil' class='okno_profil'>
+} else echo "<div id='okno_profil' class='okno_profil'>
                 <h3>Nie ste prihlásený, alebo nemáte práva na prezeranie tejto stránky</h3>
                  <a href='../login.php'>Login</a><br>
             </div>";

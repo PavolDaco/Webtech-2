@@ -120,6 +120,8 @@
             <td colspan="2"></td>
           </tr>
     </table>
+    	<br>
+    	<p class="text-center">Tabuľky v databáze si každý navrhol sám, Github sme používali samozrejme všetci</p>
      
    </div> 
 </div>   

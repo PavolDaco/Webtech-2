@@ -47,10 +47,10 @@ echo"<div class='container'>
      <input type='radio' name='typ' value='propagacia'> Propagácia (promotion)<br>
      <input type='radio' name='typ' value='zivot'> Zo života ústavu (from school's life)<br>
 
-     <br>Platnosť(validity): <input type='date' name='platnost' placeholder='rrrr-mm-dd' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' required>
+     <br>Platnosť(validity): <input style='border-color:black;' class='btn btn-default' type='date' name='platnost' placeholder='rrrr-mm-dd' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' required>
      
       <br><br>
-      <button type='submit'>Odoslať</button>
+      <button style='border-color:black;' class='btn btn-default' type='submit'>Odoslať</button>
     </form>
  </div>";
 }

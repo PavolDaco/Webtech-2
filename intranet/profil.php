@@ -41,12 +41,12 @@ if (isset($_SESSION['isUser']) OR isset($_SESSION['isAdmin'])) {
          <span class='divko'>Telefón: </span><div class='divko' id='phone'>".$row["phone"]."</div><br>
          <span class='divko'>Kancelária: </span><div class='divko' id='room'>".$row["room"]."</div><br>
          
-         <br><button id='btn_edit_profil'>Upraviť profil</button>";
+         <br><button style='border-color:black;' class='btn btn-default' id='btn_edit_profil'>Upraviť profil</button>";
 
       
 
     	// Button na odstranenie Newsletera a skryty formular
-       echo "<button style='float:right;' id='delete_news' class='clickable_news'>Zrušiť odber newsletteru</button>
+       echo "<button class='btn btn-default' style='border-color:black; float:right;' id='delete_news' class='clickable_news'>Zrušiť odber newsletteru</button>
           <div id='form3' class='okno_news col-xs-2' style='display:none;'>
             <span class='closebtn_news' style='float: right;'>&times;</span>
             <form action='includes/delete_newsletter.php' method='post' id='formular3'>Zrušiť newsletter<br>
@@ -65,7 +65,7 @@ if (isset($_SESSION['isUser']) OR isset($_SESSION['isAdmin'])) {
         
 
         // Button na pridanie Newsletera a skryty formular
-      echo "<button style='float:right;' id='add_news' class='clickable_news'>Chcem odoberať newsletter</button>
+      echo "<button class='btn btn-default' style='border-color:black; float:right; margin-right: 5px;' id='add_news' class='clickable_news'>Chcem odoberať newsletter</button>
           <div id='form2' class='okno_news col-xs-2' style='display:none;'>
             <span class='closebtn_news' style='float: right;'>&times;</span>
             <form action='includes/insert_newsletter.php' method='post' id='formular2'>Odoberať newsletter<br>

@@ -22,8 +22,10 @@ if (isset($_SESSION['isAdmin'])) {
  $result = $conn->query($sql);
  echo "<div id='okno_profil' class='okno_profil'>
         <p><strong>Pre zmenu role pre daného užívateľa kliknite na meno</strong></p>";
-    echo "<table id='table_roleStaff'>
-            <tr><th>Meno a priezvisko</th></tr>"; 
+    echo "<table class='table table-hover' id='table_roleStaff'>
+            <thead>
+            <tr><th>Meno a priezvisko</th></tr>
+            </thead>";
     while($row = mysqli_fetch_assoc($result)) {  
       $akt_id = $row["id"];
       $checkboxy = "<form id='formRole' action='roles/update_roles.php' method='POST'><input type='hidden' name='id' value=".$row["id"].">";
@@ -53,7 +55,7 @@ if (isset($_SESSION['isAdmin'])) {
  		  if (mysqli_num_rows($result2) > 0) $checkboxy = $checkboxy."<input type='checkbox' name='admin' value='admin_yes' checked> Admin<br>";
  		  else  $checkboxy = $checkboxy."<input type='checkbox' name='admin' value='admin_no'> Admin<br>"; 
 
- 		  $checkboxy = $checkboxy."<button type='submit'>Odoslať</button></form>";
+ 		  $checkboxy = $checkboxy."<button style='border-color:black;' class='btn btn-default' type='submit'>Odoslať</button></form>";
 
  		  echo "<tr>
 	          	  <td><div class='clickable_roles'>".$row["name"]." ".$row["surname"]."</div>

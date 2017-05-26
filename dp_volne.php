@@ -126,7 +126,7 @@ $(document).on('click', '.clickable', function() {
 
 	echo "<div>";
 
-	echo "<table id='myTable'><tr>
+	echo "<table id='myTable' class='table table-hover'><tr>
 	<th onclick='sortTable(0)' >Názov</th> 
 	<th onclick='sortTable(1)'  >Školiteľ</th> 
 	<th onclick='sortTable(2)'  >program</th> </tr>";
@@ -160,10 +160,13 @@ $(document).on('click', '.clickable', function() {
 	}
 
 
-	echo "</table></div>";
+	echo "</table>";
 ?>
 
 </div>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 <?php

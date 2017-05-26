@@ -9,6 +9,11 @@ function ukaz()
 {
     document.getElementById("save").value = false;
     document.getElementById("save").style.visibility="visible";
+    document.getElementById("save").style.visibility="visible";
+    document.getElementById("label1").style.visibility="visible";
+    document.getElementById("label2").style.visibility="visible";
+    document.getElementById("label3").style.visibility="visible";
+    document.getElementById("label4").style.visibility="visible";
     document.getElementById("save2").style.visibility="visible";
     document.getElementById("cancel").style.visibility="visible";
     document.getElementById("cancel2").style.visibility="visible";
@@ -25,6 +30,10 @@ function skry()
     document.getElementById("save").value = true;
     document.getElementById("save").style.visibility="hidden";
     document.getElementById("save2").style.visibility="hidden";
+    document.getElementById("label1").style.visibility="hidden";
+    document.getElementById("label2").style.visibility="hidden";
+    document.getElementById("label3").style.visibility="hidden";
+    document.getElementById("label4").style.visibility="hidden";
     document.getElementById("cancel").style.visibility="hidden";
     document.getElementById("cancel2").style.visibility="hidden";
     document.getElementById("reason").setAttribute('disabled','disabled');

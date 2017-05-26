@@ -37,8 +37,8 @@ if (isset($_SESSION['isEditor']) OR isset($_SESSION['isAdmin']) OR isset($_SESSI
     </style>
 </head>
 <body onload="nacitajTabulku()">
+<div class="container" style="position: absolute; top: 40px; left: 160px; width: 85%; min-width: 500px">
 <h1 style="text-align: center">Pedagogika</h1><br>
-<div class="container">
     <table id="tableID1" class="table table-striped">
         <thead>
         <tr>

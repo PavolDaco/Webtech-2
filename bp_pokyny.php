@@ -2,27 +2,19 @@
 include 'includes/header.php';
 
 ?>
-<title>BP pokyny</title>
-
-<style type="text/css">
-
-th, td {
-    padding: 3px;
-    text-align: left;
-}
-
+<style>
+    h4{
+        margin-top: 30px;
+    }
 </style>
-
+<title>BP pokyny</title>
 <div class="container">
 	
 	<h1>BP pokyny</h1>
-
-	<br>
 	<h4><strong>Ukončovanie predmetov BP1, BP2, BZP</strong></h4>
-	<br>
-	Bakalársky projekt 1
-	<div style="margin-left:4em">
-		<table style="width: 600px;"  >
+    <h4>Bakalársky projekt 1</h4>
+	<div>
+		<table class='table table-hover' >
 			<tr>
 				<td>Zodpovedný: </td>
 				<td>doc. Ing. Vladimír Kutiš, PhD.</td>
@@ -42,12 +34,9 @@ th, td {
 		</table>
 	</div>
 
-
-
-	<br>
-	Bakalársky projekt 2
-	<div style="margin-left:4em">
-		<table style="width: 600px;"  >
+    <h4>Bakalársky projekt 2</h4>
+	<div >
+		<table class='table table-hover' >
 			<tr>
 				<td>Zodpovedný: </td>
 				<td>doc. Ing. Vladimír Kutiš, PhD.</td>
@@ -73,12 +62,10 @@ th, td {
 		</table>
 	</div>
 
-
-	<br>
 	Prácu na projekte hodnotí vedúci práce.
-	<div style="margin-left:4em">
-		Bakalárska záverečná práca
-		<table style="width: 600px;"  >
+	<div>
+        <h4>Bakalárska záverečná práca</h4>
+		<table class='table table-hover' >
 			<tr>
 				<td>Zodpovedný: </td>
 				<td>doc. Ing. Vladimír Kutiš, PhD.</td>
@@ -97,19 +84,6 @@ th, td {
 			</tr>
 		</table>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 

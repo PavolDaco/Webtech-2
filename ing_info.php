@@ -3,8 +3,14 @@ include 'includes/header.php';
 
 ?>
 <style type="text/css">
+    table {
+        margin: 10px;
+        border: 1px solid lightgray;
+    }
 
-
+    h4 {
+        margin-left: 20px;
+    }
 </style>
 
 <title>Inžinierske štúdium</title>
@@ -14,12 +20,11 @@ include 'includes/header.php';
 <div class="container" >
 
 	<h2>Harmonogram inžinierskeho  štúdia</h2>
-	
 
 	<br>
-	Zimný semester
-	<div style="margin-left:4em">
-		<table  >
+	<div style="width: 49%; float: left">
+        <h4>Zimný semester</h4>
+		<table style="width: 100%;" class='table table-hover' >
 			<tr>
 				<td>Začiatok výučby v semestri</td>
 				<td>19. 09. 2016</td>
@@ -39,10 +44,9 @@ include 'includes/header.php';
 		</table>
 	</div>
 
-	<br>
-	Letný semester
-	<div style="margin-left:4em">
-		<table  >
+	<div style="width: 49%; float: right">
+        <h4>Letný semester</h4>
+            <table style="width: 100%;" class='table table-hover' >
 			<tr>
 				<td>Začiatok výučby v semestri</td>
 				<td>13. 02. 2017</td>
@@ -63,9 +67,9 @@ include 'includes/header.php';
 	</div>
 
 	<br>
-	Záver inžinierskeho  štúdia
-	<div style="margin-left:4em">
-		<table  >
+	<div style="width: 49%">
+        <h4>Záver inžinierskeho  štúdia</h4>
+        <table style="width: 100%;" class='table table-hover' >
 			<tr>
 				<td>Zadanie diplomovej práce </td>
 				<td>13. 02. 2017</td>

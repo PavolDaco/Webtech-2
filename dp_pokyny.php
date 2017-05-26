@@ -5,11 +5,9 @@ include 'includes/header.php';
 <title>DP pokyny</title>
 
 <style type="text/css">
-
-th, td {
-    padding: 3px;
-    text-align: left;
-}
+    h4{
+        margin-top: 30px;
+    }
 
 </style>
 
@@ -17,12 +15,10 @@ th, td {
 	
 	<h1>DP pokyny</h1>
 
-	<br>
 	<h4><strong>Ukončovanie predmetov DP1, DP2, DP3, DZP</strong></h4>
-	<br>
-	Diplomový projekt 1
-	<div style="margin-left:4em">
-		<table style="width: 600px;"  >
+    <h4>Diplomový projekt 1</h4>
+	<div >
+		<table class='table table-hover'  >
 			<tr>
 				<td>Zodpovedný: </td>
 				<td>prof. Ing. Mikuláš Huba, PhD.</td>
@@ -42,12 +38,9 @@ th, td {
 		</table>
 	</div>
 
-
-
-	<br>
-	Diplomový projekt 2
-	<div style="margin-left:4em">
-		<table style="width: 600px;"  >
+    <h4>Diplomový projekt 2</h4>
+	<div >
+		<table class='table table-hover'  >
 			<tr>
 				<td>Zodpovedný: </td>
 				<td>prof. Ing. Mikuláš Huba, PhD.</td>
@@ -68,12 +61,10 @@ th, td {
 		</table>
 	</div>
 
-
-	<br>
-	Diplomový projekt 3
-	<div style="margin-left:4em">
+    <h4>Diplomový projekt 3</h4>
+	<div>
 		Bakalárska záverečná práca
-		<table style="width: 600px;"  >
+		<table class='table table-hover'  >
 			<tr>
 				<td>Zodpovedný: </td>
 				<td>prof. Ing. Mikuláš Huba, PhD.</td>
@@ -101,12 +92,9 @@ th, td {
 	 Prácu na projekte hodnotí vedúci práce.
 	</div>
 
-
-	<br>
-	Diplomová záverečná práca
-	<div style="margin-left:4em">
-		
-		<table style="width: 600px;"  >
+    <h4>Diplomová záverečná práca</h4>
+	<div >
+		<table class='table table-hover'  >
 			<tr>
 				<td>Zodpovedný: </td>
 				<td>prof. Ing. Mikuláš Huba, PhD.</td>
@@ -125,19 +113,6 @@ th, td {
 			</tr>
 		</table>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 

@@ -20,13 +20,13 @@ if (isset($_SESSION['isReporter']) OR isset($_SESSION['isAdmin'])) {
  	<p><strong>Pridanie Youtube videa</strong></p>
 	<form action='photos_videos/upload_video.php' method='post' enctype='multipart/form-data'>
 		<label for='TitleSK'>Názov (SK):</label><br>
-		<input type='text' name='TitleSK' placeholder='Názov (SK)'><br>
+		<input style='border-color:black;' class='btn btn-default' type='text' name='TitleSK' placeholder='Názov (SK)'><br>
 		<label for='TitleEN'>Názov (EN):</label><br>
-		<input type='text' name='TitleEN' placeholder='Názov (EN)'><br>
+		<input style='border-color:black;' class='btn btn-default' type='text' name='TitleEN' placeholder='Názov (EN)'><br>
 		<label for='Adresa'>Link na YouTube:</label><br>
-		<input type='text' name='Adresa' placeholder='Link na video'><br>
-	    <input type='text' name='YT' value='yes' style='display:none;'><br>
-	    <input type='submit' value='Pridaj video' name='submit'>
+		<input style='border-color:black;' class='btn btn-default' type='text' name='Adresa' placeholder='Link na video'><br>
+	    <input  type='text' name='YT' value='yes' style='display:none;'><br>
+	    <input style='border-color:black;' class='btn btn-default' type='submit' value='Pridaj video' name='submit'>
 	</form>
 	<hr>";
 
@@ -35,14 +35,14 @@ if (isset($_SESSION['isReporter']) OR isset($_SESSION['isAdmin'])) {
  echo"<form action='photos_videos/upload_video.php' method='post' enctype='multipart/form-data'>
  		<p><strong>Pridanie nového videa na server</strong></p>
 		<label for='TitleSK'>Názov (SK):</label><br>
-		<input type='text' name='TitleSK' placeholder='Názov (SK)'><br>
-		<label for='TitleEN'>Názov (EN):</label><br>
-		<input type='text' name='TitleEN' placeholder='Názov (EN)'><br>
+		<input style='border-color:black;' class='btn btn-default' type='text' name='TitleSK' placeholder='Názov (SK)'><br>
+		<label  for='TitleEN'>Názov (EN):</label><br>
+		<input style='border-color:black;' class='btn btn-default' type='text' name='TitleEN' placeholder='Názov (EN)'><br>
 
 		<input type='text' name='YT' value='no' style='display:none;'>
-		<label for='fileToUpload'>Vyber video:</label><br>
-	    <input type='file' name='file' id='fileToUpload' accept='mp4'><br>
-	    <input type='submit' value='Nahraj video' name='submit'>
+		<label  for='fileToUpload'>Vyber video:</label><br>
+	    <input style='border-color:black;' class='btn btn-default' type='file' name='file' id='fileToUpload' accept='mp4'><br>
+	    <input style='border-color:black;' class='btn btn-default' type='submit' value='Nahraj video' name='submit'>
 	</form>
   </div>";
 

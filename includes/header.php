@@ -79,11 +79,13 @@ body {
    text-align: center;
   
 }
+
 @media print {
         .navbar,.nav,.dropdown,footer,title,#googleMap,#column1_video{
     display:none;}
 
     }
+
 </style>
 
 
@@ -98,11 +100,11 @@ body {
 
         
         <div class="collapse navbar-collapse">
-            <ul class="dropdown-menu">
-               <?php 
+            <ul class="nav navbar-nav navbar-right">
+               <?php
 				$pages = array("aktuality.php","kocka.php","projekty.php","staff.php","index.php","photogallery.php","videogallery.php", "contact.php");
 
-			if (in_array(basename($_SERVER['PHP_SELF']), $pages)) {		
+			if (in_array(basename($_SERVER['PHP_SELF']), $pages)) {
 				$linkEN = basename($_SERVER['PHP_SELF'])."?lang=en";
 		   		
 			}else{
@@ -249,3 +251,7 @@ body {
         </div>
     </div>
 </div>
+
+
+
+
