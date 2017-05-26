@@ -158,7 +158,7 @@ $(document).on('click', '.clickable', function() {
 	}
 
 
-	echo "</table>";
+	echo "</table></div>";
 ?>
 
 </div>

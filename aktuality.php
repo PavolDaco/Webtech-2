@@ -6,9 +6,6 @@
 ?>
 
 
-
-
-
   <title>Aktuality</title>
  
 	<link rel="stylesheet" href="aktuality/style.css">  
@@ -114,7 +111,7 @@ echo "<div id='zoznam_stran'>";
 for ($page=1;$page<=$number_of_pages;$page++) {
 	echo '<a href="aktuality.php?page=' . $page . '&aktuality='.$_SESSION['typ']. ($_SESSION["platnost"] =='all'? "&old=all":'') . '">' . $page . '</a> ';
 }
-echo "</div><br><br>";  // koniec zoznam_stran
+echo "</div></div><br><br>";  // koniec zoznam_stran
 
 include 'includes/footer.php';
 ?>
