@@ -2,34 +2,30 @@
     display: none;
 }
 
-table, th, td {
+table {
+    margin: 10px;
+    border: 1px solid lightgray;
+}
+
+.okno {
+
+    z-index: 1;
+    position: absolute;
+    width: 55%;
+    background-color: Gray;
+    padding: 30px;
+    color: white;
     border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 7px;
-}
-
-
-.okno{
-
-  z-index: 1;
-  position: absolute; 
-  width:55%; 
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 30px;
-  color: white;   
-  border: 3px solid blue;   
-  min-width: 325px; 
+    border-radius: 5px;
+    min-width: 325px;
 
 }
 
-#tabPublikacie{
-	color: white;
+#tabPublikacie {
+    color: white;
 }
-
 
 .closebtn {
-  cursor:pointer;
+    cursor: pointer;
+    font-size: 40px;
 }
